@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">나의 일감관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">영업관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li class="on">
+					<a href="#">고객지원</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">설치/AS/반품</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">재고관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">청구관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">공통</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">기준정보관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div class="info">
+				<div class="userInfo">
+					<div class="infoP">
+						<p>
+							김영업 님
+						</p>
+						<p>
+							영업 관리팀
+						</p>
+					</div>
+					<div class="userMenu">
+						<div class="pic">
+						</div>
+						<button class="menu-toggle"></button>
+					</div>
+					<div class="sub">
+						<ul>
+							<li><a href="#">마이페이지</a></li>
+							<li><a href="#">비밀번호 변경</a></li>
+							<li><a href="#">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="btns">
+					<li class="search"><a href="#"></a>
+					<div class="headerSearch">
+						<div class="radioBox">
+							<div>
+								<input type="radio" id="radio1" name="radio" checked>
+								<label for="radio1">가맹점</label>
+							</div>
+							<div>
+								<input type="radio" id="radio2" name="radio">
+								<label for="radio2">제조사</label>
+							</div>
+							<div>
+								<input type="radio" id="radio3" name="radio">
+								<label for="radio3">성명</label>
+							</div>
+						</div>
+						<div class="searchBox">
+							<input type="text">
+							<button class="del">지우기</button>
+							<button class="search">검색</button>
+						</div>
+						<div class="listBox n-tables tb">
+							<table class="n-table2">
+							<caption>가맹점명, 지역, 사업자번호</caption>
+							<colgroup>
+							<col style="width: 50%">
+							<col style="width: 30%">
+							<col style="width: 20%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<td>
+									강남 미니 족발 성수동 왕 족발
+								</td>
+								<td>
+									서울/양천구
+								</td>
+								<td>
+									654-56-8975
+								</td>
+							</tr>
+							<tr>
+								<td>
+									을지로 족발
+								</td>
+								<td>
+									전남/중구
+								</td>
+								<td>
+									512-12-8523
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					</li>
+					<li class="bell on">
+					<a href="#"></a>
+					<div class="cnt">
+						<button>99+</button>
+					</div>
+					<div class="notice">
+						<ul>
+							<li class="notice_today clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 승인되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								02-10 15:30
+							</div>
+							</li>
+							<!--
+						                (D) notice_today : 오늘
+						                      on : 클릭했을 때,,필요없으면 안쓰셔도 됨
+						            -->
+							<li class="notice_today clear on">
+							<div class="notice_txt">
+								<span class="subject">일감</span>
+								<a href="#">협업자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								07:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">고객요청</span>
+								<a href="#">담당자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 16:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 반려되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 11:00
+							</div>
+							</li>
+							<li class="more">
+							<span>알림 더보기</span>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="set"><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="n-content">
+			<div class="n-cti">
+				<div class="tit_box">
+					<!-- (D) 위치변경 -->
+					<div class="tit">
+						센트릭스
+					</div>
+					<!-- (D) 아래버튼 클릭시 cti-form이 show/hide -->
+					<button class="arrow_btn"></button>
+				</div>
+				<div class="cti_form">
+					<!-- (D) 19-10-02 클래스 추가 -->
+					<!-- (D) 접속 화면 -->
+					<div class="callLogin" style="display: block">
+						<div class="cont">
+							<div class="article">
+								<div class="n-radio">
+									<div>
+										<input type="radio" id="skt" name="tel" class="radio">
+										<label for="skt">SKT</label>
+									</div>
+									<div>
+										<input type="radio" id="kt" name="tel" class="radio">
+										<label for="kt">KT</label>
+									</div>
+									<div>
+										<input type="radio" id="lg" name="tel" class="radio">
+										<label for="lg">LGU+</label>
+									</div>
+								</div>
+								<div class="n-check">
+									<input type="checkbox" id="check1">
+									<label for="check1">정보저장</label>
+								</div>
+								<div class="loginBox">
+									<input type="text" placeholder="전화번호">
+									<input type="password" placeholder="비밀번호">
+									<button class="login">상담시작</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- (D) 수신 종합 화면 (callComb에 on추가하면 수신전화목록 활성화됨.) -->
+					<div class="callComb">
+						<div class="header">
+							<div class="data">
+								<button class="toggle-left"></button>
+								<span>파리바게트 성수점 (A) 010-1224-5678</span>
+							</div>
+							<div class="list">
+								<span>수신전화목록</span>
+								<button class="toggle"></button>
+							</div>
+						</div>
+						<div class="dropleft on">
+							<div class="tb">
+								<ul>
+									<li class="on">파리바게트 성수점</li>
+									<li>파리바게트 강남점</li>
+									<li>파리바게트 건대입구점</li>
+									<li>파리바게트 건대입구점</li>
+									<li>파리바게트 건대입구점</li>
+									<li>파리바게트 건대입구점</li>
+								</ul>
+							</div>
+							<button class="n-button blue">상담 적용</button>
+						</div>
+						<div class="cont">
+							<div class="left">
+								<span class="img phone"></span>
+								<span class="name">파리바게트 성수점</span>
+								<div class="cnt">
+									<button class="num">99+</button>
+									<div class="cti-tooltip etc">
+										<button class="close"></button>
+										<div class="tb">
+											<ul>
+												<li>파리바게트 동대문점(A)</li>
+												<li>서브웨이 성수점(D)</li>
+												<li>하늘소 고강점(B)</li>
+												<li>엽기떡볶이 광명동굴점(C)</li>
+												<li>파리바게트 동대문점(A)</li>
+												<li>서브웨이 성수점(D)</li>
+												<li>하늘소 고강점(B)</li>
+												<li>엽기떡볶이 광명동굴점(C)</li>
+												<li>파리바게트 동대문점(A)</li>
+												<li>서브웨이 성수점(D)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<div class="warning">
+									<div class="cti-tooltip warn">
+										<button class="close"></button>
+										<span>통화종료 후 반드시 종료버튼을 눌러주세요.</span>
+									</div>
+								</div>
+								<button class="end">종료</button>
+							</div>
+						</div>
+						<div class="dropdown">
+							<button class="toggle2"></button>
+							<div class="n-tables th">
+								<table class="n-table2">
+								<colgroup>
+								<col style="width: 60%">
+								<col style="width: 40%">
+								</colgroup>
+								<tbody>
+								<tr>
+									<th>
+										가맹점명
+									</th>
+									<th>
+										전화번호
+									</th>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="n-tables tb">
+								<table class="n-table2">
+								<colgroup>
+								<col style="width: 60%">
+								<col style="width: 40%">
+								</colgroup>
+								<tbody>
+								<tr>
+									<td class="ellip">
+										<div class="level c">
+										</div>
+										 파리바게트 뜌레쥬르성수점
+									</td>
+									<td>
+										02-854-2178
+									</td>
+								</tr>
+								<tr class="on">
+									<td class="ellip">
+										<div class="level a">
+										</div>
+										 하늘소 고강점
+									</td>
+									<td>
+										02-854-2178
+									</td>
+								</tr>
+								<tr>
+									<td class="ellip">
+										<div class="level b">
+										</div>
+										 서브웨이 신대방사거리점
+									</td>
+									<td>
+										02-854-2178
+									</td>
+								</tr>
+								<tr>
+									<td class="ellip">
+										<div class="level d">
+										</div>
+										 이태리부대찌개 광명이케아점
+									</td>
+									<td>
+										02-854-2178
+									</td>
+								</tr>
+								<tr>
+									<td class="ellip">
+										<div class="level c">
+										</div>
+										 단미온 당산점
+									</td>
+									<td>
+										02-854-2178
+									</td>
+								</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- (D) 통화대기 화면 -->
+					<div class="callComb">
+						<div class="header">
+							<div class="list">
+								<span>수신전화목록</span>
+								<button class="toggle"></button>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="left wait">
+								<span class="img phone-gray"></span>
+								<span class="wait">통화 대기...</span>
+							</div>
+							<div class="right wait">
+								<div class="selects">
+									<div class="custom-select">
+										<div class="current">
+											<span>통화대기</span>
+										</div>
+										<ul>
+											<li class="on"><span>통화대기</span></li>
+											<li><span>요청</span></li>
+											<li><span>수리</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- (D) 자리비움 화면 -->
+					<div class="callComb">
+						<div class="header">
+							<div class="list">
+								<span>수신전화목록</span>
+								<button class="toggle"></button>
+							</div>
+						</div>
+						<div class="cont">
+							<div class="left wait">
+								<span class="img hourglass"></span>
+								<span class="wait">자리비움</span>
+							</div>
+							<div class="right wait">
+								<div class="selects">
+									<div class="custom-select">
+										<div class="current">
+											<span>통화대기</span>
+										</div>
+										<ul>
+											<li class="on"><span>통화대기</span></li>
+											<li><span>요청</span></li>
+											<li><span>수리</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="n-mdi">
+				<ul>
+					<li class="home"><button>홈으로이동</button></li>
+					<li class="add"></li>
+					<li class="on">
+					<div class="mdiBox">
+						<a href="#">고객상담</a>
+						<button class="mdi-close"></button>
+					</div>
+					<div id="cs_content_main">
+						<div class="n-aligner tb main">
+							<h1 class="n-h1">고객상담</h1>
+							<div class="n-align left">
+								<div class="n-section">
+									<div class="n-heading">
+										<h2 class="n-h2">신규 상담 등록</h2>
+										<div class="n-heading__adds">
+											<div class="n-heading__add">
+												<div class="n-buttons">
+													<button class="n-button reset">초기화</button>
+													<button class="n-button save">저장</button>
+													<button class="n-button ellipsis">더보기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="n-tables">
+										<table class="n-table">
+										<caption>신규상담등록 : 간판명, 사업자번호, 요청자명, 전화번호, 요청유형, 피드백, 우선순위, 상담내용, 전달내용, 담당자</caption>
+										<colgroup>
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="col" class="star">
+												가맹점명
+											</th>
+											<!-- (D) n-input search on 이면 검색어 자동완성 기능이 생김-->
+											<td colspan="5" class="n-input search on">
+												<div>
+													<input type="text" id="search" class="search" placeholder="">
+													<label for="search" class="search"></label>
+												</div>
+												<div class="autoSearch n-tables tb">
+													<table class="n-table2">
+													<caption>가맹점명, 지역</caption>
+													<colgroup>
+													<col style="width: 70%">
+													<col style="width: 30%">
+													</colgroup>
+													<tbody>
+													<tr>
+														<td>
+															파리바게트 성수점
+														</td>
+														<td>
+															서울/성동구
+														</td>
+													</tr>
+													<tr>
+														<td>
+															하늘소 고강점
+														</td>
+														<td>
+															경기/부천시
+														</td>
+													</tr>
+													<tr>
+														<td>
+															엽기떡볶이 신대방점
+														</td>
+														<td>
+															경기/동작구
+														</td>
+													</tr>
+													<tr>
+														<td>
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr>
+														<td>
+														</td>
+														<td>
+														</td>
+													</tr>
+													<tr>
+														<td>
+														</td>
+														<td>
+														</td>
+													</tr>
+													</tbody>
+													</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">
+												요청자명
+											</th>
+											<td class="n-input">
+												<input type="text">
+											</td>
+											<th scope="col" class="star">
+												전화번호
+											</th>
+											<td colspan="2" class="n-input btn">
+												<input type="text">
+												<div class="n-heading__adds">
+													<div class="n-heading__add">
+														<button class="n-button n-button--add white">추가</button>
+													</div>
+												</div>
+											</td>
+											<td>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" class="star">
+												요청유형
+											</th>
+											<td class="n-input">
+												<div class="selects">
+													<div class="custom-select">
+														<div class="current">
+															<span>문의</span>
+														</div>
+														<ul>
+															<li class="on"><span>문의</span></li>
+															<li><span>요청</span></li>
+															<li><span>수리</span></li>
+														</ul>
+													</div>
+												</div>
+											</td>
+											<th scope="col" class="star">
+												피드백
+											</th>
+											<td colspan="3" class="n-input optionSet">
+												<div class="dates">
+													<div class="date">
+														<span class="inputDate"></span>
+														<label for="date"></label>
+													</div>
+												</div>
+												<div class="feedCheck">
+													<input type="checkbox" id="check2">
+													<label for="check2">피드백</label>
+												</div>
+												<span>우선순위</span>
+												<label for="priority" class="switch priority">
+												<input type="checkbox" id="priority">
+												<span class="slider">일반</span>
+												</label>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col" class="star">
+												상담내용
+											</th>
+											<td colspan="5" class="n-input">
+												<textarea name="" id="" cols="30" rows="10" class="middle"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">
+												응대내용
+											</th>
+											<td colspan="5" class="n-input">
+												<textarea name="" id="" cols="30" rows="10" class="small"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">
+												전달내용
+											</th>
+											<td colspan="5" class="n-input">
+												<textarea name="" id="" cols="30" rows="10" class="small"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">
+												담당자
+											</th>
+											<td colspan="5">
+												 정 - 김영업 과장 / 부 - 박한잔 대리, 한두잔 사원
+												<div class="add">
+													<button class="n-button manager">담당자배정</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="col">
+												완료처리
+											</th>
+											<td colspan="5" class="n-input feedback">
+												<div class="feedCheck w0">
+													<input type="checkbox" id="check">
+													<label for="check">완료처리여부</label>
+												</div>
+												<label class="txt" for="check">고객상담을 바로 완료 처리합니다.</label>
+											</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="n-section">
+									<div class="n-heading">
+										<h2 class="n-h2">상담/방문 이력</h2>
+									</div>
+									<div class="n-tables th">
+										<table class="n-table2">
+										<caption>상담/방문이력 : 일시, 구분, 상담/처리내용, 상태</caption>
+										<colgroup>
+										<col style="width: 20%">
+										<col style="width: 15%">
+										<col style="width: 55%">
+										<col style="width: 10%">
+										</colgroup>
+										<thead>
+										<tr>
+											<th scope="row">
+												일시<button class="trigger"></button>
+											</th>
+											<th scope="row">
+												구분<button class="trigger"></button>
+											</th>
+											<th scope="row">
+												상담/처리내용<button class="trigger"></button>
+											</th>
+											<th scope="row">
+												상태<button class="trigger"></button>
+											</th>
+										</tr>
+										</thead>
+										</table>
+									</div>
+									<div class="n-tables tb">
+										<table class="n-table2">
+										<caption>상담/방문이력 : 일시, 구분, 상담/처리내용, 상태</caption>
+										<colgroup>
+										<col style="width: 20%">
+										<col style="width: 15%">
+										<col style="width: 55%">
+										<col style="width: 10%">
+										</colgroup>
+										<tbody>
+										<tr>
+											<td>
+												2018-09-30 11:30
+											</td>
+											<td>
+												고객요청
+											</td>
+											<td>
+												매장을 8월 31일에 오픈하는데 신용카드 가맹점 신청과 POS단말기와 CCTV를 설치하고 싶다고 말한다. 핸드폰번호는 010-1234-1234이고, 주소는 서울시 성동구 성수일로 8길 59이다.
+											</td>
+											<td>
+												진행중
+											</td>
+										</tr>
+										<tr>
+											<td>
+												2018-09-10 17:30
+											</td>
+											<td>
+												문의
+											</td>
+											<td>
+												단말기 설치에 대하여 문의를 하셔서 응대함.
+											</td>
+											<td>
+												완료
+											</td>
+										</tr>
+										<tr>
+											<td>
+                        2018-09-09 15:40
+											</td>
+											<td>
+                        용지보급
+											</td>
+											<td>
+                        노랑통닭 가산2호점 용지 50*30 보급을 원하심. 김충식 과장에게 전달하여 내일중으로 배송하기로 함.
+											</td>
+											<td>
+                        진행중
+											</td>
+										</tr>
+										<tr>
+											<td>
+                        2018-09-09 09:30
+											</td>
+											<td>
+                        계약
+											</td>
+											<td>
+                        토담토담 철산점에서 지난번 견적한 건으로 계약을 희망하심.
+											</td>
+											<td>
+                        접수
+											</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+									<div class="n-pagings">
+										<div class="n-paging">
+											<button class="n-paging__btn"></button>
+											<button class="pagingLeft"></button>
+											<ul class="n-paging__list">
+												<li class="on">1</li>
+												<li>2</li>
+												<li>3</li>
+												<li>4</li>
+												<li>5</li>
+												<li>6</li>
+												<li>7</li>
+												<li>8</li>
+												<li>9</li>
+												<li>10</li>
+											</ul>
+											<button class="pagingRight"></button>
+											<button class="n-paging__btn"></button>
+										</div>
+										<div class="itemView">
+											<div class="custom-select">
+												<span class="current">12개 보기</span>
+												<ul>
+													<li class="on"><span>30개 보기</span></li>
+													<li><span>50개 보기</span></li>
+													<li><span>100개 보기</span></li>
+													<li><span>200개 보기</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="n-align right">
+								<div class="n-section">
+									<div class="n-heading">
+										<h2 class="n-h2">가맹점정보</h2>
+										<div class="level a"></div>
+										<div class="level b"></div>
+										<div class="level c"></div>
+										<div class="level bond"></div>
+										<div class="n-heading__adds">
+											<div class="n-heading__add">
+												<div class="n-buttons">
+													<button class="n-button modify">수정</button>
+													<button class="n-button save">저장</button>
+													<button class="n-button ellipsis">더보기</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="n-tables">
+										<table class="n-table">
+										<caption>가맹점정보 : 간판명, 상태, 상호명, 대표자, 개업일, 사업자번호, 법인번호, 업태, 업종, 전화번호, 주소</caption>
+										<colgroup>
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										<col style="width: 13.3333%">
+										<col style="width: 20%">
+										</colgroup>
+										<tbody>
+										<tr>
+											<th scope="row">
+												가맹점명
+											</th>
+											<td class="em" colspan="3">
+												파리바게트 성수동지점 왕족발 체인
+												<div class="n-heading__adds">
+													<divl class="n-heading__add">
+													<button class="organization"></button>
+													</divl>
+												</div>
+											</td>
+											<th scope="row">
+												상태
+											</th>
+											<td class="n-input">
+												<div class="custom-select">
+													<div class="current">
+														<span>긴급</span>
+													</div>
+													<ul>
+														<li class="on"><span>긴급</span></li>
+														<li><span>일반</span></li>
+													</ul>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">
+												전화번호
+											</th>
+											<td class="n-input">
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="2">
+												주소
+											</th>
+											<td class="n-input addressView bb0" colspan="5">
+												<button class="n-button blue">우편번호</button>
+												<div class="address_detail">
+													<p>
+														(12345) 서울특별시 성동구 성수일로 8길 59
+													</p>
+													<p>
+														서울특별시 성동구 성수동1가 8길 59
+													</p>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="n-input" colspan="5">
+												<input type="text" id="search" class="search" placeholder="상세주소 를 입력하세요.">
+												<label for="search" class="search"></label>
+											</td>
+										</tr>
+										</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="n-sections">
+									<div class="n-heading">
+										<h2 class="n-h2">상세내역</h2>
+									</div>
+									<div class="n-tabs mb10">
+										<ul>
+											<li class="n-tab">기본</li>
+											<li class="n-tab on">연락처</li>
+											<li class="n-tab">설치장비</li>
+											<li class="n-tab">계약</li>
+											<li class="n-tab">A/S</li>
+											<li class="n-tab">청구현황</li>
+											<li class="n-tab">요청현황</li>
+											<li class="n-tab">상담이력</li>
+											<li class="n-tab">용지보급</li>
+											<li class="n-tab">기타</li>
+										</ul>
+									</div>
+									<div class="n-section tb ht394">
+										<div class="n-tables">
+											<div class="n-heading">
+												<h3 class="n-h3">대표자 정보</h3>
+												<div class="n-heading__adds">
+													<div class="n-heading__add">
+														<div class="n-buttons">
+															<button class="n-button refuse">취소</button>
+															<button class="n-button save">저장</button>
+															<button class="n-button n-button--add white">추가</button>
+															<button class="n-button modify">수정</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<table class="n-table">
+											<caption>대표자 정보 : 이름, 연락처, 이메일, 생년월일, 자책주소</caption>
+											<colgroup>
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											</colgroup>
+											<tbody>
+											<tr>
+												<th scope="row">
+													이름
+												</th>
+												<td>
+													전대표
+												</td>
+												<th scope="row">
+													연락처
+												</th>
+												<td>
+													01078945484
+												</td>
+												<th scope="row">
+													생년월일
+												</th>
+												<td>
+													1965-10-23
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													이메일
+												</th>
+												<td colspan="5">
+													ceo@company.com
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													자택주소
+												</th>
+												<td colspan="5">
+													서울특별시 강남구 테헤란로 74
+												</td>
+											</tr>
+											</tbody>
+											</table>
+											<table class="n-table">
+											<caption>대표자 정보 : 이름, 연락처, 이메일, 생년월일, 자책주소</caption>
+											<colgroup>
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											<col style="width: 13.3333%">
+											<col style="width: 20%">
+											</colgroup>
+											<tbody>
+											<tr>
+												<th scope="row">
+													이름
+												</th>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<th scope="row">
+													연락처
+												</th>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<th scope="row">
+													생년월일
+												</th>
+												<td class="n-input">
+													<input type="text">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													이메일
+												</th>
+												<td colspan="5" class="n-input">
+													<input type="text">
+												</td>
+											</tr>
+											<tr>
+												<th scope="row">
+													자택주소
+												</th>
+												<td colspan="5" class="n-input address disabled">
+													<button class="n-button blue">우편번호</button>
+													<input type="text" disabled value="서울특별시 성동구 성수일로 8길 59">
+													<input type="text" disabled value="1402호">
+												</td>
+											</tr>
+											</tbody>
+											</table>
+										</div>
+										<div class="n-tables">
+											<div class="n-heading">
+												<h3 class="n-h3">담당자 정보</h3>
+												<div class="n-heading__adds">
+													<div class="n-heading__add">
+														<button class="n-button n-button--add blue">담당자 추가</button>
+													</div>
+												</div>
+											</div>
+											<table class="n-table row">
+											<caption>가맹점 정보 : 가맹점명, 상태</caption>
+											<colgroup>
+											<col style="width: %">
+											<col style="width: 15%">
+											<col style="width: 16%">
+											<col style="width: 27%">
+											<col style="width: 32%">
+											</colgroup>
+											<thead>
+											<tr>
+												<th scope="col">
+													이름
+												</th>
+												<th scope="col">
+													생년월일
+												</th>
+												<th scope="col">
+													연락처
+												</th>
+												<th scope="col">
+													이메일
+												</th>
+												<th scope="col">
+													담당업무
+												</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>
+													박영진
+												</td>
+												<td>
+													1988-01-11
+												</td>
+												<td>
+													01050144200
+												</td>
+												<td>
+													alba0111@naver.com
+												</td>
+												<td class="ellip">
+													전산회계 및 세무 담당
+												</td>
+											</tr>
+											<tr>
+												<td>
+													영일정
+												</td>
+												<td>
+													1983-12-07
+												</td>
+												<td>
+													01081556099
+												</td>
+												<td>
+													cctv_sale@naver.com
+												</td>
+												<td>
+													중부권 영업 담당
+												</td>
+											</tr>
+											<tr>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<td class="n-input">
+													<input type="text">
+												</td>
+												<td class="n-input">
+													<input type="text">
+												</td>
+											</tr>
+											</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</li>
+					<li>
+					<div class="mdiBox">
+						<a href="#">CMS출금요청</a>
+						<button class="mdi-close"></button>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="n-container">
+		<div class="header">
+			<a href="#" class="logo">브이존</a>
+			<button class="menu-toggler">메뉴여닫기</button>
+		</div>
+		<div class="depth2-wrap tb">
+			<div class="depth2">
+				<ul class="depth2-ul">
+					<li class="depth2-li"><span class="icon cart-arrow-down"></span><a href="#">구매</a></li>
+					<li class="depth2-li">
+					<span class="icon box"></span>
+					<a href="#">입고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li" class="on">
+					<span class="icon box-open"></span>
+					<a href="#">출고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li"><span class="icon archive"></span><a href="#">보유 재고</a></li>
+					<li class="depth2-li"><span class="icon medkit"></span><a href="#">수리 현황</a></li>
+					<li class="depth2-li"><span class="icon boxes"></span><a href="#">재고 현황</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<span>@ 2018 Pentaon. All right reserved</span>
+		</div>
+	</div>
+	<div id="dtBox">
+	</div>
+</div>
+<script>
+		$(document).ready(function(){
+      $('.n-cti .tit_box .arrow_btn').click(function(){
+        $('.n-cti').toggleClass('on');
+      });
+      $('.bell').click(function(){
+        $(this).toggleClass('on');
+      });
+		});
+	</script>
+</body>
+</html>

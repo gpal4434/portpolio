@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap admin">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">기본설정</a>
+					</li>
+					<li class="on">
+					<a href="#">상품관리</a>
+					</li>
+					<li>
+					<a href="#">직원관리</a>
+					</li>
+					<li>
+					<a href="#">결제설정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info clear">
+				<p class="name">
+					Admin
+				</p>
+				<button class="setBtn"></button>
+				<button class="logout">로그아웃</button>
+			</div>
+		</div>
+    <div class="n-content">
+	<div class="header">
+		<h1>대리점 정보 설정</h1>
+	</div>
+	<div class="content agent">
+		<div class="tableBox">
+			<div class="form form2 clear">
+				<div class="tableSection">
+					<div class="header">
+						<h3>대리점 사업자 정보</h3>
+						<div class="rightBox">
+							<div class="buttons">
+								<button class="button">삭제</button>
+								<button class="button purple">수정</button>
+								<button class="button gray">취소</button>
+								<button class="button">저장</button>
+							</div>
+						</div>
+					</div>
+					<div class="table">
+						<table>
+						<colgroup>
+						<col width="15%">
+						<col width="35%">
+						<col width="15%">
+						<col width="35%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								상호
+							</th>
+							<td class="input">
+								<input type="text">
+							</td>
+							<th scope="row">
+								사업자등록번호
+							</th>
+							<td class="input">
+								<input type="text" placeholder=" '-'를 빼고 숫자만 입력하세요. ">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								업태
+							</th>
+							<td class="input">
+								<input type="text">
+							</td>
+							<th scope="row">
+								종목
+							</th>
+							<td class="input">
+								<input type="text">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								대표자명
+							</th>
+							<td class="input">
+								<input type="text">
+							</td>
+							<th scope="row">
+								개업일
+							</th>
+							<td class="input">
+								<div class="dates">
+									<div class="date">
+										<span class="inputDate" id="date">
+										<span>2018-01-17</span>
+										<label for="date"></label>
+										</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<!-- (D) 수정모드 일 때, -->
+							<th scope="row" rowspan="2">
+								사업장 주소
+							</th>
+							<td class="input clear" colspan="3">
+								<button class="button">우편번호</button>
+								<span></span>
+							</td>
+						</tr>
+						<tr>
+							<td class="input" colspan="3">
+								<input type="text" placeholder="상세주소를 입력하세요.">
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tableSection">
+					<div class="header">
+						<h3>이미지 등록</h3>
+						<div class="rightBox">
+							<div class="buttons">
+								<button class="button">저장</button>
+								<button class="button gray">취소</button>
+								<button class="button purple">수정</button>
+							</div>
+						</div>
+					</div>
+					<div class="table">
+						<table>
+						<colgroup>
+						<col width="15%">
+						<col width="35%">
+						<col width="15%">
+						<col width="35%">
+						</colgroup>
+						<tr>
+							<th scope="row">
+								CI 등록
+							</th>
+							<td class="input img">
+								<button class="button">이미지 첨부</button>
+								<div class="imgInfo clear">
+									<span>펜타온_CI_최종(20120901).png</span>
+									<button class="button gray small">삭제</button>
+								</div>
+							</td>
+							<th scope="row">
+								인감이미지 등록
+							</th>
+							<td class="input img clear">
+								<button class="button">이미지 첨부</button>
+								<div class="imgInfo clear">
+									<span>펜타온_인감이미지_최종(20120901).png</span>
+									<button class="button gray small">삭제</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								미리보기
+							</th>
+							<td class="input ci">
+							</td>
+							<th scope="row">
+								미리보기
+							</th>
+							<td class="input stp">
+							</td>
+						</tr>
+						<!-- (D) 텍스트모드일 때, -->
+						<tr>
+							<th scope="row">
+								CI 등록
+							</th>
+							<td class="input img clear">
+								<span>펜타온_CI_최종(20120901).png</span>
+							</td>
+							<th scope="row">
+								인감이미지 등록
+							</th>
+							<td class="input img clear">
+								<span>로스트아크PC방_인감이미지_20180707.png</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								미리보기
+							</th>
+							<td class="input ci">
+								<img src="../images_web/dummy/logo.png" alt="대리점 BI">
+							</td>
+							<th scope="row">
+								미리보기
+							</th>
+							<td class="input stp">
+								<img src="../images_web/dummy/stamp.png" alt="인감">
+							</td>
+						</tr>
+						<!-- (D) //텍스트모드일 때, -->
+						<tr>
+						</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="form clear">
+				<div class="tableSection">
+					<div class="header">
+						<h3>지점 운영 여부</h3>
+						<div class="rightBox">
+							<div class="toggleBox">
+								<label for="toggle1" class="switch">
+								<input type="checkbox" id="toggle1">
+								<span class="slider"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form form2 clear">
+				<div class="tableSection">
+					<div class="area2">
+						<div class="header">
+							<h3>본사 기본 정보</h3>
+						</div>
+						<div class="table">
+							<table>
+							<colgroup>
+							<col width="15%">
+							<col width="35%">
+							<col width="15%">
+							<col width="35%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">
+									대리점명
+								</th>
+								<td>
+									로스트아크 PC방
+								</td>
+								<!-- (D) //-->
+								<th scope="row">
+									대표전화
+								</th>
+								<td>02-1500-5044</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									팩스
+								</th>
+								<td>02-1500-5043</td>
+                <td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									이메일
+								</th>
+								<td>
+									hm.kim@pentaon.com
+								</td>
+                <td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<!-- (D) 텍스트모드 일 때, 상세주소 옆에 나란히 가능한지. -->
+								<th scope="row">
+									대리점 주소
+								</th>
+								<td class="input clear" colspan="3">
+									<span>(12345) 경기도 양주시 고읍2동 215-48 영진타워 2층</span>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="tableSection">
+					<div class="area2">
+						<div class="header">
+							<h3>지점1 기본 정보</h3>
+							<div class="rightBox">
+								<div class="buttons">
+									<button class="button">삭제</button>
+									<button class="button purple">수정</button>
+									<button class="button gray">취소</button>
+									<button class="button">저장</button>
+								</div>
+							</div>
+						</div>
+						<div class="table">
+							<!-- (D) 수정모드 아닌 텍스트(뷰)모드에서는 버튼 다 없애주세요. -->
+							<table>
+							<colgroup>
+							<col width="15%">
+							<col width="35%">
+							<col width="15%">
+							<col width="35%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">
+									대리점명
+								</th>
+								<!-- (D) 뷰 모드일때, 아무것도 없이 데이터만 넣으시면 돼요. -->
+								<td class="n-input">
+									<input type="text">
+								</td>
+								<!-- (D) //-->
+								<th scope="row">
+									대표전화
+								</th>
+								<td class="input">
+									<input type="text" placeholder=" '-'를 빼고 숫자만 입력하세요. ">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									팩스
+								</th>
+								<td class="input">
+									<input type="text" placeholder=" '-'를 빼고 숫자만 입력하세요. ">
+								</td>
+                <td colspan="2">&nbsp;</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									이메일<br>
+									<span class="red">(세금계산서 발행)</span>
+								</th>
+								<td class="input form3" colspan="2">
+									<input type="text">
+									<span>@</span>
+									<input type="text">
+									<label class="select-custom">
+									<select name="" id="">
+										<option value="직접입력">직접입력</option>
+									</select>
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row" rowspan="2">
+									대리점 주소
+								</th>
+								<td class="input clear" colspan="3">
+									<button class="button">우편번호</button>
+									<span></span>
+								</td>
+							</tr>
+							<tr>
+								<td class="input" colspan="3">
+									<input type="text" placeholder="상세주소를 입력하세요.">
+								</td>
+							</tr>
+							<tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="n-container">
+			<div class="header">
+				<a href="#" class="logo">브이존</a>
+			</div>
+			<div class="depth2-wrap tb">
+				<div class="depth2">
+					<ul class="depth2-ul">
+						<li class="depth2-li on"><a href="#">상품 목록</a></li>
+						<li class="depth2-li"><a href="#">상품 구성 설정</a></li>
+						<li class="depth2-li"><a href="#">재고 설정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<span>@ 2018 Pentaon. All right reserved</span>
+			</div>
+		</div>
+		<div id="dtBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+      $('.tab_cont > div').hide();
+      $('.tab_cont > div').eq(0).show();
+      $('.admin .division .tableSection:nth-child(2) .tab li').click(function(){
+        var index = $(this).index();
+        $('.tab_cont > div').hide();
+        $('.tab_cont > div').eq(index).show();
+        if($(this).hasClass('on')){
+        }else{
+          $('.admin .division .tableSection:nth-child(2) .tab li').removeClass('on');
+          $(this).addClass('on');
+        }
+      });
+		});
+	</script>
+	</body>
+	</html>

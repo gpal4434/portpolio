@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-modal">
+	<div class="n-pop w1280">
+		<div class="header">
+			<span>담당자 배정</span>
+			<button class="close">닫기</button>
+		</div>
+		<div class="content">
+			<div class="n-heading">
+				<div class="popTit">
+					<span>파리바게트 성수점</span>
+					<div class="n-level big a">
+						<span class="cnt">A</span>
+					</div>
+				</div>
+				<div class="n-heading__adds">
+					<div class="n-headding__add">
+						<div class="n-buttons">
+							<div class="status red">
+								긴급
+							</div>
+							<div class="status">
+								수리
+							</div>
+							<div class="status">
+								피드백
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="address">
+					서울특별시 성동구 성동일로 19길 92 1층 파리바게트 성수동지점
+				</p>
+			</div>
+			<div class="week_center">
+				<div class="today clear">
+					<button class="prev"></button>
+					<ul class="clear">
+						<li><a href="#">03-22(화)</a></li>
+						<li><a href="#">03-23(수)</a></li>
+						<li><a href="#">03-24(목)</a></li>
+						<!-- (D) 클릭하면 on이 들어감 -->
+						<li><a href="#" class="on">3/25(금)</a></li>
+						<li><a href="#">3-26(토)</a></li>
+						<li><a href="#">3-27(일)</a></li>
+						<li><a href="#">3-28(월)</a></li>
+					</ul>
+					<button class="next"></button>
+				</div>
+				<div class="n-heading__adds">
+					<button class="n-button">오늘</button>
+				</div>
+			</div>
+			<div class="scheduleBox">
+				<div class="dept">
+					<div class="tit clear">
+						<span>부서</span>
+						<input type="text" class="">
+						<button class="reset notext n-button"></button>
+						<div class="n-tables tb managerSelect">
+							<table class="n-table2">
+							<tbody>
+							<tr>
+								<td>
+									파리바게트 성수점
+								</td>
+							</tr>
+							<tr>
+								<td>
+									하늘소 고강점
+								</td>
+							</tr>
+							<tr>
+								<td>
+									엽기떡볶이 신대방점
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="trees tb">
+						<div class="treeBox">
+							<div class="tree on">
+								<span class="n-toggle"></span>
+								<a href="#" class="key">영업1팀</a>
+								<div class="value">
+									<div class="tree on">
+										<span class="n-toggle"></span>
+										<a href="#" class="key">영업1-1팀</a>
+										<div class="value">
+											<div class="tree on">
+												<span class="n-toggle"></span>
+												<a href="#" class="key">영업1-1-1팀</a>
+												<div class="value last">
+													<div class="tree">
+														<!-- (D) 최종 클릭되어 선택된 key에 on이 들어갑니다 -->
+														<a href="#" class="key on">영업1-1-1-1팀</a>
+														<span class="arrow"></span>
+													</div>
+													<div class="tree">
+														<a href="#" class="key">영업1-1-1-2팀</a>
+														<span class="arrow"></span>
+													</div>
+												</div>
+											</div>
+											<div class="tree">
+												<span class="n-toggle"></span>
+												<a href="#" class="key">영업1-1-2팀</a>
+												<div class="value last">
+													<div class="tree">
+														<a href="#" class="key">영업1-1-2-1팀</a>
+														<span class="arrow"></span>
+													</div>
+													<div class="tree">
+														<a href="#" class="key">영업1-1-2-2팀</a>
+														<span class="arrow"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tree">
+								<span class="n-toggle"></span>
+								<a href="#" class="key">영업2팀</a>
+								<div class="value last">
+									<div class="tree">
+										<a href="#" class="key">영업2-1팀</a>
+										<span class="arrow"></span>
+									</div>
+									<div class="tree">
+										<a href="#" class="key">영업2-2팀</a>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="memb">
+					<div class="pop_tooltipWrap">
+						<div class="pop_tooltip">
+							<div class="pop_tooltipText">
+								<p class="title">
+									21:00 구로
+								</p>
+								<p class="title">
+									21:30 경기 의정부시
+								</p>
+							</div>
+							<div class="pop_tooltipArrow">
+							</div>
+						</div>
+					</div>
+					<div class="n-tables th">
+						<table class="n-table2">
+						<colgroup>
+						<col width="16%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						</colgroup>
+						<thead>
+						<th scope="col" class="left">
+							사원
+						</th>
+						<th scope="col">
+							미정
+						</th>
+						<th scope="col">
+							업무외
+						</th>
+						<th scope="col">
+							09
+						</th>
+						<th scope="col">
+							10
+						</th>
+						<th scope="col">
+							11
+						</th>
+						<th scope="col">
+							12
+						</th>
+						<th scope="col">
+							13
+						</th>
+						<th scope="col">
+							14
+						</th>
+						<th scope="col">
+							15
+						</th>
+						<th scope="col">
+							16
+						</th>
+						<th scope="col">
+							17
+						</th>
+						<th scope="col">
+							18
+						</th>
+						</thead>
+						</table>
+					</div>
+					<div class="n-tables tb">
+						<table class="n-table2">
+						<colgroup>
+						<col width="16%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						</colgroup>
+						<tbody>
+						<!-- (D) 선택된 것은 on 클래스 추가 -->
+						<tr class="on">
+							<td class="left">
+								김영업 과장
+							</td>
+							<td>
+								<span class="cnt">3</span>
+							</td>
+							<td>
+							</td>
+							<!-- (D) 스케쥴이 꽉 차있는 것은 plus로 표현 -->
+							<td>
+								<div class="plus">
+								</div>
+								<span class="cnt">종로</span>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">영등포</span>
+							</td>
+							<td>
+                <span class="cnt">금천</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                대전
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								차영업 대리
+							</td>
+							<td>
+								<span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                관악
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">용산</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                성북
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								윤영업 주임
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+                안산
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">안양</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                포천
+							</td>
+							<td>
+                의정부
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								신영업 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+                성북
+							</td>
+							<td>
+                강북
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                양재
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">강남</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								길영업 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                서초
+							</td>
+							<td>
+							</td>
+							<td>
+                강남
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                고양
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								조영업 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+                광명
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                인천
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								성영업 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">부천</span>
+							</td>
+							<td>
+							</td>
+							<td>
+                인천
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								백승원 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">여주</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">금천</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								장영업 사원
+							</td>
+							<td>
+                <span class="cnt">0</span>
+							</td>
+							<td>
+                성동
+							</td>
+							<td>
+                광진
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">의정부</span>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								민영업 인턴
+							</td>
+							<td>
+								<span class="cnt">3</span>
+							</td>
+							<td>
+                동두천
+							</td>
+							<td>
+                양주
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                <div class="plus">
+								</div>
+								<span class="cnt">구리</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="left">
+								김영업 인턴
+							</td>
+							<td>
+                <span class="cnt">1</span>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+                남양주
+							</td>
+							<td>
+                구리
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+							<td>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="btns">
+					<button class="n-button x">취소</button>
+					<button class="n-button o">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    $(function(){
+        $('.plus').parent().on('mouseover', function(){
+            $('.pop_tooltipWrap').show();
+            var twidth = $('.pop_tooltip').width() - $(this).outerWidth();
+            var ht = $('.n-tables.tb .mCSB_container').position().top;
+            var obj_left = $(this).position().left;
+            var obj_top = $(this).position().top;
+            $('.pop_tooltipWrap').css({'left' : obj_left - (twidth/2), 'top' : ht + obj_top - 15});
+        });
+        $('.plus').parent().on('mouseleave', function(){
+            $('.pop_tooltipWrap').hide();
+        });
+    });
+</script>
+</body>
+</html>

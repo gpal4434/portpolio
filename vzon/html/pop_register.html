@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-modal">
+	<div class="n-pop w720">
+		<div class="header">
+			<span>고객 등록</span>
+			<button class="close">닫기</button>
+		</div>
+		<div class="content">
+			<div class="n-section register tb">
+                <div class="n-heading mb20 mt5">
+                    <div class="n-radio">
+                        <div class="radioBox">
+                            <input type="radio" id="radio1" name="radio" checked>
+                            <label for="radio1">기회고객
+                                <div class="tooltips">
+                                    <div class="tooltip">
+                                        <span>영업 단계의 고객으로 고객의 간단한 정보만 입력 가능</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="radioBox">
+                            <input type="radio" id="radio2" name="radio">
+                            <label for="radio2">가망고객
+                                <div class="tooltips">
+                                    <div class="tooltip">
+                                        <span>계약 가능한 상태의 고객으로 사업자 등록 정보를 포함한 모든 정보 입력 가능</span>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="n-heading__adds bottom">
+                        <div class="n-heading__add">
+                            <p>영업대표 <span>박영업</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="n-tables">
+                   <div class="n-heading">
+                       <h3 class="n-h3">사업자 정보</h3>
+                   </div>
+                    <table class="n-table">
+                        <caption>사업자 정보 : 사업자등록번호, 유형, 상호, 업종, 업태, 종목, 주소</caption>
+                        <colgroup>
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">상호</th>
+                                <td colspan="3" class="n-input">
+                                    <input type="text">
+                                </td>
+                                <th scope="col">사업자번호</th>
+                                <td class="n-input search">
+                                    <input type="text" id="search" class="search" placeholder="">
+                                    <label for="search" class="search"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">유형</th>
+                                <td class="n-input">
+                                    <div class="selects">
+                                        <div class="custom-select">
+                                            <div class="current"><span>유형선택</span></div>
+                                            <ul>
+                                                <li class="on"><span>문의</span></li>
+                                                <li><span>요청</span></li>
+                                                <li><span>수리</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="col">개업일자</th>
+                                <td class="n-input">
+                                    <div class="date">
+                                        <label for="date11"></label>
+                                        <input type="text" id="date11" class="inputDate" data-field="date" readonly>
+                                    </div>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="col">업종</th>
+                                <td class="n-input">
+                                    <div class="selects">
+                                        <div class="custom-select">
+                                            <div class="current"><span>업종선택</span></div>
+                                            <ul>
+                                                <li class="on"><span>문의</span></li>
+                                                <li><span>요청</span></li>
+                                                <li><span>수리</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="col">업태</th>
+                                <td class="n-input">
+                                    <input type="text">
+                                </td>
+                                <th scope="col">종목</th>
+                                <td class="n-input">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan="2">사업장 주소</th>
+                                <td class="n-input address bb0" colspan="5">
+                                    <button class="n-button blue">우편번호</button>
+                                    <span>(12345) 서울특별시 성동구 성수일로 8길 59</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="n-input" colspan="5">
+                                    <input type="text" id="search" class="search" placeholder="상세주소 를 입력하세요.">
+                                    <label for="search" class="search"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan="3">본점 주소</th>
+                                <td colspan="5" class="bb0">
+                                    <div class="n-check">
+                                       <input type="checkbox" id="checkall">
+                                        <label for="checkall">사업장 주소와 동일</label>
+                                   </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="n-input addressView bb0" colspan="5">
+                                    <button class="n-button blue">우편번호</button>
+                                    <div class="address_detail">
+                                        <p>(12345) 서울특별시 성동구 성수일로 8길 59</p>
+                                        <p>서울특별시 성동구 성수이동 402-13</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="n-input" colspan="5">
+                                    <input type="text" id="search" class="search" placeholder="상세주소 를 입력하세요.">
+                                    <label for="search" class="search"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="n-tables">
+                   <div class="n-heading">
+                       <h3 class="n-h3">가맹점 정보</h3>
+                       <div class="n-heading__adds">
+                           <div class="n-heading__add">
+                                <div class="n-check">
+                                   <input type="checkbox" id="check2">
+                                    <label for="check2">가맹점 정보를 사업자 등록정보와 동일하게 적용합니다.
+</label>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                    <table class="n-table">
+                        <caption>일감신규등록 : 가맹점명, 일감항목, 요청ID, 요청납기일시, 일감내용</caption>
+                        <colgroup>
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">가맹점명</th>
+                                <td colspan="3" class="n-input search">
+                                    <input type="text" id="search" class="search" placeholder="">
+                                </td>
+                                <th scope="col">등급</th>
+                                <td class="n-input">
+                                    <div class="selects">
+                                        <div class="custom-select">
+                                            <div class="current"><span>A</span></div>
+                                            <ul>
+                                                <li class="on"><span>문의</span></li>
+                                                <li><span>요청</span></li>
+                                                <li><span>수리</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">가맹점유형</th>
+                                <td class="n-input">
+                                    <div class="selects">
+                                        <div class="custom-select">
+                                            <div class="current"><span>본점</span></div>
+                                            <ul>
+                                                <li class="on"><span>문의</span></li>
+                                                <li><span>요청</span></li>
+                                                <li><span>수리</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th scope="col">전화번호</th>
+                                <td class="n-input">
+                                    <input type="text">
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan="2">주소</th>
+                                <td class="n-input addressView bb0" colspan="5">
+                                    <button class="n-button blue">우편번호</button>
+                                    <div class="address_detail">
+                                        <p>(12345) 서울특별시 성동구 성수일로 8길 59</p>
+                                        <p>서울특별시 성동구 성수이동 402-13</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="n-input" colspan="5">
+                                    <input type="text" id="search" class="search" placeholder="상세주소 를 입력하세요.">
+                                    <label for="search" class="search"></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="n-tables">
+                   <div class="n-heading">
+                       <h3 class="n-h3">대표자 정보</h3>
+                   </div>
+                    <table class="n-table">
+                        <caption>대표자정보 : 대표자명, 핸드폰번호</caption>
+                        <colgroup>
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">대표자명</th>
+                                <td class="n-input">
+                                    <input type="text" id="search" class="search" placeholder="">
+                                </td>
+                                <th scope="col">생년월일</th>
+                                <td class="n-input">
+                                    <div class="date">
+                                        <label for="date12"></label>
+                                        <input type="text" id="date12" class="inputDate" data-field="date" readonly>
+                                    </div>
+                                </td>
+                                <th scope="col">휴대폰번호</th>
+                                <td class="n-input">
+                                    <input type="text" placeholder="-없이 숫자만 입력">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">담당업무</th>
+                                <td colspan="5" class="n-input">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">이메일</th>
+                                <td colspan="5" class="n-input email">
+                                    <input type="text">
+                                    <label for=""></label>
+                                    <input type="text">
+                                    <div class="custom-select">
+                                        <span class="current">직접입력</span>
+                                        <ul>
+                                            <li><span>직접입력</span></li>
+                                            <li><span>naver.com</span></li>
+                                            <li><span>gmail.com</span></li>
+                                            <li><span>nate.com</span></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="n-tables">
+                   <div class="n-heading">
+                       <h3 class="n-h3">담당자 정보</h3>
+                       <div class="n-heading__adds">
+                           <div class="n-heading__add">
+                                <div class="n-check">
+                                   <input type="checkbox" id="check3">
+                                    <label for="check3">담당자 정보를 대표자 정보와 동일하게 적용합니다.</label>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                    <table class="n-table">
+                        <caption>일감신규등록 : 가맹점명, 일감항목, 요청ID, 요청납기일시, 일감내용</caption>
+                        <colgroup>
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                            <col style="width: 13.3333%">
+                            <col style="width: 20%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">담당자명</th>
+                                <td class="n-input search">
+                                    <input type="text" id="search" class="search" placeholder="">
+                                </td>
+                                <th scope="col">생년월일</th>
+                                <td class="n-input">
+                                    <div class="date">
+                                        <label for="date"></label>
+                                        <input type="text" id="date" class="inputDate" data-field="date" readonly>
+                                    </div>
+                                </td>
+                                <th scope="col">전화번호</th>
+                                <td class="n-input">
+                                    <input type="text" placeholder="-없이 숫자만 입력">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">담당업무</th>
+                                <td colspan="5" class="n-input">
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">이메일</th>
+                                <td colspan="5" class="n-input email">
+                                    <input type="text">
+                                    <label for=""></label>
+                                    <input type="text">
+                                    <div class="custom-select">
+                                        <span class="current">직접입력</span>
+                                        <ul>
+                                            <li><span>직접입력</span></li>
+                                            <li><span>naver.com</span></li>
+                                            <li><span>gmail.com</span></li>
+                                            <li><span>nate.com</span></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+			<div class="footer">
+				<div class="btns">
+					<button class="n-button x">취소</button>
+					<button class="n-button o">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div id="dtBox"></div>
+</div>
+</body>
+</html>

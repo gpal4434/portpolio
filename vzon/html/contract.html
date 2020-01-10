@@ -1,0 +1,2080 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">나의 일감관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">영업관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li class="on">
+					<a href="#">고객지원</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">설치/AS/반품</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">재고관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">청구관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">공통</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">기준정보관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div class="info">
+				<div class="userInfo">
+					<div class="infoP">
+						<p>
+							김영업 님
+						</p>
+						<p>
+							영업 관리팀
+						</p>
+					</div>
+					<div class="userMenu">
+						<div class="pic">
+						</div>
+						<button class="menu-toggle"></button>
+					</div>
+					<div class="sub">
+						<ul>
+							<li><a href="#">마이페이지</a></li>
+							<li><a href="#">비밀번호 변경</a></li>
+							<li><a href="#">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="btns">
+					<li class="search"><a href="#"></a>
+					<div class="headerSearch">
+						<div class="radioBox">
+							<div>
+								<input type="radio" id="radio1" name="radio" checked>
+								<label for="radio1">가맹점</label>
+							</div>
+							<div>
+								<input type="radio" id="radio2" name="radio">
+								<label for="radio2">제조사</label>
+							</div>
+							<div>
+								<input type="radio" id="radio3" name="radio">
+								<label for="radio3">성명</label>
+							</div>
+						</div>
+						<div class="searchBox">
+							<input type="text">
+							<button class="del">지우기</button>
+							<button class="search">검색</button>
+						</div>
+						<div class="listBox n-tables tb">
+							<table class="n-table2">
+							<caption>가맹점명, 지역, 사업자번호</caption>
+							<colgroup>
+							<col style="width: 50%">
+							<col style="width: 30%">
+							<col style="width: 20%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<td>
+									강남 미니 족발 성수동 왕 족발
+								</td>
+								<td>
+									서울/양천구
+								</td>
+								<td>
+									654-56-8975
+								</td>
+							</tr>
+							<tr>
+								<td>
+									을지로 족발
+								</td>
+								<td>
+									전남/중구
+								</td>
+								<td>
+									512-12-8523
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					</li>
+					<li class="bell">
+					<a href="#"></a>
+					<div class="cnt">
+						<button>99+</button>
+					</div>
+					<div class="notice">
+						<ul>
+							<li class="notice_today clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 승인되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								02-10 15:30
+							</div>
+							</li>
+							<!--
+						                (D) notice_today : 오늘
+						                      on : 클릭했을 때,,필요없으면 안쓰셔도 됨
+						            -->
+							<li class="notice_today clear on">
+							<div class="notice_txt">
+								<span class="subject">일감</span>
+								<a href="#">협업자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								07:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">고객요청</span>
+								<a href="#">담당자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 16:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 반려되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 11:00
+							</div>
+							</li>
+							<li class="more">
+							<span>알림 더보기</span>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="set"><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="n-content">
+			<div class="n-cti">
+				<div class="tit_box">
+					<!-- (D) 위치변경 -->
+					<div class="tit">
+						센트릭스
+					</div>
+					<!-- (D) 아래버튼 클릭시 cti-form이 show/hide -->
+					<button class="arrow_btn"></button>
+				</div>
+				<div class="cti_form">
+					<div class="callLogin" style="display: block">
+						<div class="cont">
+							<div class="article">
+								<div class="n-radio">
+									<div>
+										<input type="radio" id="skt" name="tel" class="radio">
+										<label for="skt">SKT</label>
+									</div>
+									<div>
+										<input type="radio" id="kt" name="tel" class="radio">
+										<label for="kt">KT</label>
+									</div>
+									<div>
+										<input type="radio" id="lg" name="tel" class="radio">
+										<label for="lg">LGU+</label>
+									</div>
+								</div>
+								<div class="n-check">
+									<input type="checkbox" id="check1">
+									<label for="check1">정보저장</label>
+								</div>
+								<div class="loginBox">
+									<input type="text" placeholder="전화번호">
+									<input type="password" placeholder="비밀번호">
+									<button class="login">상담시작</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="n-mdi">
+				<ul>
+					<li class="home"><button>홈으로이동</button></li>
+					<li class="add"></li>
+					<li class="on">
+					<div class="mdiBox">
+						<a href="#">고객상담</a>
+						<button class="mdi-close"></button>
+					</div>
+          <div class="n-aligner tb">
+          	<div id="contract">
+          		<!-- (D) 추가 -->
+          		<div class="n-heading">
+          			<h1 class="n-h1">계약 작성</h1>
+          		</div>
+          		<div class="n-align left">
+          			<div class="n-searchs">
+          				<div class="n-search">
+          					<div class="keybox">
+          						<input type="text" id="search" class="keyword" placeholder="가맹점명, 사업자번호, 대표자명">
+          						<!-- (D) input이 focus되면 label은 안보이고 button이 보임 -->
+          						<label for="search" class="search"></label>
+          						<button class="search-close"></button>
+          					</div>
+          					<div class="n-form">
+          						<span class="title">상태</span>
+          						<div class="n-form__select">
+          							<div class="custom-select">
+          								<div class="current">
+          									<span>전체</span>
+          								</div>
+          								<ul>
+          									<li class="on"><span>전체</span></li>
+          									<li><span>계좌CMS</span></li>
+          									<li><span>계좌CMS</span></li>
+          								</ul>
+          							</div>
+          						</div>
+          					</div>
+          					<div class="searchBtn">
+          						<button class="reset">새로고침</button>
+          						<button class="search detail">검색</button>
+          						<button class="detailBtn"></button>
+          					</div>
+          				</div>
+          				<div class="n-searchDetailBox">
+          					<div class="n-forms">
+          						<div class="dates">
+          							<div class="date">
+          								<label for="date1"></label>
+          								<input type="text" id="date1" class="inputDate" data-field="date" readonly>
+          							</div>
+          							<div class="date">
+          								<label for="date2"></label>
+          								<input type="text" id="date2" class="inputDate" data-field="date" readonly>
+          							</div>
+          							<div class="btns">
+          								<button class="on">전체</button>
+          								<button>1개월</button>
+          								<button>3개월</button>
+          							</div>
+          						</div>
+          					</div>
+          				</div>
+          			</div>
+          			<div class="n-section">
+          				<div class="n-heading">
+          					<h2 class="n-h2">등록 현황</h2>
+          					<div class="n-heading__adds">
+          						<div class="n-heading__add">
+          							<button class="n-button n-button--add white">계약 등록</button>
+          						</div>
+          					</div>
+          				</div>
+          				<div class="n-tables th">
+          					<table class="n-table2">
+          					<caption>등록현황 : 상태, 등록일자, 계약일자, 가맹점명, 계약유형</caption>
+          					<colgroup>
+          					<col style="width: 6%">
+          					<col style="width: 10%">
+          					<col style="width: 15%">
+          					<col style="width: 15%">
+          					<col style="width: 39%">
+          					<col style="width: 15%">
+          					</colgroup>
+          					<thead>
+          					<tr>
+          						<th scope="row" colspan="2">
+          							상태<button class="trigger on"></button>
+          						</th>
+          						<th scope="row">
+          							등록일자<button class="trigger on"></button>
+          						</th>
+          						<th scope="row">
+          							계약일자<button class="trigger"></button>
+          						</th>
+          						<th scope="row">
+          							가맹점명<button class="trigger"></button>
+          						</th>
+          						<th scope="row">
+          							계약유형<button class="trigger"></button>
+          						</th>
+          					</tr>
+          					</thead>
+          					</table>
+          				</div>
+          				<div class="n-tables tb search2">
+          					<table class="n-table2">
+          					<caption>등록현황 : 상태, 등록일자, 계약일자, 가맹점명, 계약유형</caption>
+          					<colgroup>
+          					<col style="width: 6%">
+          					<col style="width: 10%">
+          					<col style="width: 15%">
+          					<col style="width: 15%">
+          					<col style="width: 39%">
+          					<col style="width: 15%">
+          					</colgroup>
+          					<tbody>
+          					<tr class="on">
+          						<td>
+          							<div class="status red">
+          								긴급
+          							</div>
+          						</td>
+          						<td>
+          							<div class="status">
+          								등록
+          							</div>
+          						</td>
+          						<td>
+          							2018-09-30
+          						</td>
+          						<td>
+          							2018-09-31
+          						</td>
+          						<td class="ellip em">
+          							서브웨이 성수점
+          						</td>
+          						<td>
+          							신규계약(판매)
+          						</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">해지</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>멘야코노하 제주도서귀포점</td>
+          						<td>재계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>탄탄면공방 목포점</td>
+          						<td>계약해지</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>모모야 여주점</td>
+          						<td>재계약</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>비사벌 전주 콩나물 국밥 진주점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">완료</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>노량진누룽지통닭구이 노량진2호점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>웨일즈커피 메가박스군자점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>쏘마이 미국분식집 대학로점</td>
+          						<td>재계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>빵의정석 도봉1호점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>마켓온오프 미아사거리점</td>
+          						<td>유지보수</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>할머니의 레시피 회룡역점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>여음 가능점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>체다앤올리 의정부점</td>
+          						<td>재계약</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">완료</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>BELOW SEONGSOO</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">완료</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>빅토리아베이커리 대구동성로점</td>
+          						<td>신규계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>블루보틀 삼청 카페</td>
+          						<td>재계약</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">작성중</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>다로베 철산점</td>
+          						<td>계약만료</td>
+          					</tr>
+          					<tr>
+          						<td></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>카페 차 가산디지털점</td>
+          						<td>계약해지</td>
+          					</tr>
+          					<tr>
+          						<td><div class="status red">긴급</div></td>
+          						<td><div class="status">신규</div></td>
+          						<td>2018-09-30</td>
+          						<td>2018-09-31</td>
+          						<td>성수동 호호식당</td>
+          						<td>재계약</td>
+          					</tr>
+          					</tbody>
+          					</table>
+          				</div>
+          				<div class="n-pagings">
+          					<div class="n-paging">
+          						<button class="n-paging__btn"></button>
+          						<button class="pagingLeft"></button>
+          						<ul class="n-paging__list">
+          							<li class="on">1</li>
+          							<li>2</li>
+          							<li>3</li>
+          							<li>4</li>
+          							<li>5</li>
+          							<li>6</li>
+          							<li>7</li>
+          							<li>8</li>
+          							<li>9</li>
+          							<li>10</li>
+          						</ul>
+          						<button class="pagingRight"></button>
+          						<button class="n-paging__btn"></button>
+          					</div>
+          				</div>
+          			</div>
+          		</div>
+          		<div class="n-align right">
+          			<div class="open">
+          				<div class="n-heading">
+          					<h2 class="n-h2">상세내역<span class="detail">SOR190702-010318</span></h2>
+          					<div class="n-heading__adds">
+          						<div class="n-heading__add">
+          							<div class="toggleBox">
+          								<span class="switchTxt">상품진행상황</span>
+          								<label for="toggle" class="switch">
+          								<input type="checkbox" id="toggle">
+          								<span class="slider"></span>
+          								</label>
+          							</div>
+          							<!-- <div class="selectBox">
+                                        <div class="custom-select">
+                                            <div class="current"><span>선택</span></div>
+                                            <ul>
+                                                <li class="on"><span>신규계약</span></li>
+                                                <li><span>재계약</span></li>
+                                                <li><span>유지보수</span></li>
+                                            </ul>
+                                        </div>
+                                      </div>
+                                      <div class="n-buttons">
+                                        <span class="disabledBtn">버튼</span>
+                                        <button class="n-button blue">결재상신</button>
+                                        <button class="n-button modify">수정</button>
+                                        <button class="n-button trash">삭제</button>
+                                        <button class="n-button blue">결재</button>
+                                        <button class="n-button blue">반려</button>
+                                      </div> -->
+          						</div>
+          					</div>
+          				</div>
+          				<div>
+          					<div class="optionLine clear">
+          						<div class="left">
+          							<h2>서브웨이 성수점</h2>
+          							<div class="status">
+          								작업중
+          							</div>
+          						</div>
+          						<div class="right clear">
+          							<div class="inblock">
+          								<div class="toggleBox clear">
+          									<span class="switchTxt">서명필요여부</span>
+          									<label for="toggle2" class="switch">
+          									<input type="checkbox" id="toggle2">
+          									<span class="slider"></span>
+          									</label>
+          								</div>
+          								<div class="manager clear">
+          									<span>영업담당자 :</span>
+          									<span>이해일</span>
+          									<button class="n-button modify notext"></button>
+          								</div>
+          							</div>
+          						</div>
+          					</div>
+          				</div>
+          				<div class="n-section">
+          					<div class="process">
+          						<div class="process1">
+          							<ul>
+          								<li class="completed">
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									선출하승인
+          								</p>
+          								</li>
+          								<li class="completed">
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									출하요청
+          								</p>
+          								</li>
+          								<li>
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									출고
+          								</p>
+          								</li>
+          								<li>
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									패킹
+          								</p>
+          								</li>
+          								<li>
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									출하
+          								</p>
+          								</li>
+          								<li>
+          								<div class="checkImg">
+          								</div>
+          								<p>
+          									설치
+          								</p>
+          								</li>
+          							</ul>
+          						</div>
+          						<div class="process2">
+          							<div class="process2_table">
+          								<!-- (D) 완료된 마지막 li엔 last 클래스가 있어야 합니다. 감사합니다 ~ -->
+          								<ul>
+          									<li class="completed"><span>계약설계</span>
+          									<div class="bar">
+          									</div>
+          									</li>
+          									<li class="completed last"><span>자료입력</span></li>
+          									<li class="current"><span>청구정보</span></li>
+          									<li class=""><span>증빙첨부</span></li>
+          									<li><span>확인</span></li>
+          								</ul>
+          							</div>
+          						</div>
+          					</div>
+          				</div>
+          				<!-- 계약 설계 -->
+          				<div class="n-section" style="display: none">
+          					<div class="n-tables">
+          						<table class="n-table">
+          						<colgroup>
+          						<col style="width: 13.3333%">
+          						<col style="width: 20%">
+          						<col style="width: 13.3333%">
+          						<col style="width: 20%">
+          						<col style="width: 13.3333%">
+          						<col style="width: 20%">
+          						</colgroup>
+          						<tbody>
+          						<tr>
+          							<th scope="row">
+          								가맹점명
+          							</th>
+          							<td colspan="3" class="em">
+          								하늘소 고강점
+          							</td>
+          							<th scope="row">
+          								밴사
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">밴사A</span>
+          									<ul>
+          										<li class="on">재계약</li>
+          									</ul>
+          								</div>
+          							</td>
+          						</tr>
+          						<!-- 신규계약 -->
+          						<tr>
+          							<th scope="row">
+          								계약유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">신규계약</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<th scope="row">
+          								신규계약유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">임대</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<th scope="row">
+          								임대유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">무상임대</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          						</tr>
+          						<tr>
+          							<th scope="row">
+          								계약시작월
+          							</th>
+          							<td class="n-input">
+          								<div class="dates">
+          									<div class="date">
+          										<span class="inputDate">2018-10</span>
+          										<label for=""></label>
+          									</div>
+          								</div>
+          							</td>
+          							<th scope="row">
+          								계약기간
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">12개월</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<td>
+          							</td>
+          							<td>
+          							</td>
+          							<td>
+          							</td>
+          						</tr>
+          						<!-- //신규계약 -->
+          						<!-- 신규계약 외 -->
+          						<tr>
+          							<th scope="row">
+          								계약유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">재계약</span>
+          									<ul>
+          										<li class="on"><span>신규계약</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<td colspan="3">
+          								<button class="n-button">기존계약선택</button>
+          							</td>
+          							<td>
+          							</td>
+          						</tr>
+          						<tr>
+          							<th scope="row">
+          								신규계약유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">임대</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<th scope="row">
+          								임대유형
+          							</th>
+          							<td class="n-input">
+          								<div class="custom-select">
+          									<span class="current">무상임대</span>
+          									<ul>
+          										<li class="on"><span>전체</span></li>
+          									</ul>
+          								</div>
+          							</td>
+          							<td>
+          							</td>
+          							<td>
+          							</td>
+          						</tr>
+          						<!-- //신규계약 -->
+          						<tr>
+          							<th scope="row">
+          								특약사항<br>
+          								(0/200)
+          							</th>
+          							<td class="n-input" colspan="5">
+          								<textarea name="" id="" cols="30" rows="10">특약사항입니다.</textarea>
+          							</td>
+          						</tr>
+          						</tbody>
+          						</table>
+          					</div>
+          				</div>
+          				<!-- //계약 설계 -->
+          				<!-- 자료 입력 -->
+          				<div class="n-section">
+          					<div class="multiSelect">
+          						<div class="n-tables">
+          							<div class="n-tabs">
+          								<ul>
+          									<li class="n-tab on">물품/용역 입력</li>
+          									<li class="n-tab">서비스 용역</li>
+          								</ul>
+          							</div>
+          							<div class="n-heading">
+          								<div class="left">
+          									<h2 class="n-h3">상품 목록</h2>
+          									<div class="n-forms">
+          										<div class="n-form">
+          											<div class="n-form__select">
+          												<div class="custom-select">
+          													<div class="current">
+          														<span>카테고리</span>
+          													</div>
+          													<ul>
+          														<li class="on"><span>카테고리카카카테테테고고고리리리릴리리야릴리릴릴리리람보</span></li>
+          														<li><span>계좌CMS</span></li>
+          														<li><span>계좌CMS</span></li>
+          													</ul>
+          												</div>
+          											</div>
+          										</div>
+          										<div class="n-form">
+          											<div class="n-form__select">
+          												<div class="custom-select">
+          													<div class="current">
+          														<span>카테고리</span>
+          													</div>
+          													<ul>
+          														<li class="on"><span>카테고리</span></li>
+          														<li><span>계좌CMS</span></li>
+          														<li><span>계좌CMS</span></li>
+          													</ul>
+          												</div>
+          											</div>
+          										</div>
+          										<div class="n-form">
+          											<div class="n-form__select">
+          												<div class="custom-select">
+          													<div class="current">
+          														<span>POSA-1004A</span>
+          													</div>
+          													<ul>
+          														<li class="on"><span>전체</span></li>
+          														<li><span>계좌CMS</span></li>
+          														<li><span>계좌CMS</span></li>
+          													</ul>
+          												</div>
+          											</div>
+          										</div>
+          									</div>
+          								</div>
+          								<div class="n-heading__adds">
+          									<div class="n-heading__add">
+          										<button class="n-button n-button--add blue">추가</button>
+          									</div>
+          								</div>
+          							</div>
+          							<div class="n-tables tb inputData">
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<!-- (D) thead에 있는 arrow-toggle에 on이 되면 tbody가 display none됨 -->
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										상품명
+          									</th>
+          									<td colspan="5" class="blue">
+          										<div class="status orange">
+          											중고품
+          										</div>
+          										 POSA-1004F
+          										<div class="n-heading__adds">
+          											<div class="n-heading__add">
+          												<div class="n-buttons">
+          													<button class="n-button modify">수정</button>
+          													<button class="n-button trash">삭제</button>
+          													<button class="arrow-toggle td"></button>
+          												</div>
+          											</div>
+          										</div>
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										수량
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<th scope="row">
+          										공급가
+          									</th>
+          									<td>
+          										420,000
+          									</td>
+          									<th>
+          									</th>
+          									<td class="empty">
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										판매금액
+          									</th>
+          									<td>
+          										390,000
+          									</td>
+          									<th scope="row">
+          										할인율(%)
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<th scope="row">
+          										할인금액
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          								<!-- (D) 저장된 것은 completed 추가 -->
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<!-- (D) thead에 있는 arrow-toggle에 on이 되면 tbody가 display none됨 -->
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										상품명
+          									</th>
+          									<td colspan="5" class="blue">
+          										<div class="status green">
+          											신품
+          										</div>
+          										 POSA-1004F
+          										<div class="n-heading__adds">
+          											<div class="n-heading__add">
+          												<div class="n-buttons">
+          													<button class="n-button trash">삭제</button>
+          													<button class="n-button modify">저장</button>
+          													<button class="arrow-toggle td"></button>
+          												</div>
+          											</div>
+          										</div>
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										연수
+          									</th>
+          									<td>
+          										1년 4개월
+          									</td>
+          									<th scope="row">
+          										시리얼
+          									</th>
+          									<td>
+          										ASDF21231
+          									</td>
+          									<th scope="row">
+          										공급가
+          									</th>
+          									<td>
+          										390,000
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										판매금액
+          									</th>
+          									<td>
+          										390,000
+          									</td>
+          									<th scope="row">
+          										할인율(%)
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<th scope="row">
+          										할인금액
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          								<div class="completed">
+          									<table class="n-table">
+          									<colgroup>
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									</colgroup>
+          									<!-- (D) thead에 있는 arrow-toggle에 on이 되면 tbody가 display none됨 -->
+          									<tbody>
+          									<tr>
+          										<th scope="row">
+          											상품명
+          										</th>
+          										<td colspan="5" class="blue">
+          											<div class="status green">
+          												신품
+          											</div>
+          											 POSA-1004F
+          											<div class="n-heading__adds">
+          												<div class="n-heading__add">
+          													<div class="n-buttons">
+          														<button class="n-button modify">수정</button>
+          														<button class="arrow-toggle td"></button>
+          													</div>
+          												</div>
+          											</div>
+          										</td>
+          									</tr>
+          									<tr>
+          										<th scope="row">
+          											연수
+          										</th>
+          										<td>
+          											1년 4개월
+          										</td>
+          										<th scope="row">
+          											시리얼
+          										</th>
+          										<td>
+          											ASDF21231
+          										</td>
+          										<th scope="row">
+          											공급가
+          										</th>
+          										<td>
+          											390,000
+          										</td>
+          									</tr>
+          									<tr>
+          										<th scope="row">
+          											판매금액
+          										</th>
+          										<td>
+          											390,000
+          										</td>
+          										<th scope="row">
+          											할인율
+          										</th>
+          										<td class="n-input">
+          											<input type="text" disabled value="0.5%">
+          										</td>
+          										<th scope="row">
+          											할인금액
+          										</th>
+          										<td class="n-input">
+          											<input type="text" disabled="disabled" value="0">
+          										</td>
+          									</tr>
+          									</tbody>
+          									</table>
+          								</div>
+          							</div>
+          							<div class="n-tables">
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 20%">
+          								<col style="width: 30%">
+          								<col style="width: 20%">
+          								<col style="width: 30%">
+          								</colgroup>
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										총 공급가
+          									</th>
+          									<td colspan="3" class="red">
+          										360,000
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          							</div>
+          						</div>
+          					</div>
+          				</div>
+          				<!-- //자료 입력 -->
+          				<!-- 청구정보 (복잡주의) -->
+          				<div class="n-section" style="display: none">
+          					<div class="n-tableBox">
+          						<!-- (D) 아래 chargeInfo 클래스 꼭 넣어주세요 -->
+          						<div class="n-tables tb bb chargeInfo">
+          							<!-- 청구서발행 정보 -->
+          							<div class="n-section">
+          								<div class="n-heading">
+          									<div class="n-h2">
+          										청구서발행 정보
+          									</div>
+          								</div>
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										계산서 발행
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">미발행</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<td>
+          									</td>
+          									<td>
+          									</td>
+          									<td>
+          									</td>
+          									<td>
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										계산서 유형
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current"></span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										수취 이메일
+          									</th>
+          									<td colspan="3" class="n-input email">
+          										<input type="text">
+          										<label></label>
+          										<input type="text">
+          										<div class="custom-select">
+          											<span class="current">직접입력</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										청구서 발행
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">미발행</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										수취 이메일
+          									</th>
+          									<td colspan="3" class="n-input email">
+          										<input type="text">
+          										<label></label>
+          										<input type="text">
+          										<div class="custom-select">
+          											<span class="current">직접입력</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          							</div>
+          							<!-- 상품 지불 계획 -->
+          							<div class="n-section">
+          								<div class="n-heading">
+          									<div class="n-h2">
+          										상품 지불 계획
+          									</div>
+          								</div>
+          								<!-- 결제방식 : 일시불 - 현금/계좌이체, 신용카드, 할부금융사 -->
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										결제방식
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">일시불판매</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										결제수단
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">현금</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<!-- (D) 신용카드일때 밑에 <td></td> <td></td> 지우고 카드사가 들어감
+                                                            <th scope="row">카드사</th>
+                                                            <td class="n-input">
+                                                                <div class="custom-select">
+                                                                    <span class="current">BC카드</span>
+                                                                    <ul>
+                                                                        <li class="on"><span>미발행</span></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </td>
+                                                             -->
+          									<td>
+          									</td>
+          									<td>
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										공급금액
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<th scope="row">
+          										청구금액
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<th scope="row">
+          										결제기일
+          									</th>
+          									<td class="n-input">
+          										<div class="dates">
+          											<div class="date">
+          												<span class="inputDate"></span>
+          												<label for=""></label>
+          											</div>
+          										</div>
+          									</td>
+          								</tr>
+          								<!-- (D) 할부금융일때 -->
+          								<tr>
+          									<th scope="row">
+          										할부금융사
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">BC카드</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										상품명
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          								<!-- 결제방식 : 일시불/할부 -->
+          								<table class="n-table row">
+          								<colspan>
+          								<col style="width: 20%">
+          								<col style="width: 40%">
+          								<col style="width: 40%">
+          								</colspan>
+          								<tbody>
+          								<tr>
+          									<th scope="row" rowspan="2" class="rowspan">
+          										일시불
+          									</th>
+          									<th scope="row">
+          										결제수단
+          									</th>
+          									<th scope="row">
+          										청구금액
+          									</th>
+          								</tr>
+          								<tr>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">현금</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row" rowspan="2" class="rowspan">
+          										할부
+          									</th>
+          									<th scope="row">
+          										결제수단
+          									</th>
+          									<th scope="row">
+          										청구금액
+          									</th>
+          								</tr>
+          								<tr>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<span class="current">현금</span>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          								<!-- 결제방식 : 일시불/할부 (일시불) -->
+          								<div class="n-tables toggle">
+          									<div class="n-heading mb0 mt10">
+          										<div class="n-h3 bb">
+          											일시불
+          										</div>
+          										<!-- (D) 접힐 수 있어야 함 -->
+          										<div class="n-heading__adds">
+          											<div class="n-heading__add">
+          												<button class="arrow-toggle on"></button>
+          											</div>
+          										</div>
+          									</div>
+          									<table class="n-table">
+          									<colgroup>
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									</colgroup>
+          									<tbody>
+          									<tr>
+          										<th scope="row">
+          											결제수단
+          										</th>
+          										<td>
+          											현금
+          										</td>
+          										<th scope="row">
+          											결제기일
+          										</th>
+          										<td class="n-input">
+          											<div class="dates">
+          												<div class="date">
+          													<span class="inputDate"></span>
+          													<label for=""></label>
+          												</div>
+          											</div>
+          										</td>
+          										<th scope="row">
+          											청구금액
+          										</th>
+          										<td>
+          											450,000
+          										</td>
+          									</tr>
+          									</tbody>
+          									</table>
+          								</div>
+          								<!-- 결제방식 : 일시불/할부 (할부) -->
+          								<div class="n-tables">
+          									<div class="n-heading mb0">
+          										<div class="n-h3 bb">
+          											할부
+          										</div>
+          										<div class="n-heading__adds">
+          											<div class="n-heading__add">
+          												<button class="arrow-toggle"></button>
+          											</div>
+          										</div>
+          									</div>
+          									<table class="n-table">
+          									<colgroup>
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									<col style="width: 13.3333%">
+          									<col style="width: 20%">
+          									</colgroup>
+          									<tbody>
+          									<tr>
+          										<th scope="row">
+          											결제수단
+          										</th>
+          										<td class="n-input">
+          											<div class="custom-select">
+          												<span class="current">현금</span>
+          												<ul>
+          													<li class="on"><span>미발행</span></li>
+          												</ul>
+          											</div>
+          										</td>
+          										<th scope="row">
+          											청구금액
+          										</th>
+          										<td>
+          											350,000
+          										</td>
+          										<th scope="row" class="tight">
+          											청구횟수(월)
+          										</th>
+          										<td class="n-input">
+          											<input type="text">
+          										</td>
+          									</tr>
+          									<tr>
+          										<th scope="row" class="tight">
+          											정기청구액(월)
+          										</th>
+          										<td colspan="5">
+          											350,000
+          										</td>
+          									</tr>
+          									</tbody>
+          									</table>
+          								</div>
+          							</div>
+          							<!-- 서비스 지불 계획 -->
+          							<div class="n-section">
+          								<div class="n-heading">
+          									<div class="n-h2">
+          										서비스 지불 계획
+          									</div>
+          								</div>
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										결제수단
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<div class="current">
+          												<span>CMS/계좌이체</span>
+          											</div>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										총 청구금액
+          									</th>
+          									<td>
+          										240,000
+          									</td>
+          									<th scope="row" class="tight">
+          										서비스 월정액
+          									</th>
+          									<td>
+          										240.000
+          									</td>
+          								</tr>
+          								<tr>
+          									<th scope="row">
+          										청구횟수(월)
+          									</th>
+          									<td>
+          										24
+          									</td>
+          									<th scope="row" class="tight">
+          										정기 청구액(월)
+          									</th>
+          									<td class="n-input">
+          										<input type="text">
+          									</td>
+          									<td>
+          									</td>
+          									<td>
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          							</div>
+          							<!-- 약정설정 -->
+          							<div class="n-section">
+          								<div class="n-heading bb">
+          									<!-- (D) 아래 테이블이 있을 경우엔 bb 빼주세요 -->
+          									<div class="n-h2">
+          										약정설정
+          									</div>
+          									<div class="n-heading__adds">
+          										<div class="n-heading__add">
+          											<label class="switch">
+          											<input type="checkbox">
+          											<span class="slider"></span>
+          											</label>
+          										</div>
+          									</div>
+          								</div>
+          								<table class="n-table">
+          								<colgroup>
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								<col style="width: 13.3333%">
+          								<col style="width: 20%">
+          								</colgroup>
+          								<tbody>
+          								<tr>
+          									<th scope="row">
+          										약정건수
+          									</th>
+          									<td>
+          										300
+          									</td>
+          									<th scope="row">
+          										결제수단
+          									</th>
+          									<td class="n-input">
+          										<div class="custom-select">
+          											<div class="current">
+          												<span>현금</span>
+          											</div>
+          											<ul>
+          												<li class="on"><span>미발행</span></li>
+          											</ul>
+          										</div>
+          									</td>
+          									<th scope="row">
+          										약정청구횟수
+          									</th>
+          									<td>
+          										24
+          									</td>
+          								</tr>
+          								</tbody>
+          								</table>
+          							</div>
+          							<!-- 정기결제 정보 -->
+          							<div class="n-section">
+          								<div class="n-heading">
+          									<div class="n-h2">
+          										정기결제 정보
+          									</div>
+          									<div class="n-heading__adds">
+          										<div class="n-heading__add">
+          											<div class="dates">
+          												<span>청구시작월</span>
+          												<div class="date">
+          													<span class="inputDate">2018-08</span>
+          													<label for=""></label>
+          												</div>
+          											</div>
+          										</div>
+          									</div>
+          								</div>
+          								<div class="n-tables">
+          									<table class="n-table row">
+          									<colgroup>
+          									<col style="width: 10%">
+          									<col style="width: 38%">
+          									<col style="width: 10%">
+          									<col style="width: 10%">
+          									<col style="width: 10%">
+          									<col style="width: 22%">
+          									</colgroup>
+          									<tbody>
+          									<tr>
+          										<th rowspan="2" scope="row" class="rowspan">
+          											CMS
+          										</th>
+          										<th scope="row">
+          											결제계좌
+          										</th>
+          										<th scope="row" colspan="3">
+          											결제일자
+          										</th>
+          										<th scope="row">
+          											연체이자율
+          										</th>
+          									</tr>
+          									<tr>
+          										<td>
+          											<button class="n-button blue">등록</button>
+          											<span>3333-01-6044471 카카오뱅크(서브웨이)</span>
+          										</td>
+          										<td class="n-input">
+          											<div class="custom-select">
+          												<div class="current">
+          													<span>1차</span>
+          												</div>
+          												<ul>
+          													<li class="on"><span>미발행</span></li>
+          												</ul>
+          											</div>
+          										</td>
+          										<td class="n-input">
+          											<div class="itemView">
+          												<div class="custom-select">
+          													<div class="current">
+          														<span>2차</span>
+          													</div>
+          													<div>
+          														<ul style="max-height: 200px; overflow-y: auto">
+          															<li class="on"><span>1</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          															<li><span>2</span></li>
+          														</ul>
+          													</div>
+          												</div>
+          											</div>
+          										</td>
+          										<td class="n-input">
+          											<div class="custom-select">
+          												<div class="current">
+          													<span>3차</span>
+          												</div>
+          												<ul>
+          													<li class="on"><span>미발행</span></li>
+          												</ul>
+          											</div>
+          										</td>
+          										<td class="n-input">
+          											<label class="switch">
+          											<input type="checkbox" checked>
+          											<span class="slider"></span>
+          											</label>
+          											<input type="text">
+          											<span class="percent">%</span>
+          										</td>
+          									</tr>
+          									<tr>
+          										<th rowspan="2" scope="row" class="rowspan">
+          											계좌이체
+          										</th>
+          										<th scope="row">
+          											예금주
+          										</th>
+          										<th scope="row" colspan="3">
+          											결제일(매월)
+          										</th>
+          										<th scope="row">
+          											연체이자율
+          										</th>
+          									</tr>
+          									<tr>
+          										<td class="n-input">
+          											<input type="text">
+          										</td>
+          										<td class="n-input">
+          											<div class="custom-select">
+          												<div class="current">
+          													<span>선택</span>
+          												</div>
+          												<ul>
+          													<li class="on"><span>미발행</span></li>
+          												</ul>
+          											</div>
+          										</td>
+          										<td>
+          										</td>
+          										<td>
+          										</td>
+          										<td class="n-input">
+          											<label class="switch">
+          											<input type="checkbox">
+          											<span class="slider"></span>
+          											</label>
+          											<input type="text" disabled>
+          										</td>
+          									</tr>
+          									</tbody>
+          									</table>
+          								</div>
+          							</div>
+          						</div>
+          						<!-- 총 청구금액 -->
+          						<div class="n-tables">
+          							<table class="n-table">
+          							<colgroup>
+          							<col style="width: 20%">
+          							<col style="width: *">
+          							</colgroup>
+          							<tbody>
+          							<th>
+          								총 청구금액
+          							</th>
+          							<td class="red">
+          								360,000원
+          							</td>
+          							</tbody>
+          							</table>
+          						</div>
+          					</div>
+          				</div>
+          				<!-- //청구정보 -->
+          				<!-- 증빙첨부 -->
+          				<div class="n-sections" style="display: none">
+          					<div class="n-section">
+          						<div class="n-tables">
+          							<table class="n-table">
+          							<caption>상세내역 : 청구처</caption>
+          							<colgroup>
+          							<col style="width: 13.3333%">
+          							<col style="width: 20%">
+          							<col style="width: 13.3333%">
+          							<col style="width: 20%">
+          							<col style="width: 13.3333%">
+          							<col style="width: 20%">
+          							</colgroup>
+          							<tbody>
+          							<tr>
+          								<th scope="row">
+          									가맹점명
+          								</th>
+          								<td class="em" colspan="5">
+          									파리바게트 성수동지점 왕족발 체인
+          									<div class="n-heading__adds">
+          										<div class="n-heading__add">
+          											<div class="status">
+          												임시저장
+          											</div>
+          										</div>
+          									</div>
+          								</td>
+          							</tr>
+          							</tbody>
+          							</table>
+          						</div>
+          					</div>
+          					<div class="n-section">
+          						<div class="n-heading">
+          							<h3 class="n-h3 bb">첨부 문서 목록</h3>
+          							<!-- (D) 팝업에 없는 부분 -->
+          							<div class="n-heading__adds">
+          								<div class="n-heading__add">
+          									<div class="n-buttons">
+          										<div class="status">
+          											선출하 요청중
+          										</div>
+          										<button class="n-button">서명요청</button>
+          										<button class="n-button">서명재요청</button>
+          									</div>
+          								</div>
+          							</div>
+          							<!-- (D) 팝업에 없는 부분 -->
+          						</div>
+          						<div class="documentBox">
+          							<ul>
+          								<li class="none">
+          								<span class="documentType">계약서</span>
+          								<div class="documentField">
+          									<div class="document">
+          										<span>첨부된 파일이 없습니다.</span>
+          									</div>
+          									<!-- (D) 첨부파일이 없을 때 즉, li.none일때는 .hover가 보이면 안됨 -->
+          								</div>
+          								</li>
+          								<li class="none">
+          								<span class="documentType">약관동의서</span>
+          								<div class="documentField">
+          									<div class="document">
+          										<span>첨부된 파일이 없습니다.</span>
+          									</div>
+          									<!-- (D) 첨부파일이 없을 때 즉, li.none일때는 .hover가 보이면 안됨 -->
+          								</div>
+          								</li>
+          								<li>
+          								<span class="documentType">CMS동의서</span>
+          								<div class="documentField">
+          									<div class="document">
+          										<span>하늘소고강점_CMS동의서.pdf</span>
+          									</div>
+          									<div class="hover">
+          									</div>
+          								</div>
+          								</li>
+          							</ul>
+          						</div>
+          					</div>
+          				</div>
+          				<!-- //증빙첨부 -->
+          				<div class="centerBtn">
+          					<div class="n-buttons">
+          						<button class="n-button refuse">취소</button>
+          						<button class="n-button modify">수정</button>
+          						<button class="n-button save">저장</button>
+          						<button class="n-button complete">완료</button>
+          					</div>
+          				</div>
+          			</div>
+          		</div>
+          	</div>
+          </div>
+					</li>
+					<li>
+					<div class="mdiBox">
+						<a href="#">CMS출금요청</a>
+						<button class="mdi-close"></button>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="n-container">
+		<div class="header">
+			<a href="#" class="logo">브이존</a>
+			<button class="menu-toggler">메뉴여닫기</button>
+		</div>
+		<div class="depth2-wrap tb">
+			<div class="depth2">
+				<ul class="depth2-ul">
+					<li class="depth2-li"><span class="icon cart-arrow-down"></span><a href="#">구매</a></li>
+					<li class="depth2-li">
+					<span class="icon box"></span>
+					<a href="#">입고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li" class="on">
+					<span class="icon box-open"></span>
+					<a href="#">출고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li"><span class="icon archive"></span><a href="#">보유 재고</a></li>
+					<li class="depth2-li"><span class="icon medkit"></span><a href="#">수리 현황</a></li>
+					<li class="depth2-li"><span class="icon boxes"></span><a href="#">재고 현황</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<span>@ 2018 Pentaon. All right reserved</span>
+		</div>
+	</div>
+	<div id="dtBox">
+	</div>
+</div>
+<script>
+		$(document).ready(function(){
+      $('.n-cti .tit_box .arrow_btn').click(function(){
+        $('.n-cti').toggleClass('on');
+      });
+      $('.bell').click(function(){
+        $(this).toggleClass('on');
+      });
+		});
+	</script>
+</body>
+</html>

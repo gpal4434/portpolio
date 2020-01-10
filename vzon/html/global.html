@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">나의 일감관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">영업관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li class="on">
+					<a href="#">고객지원</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">설치/AS/반품</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">재고관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">청구관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">공통</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+					<li>
+					<a href="#">기준정보관리</a>
+					<div class="depth1Arrow">
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div class="info">
+				<div class="userInfo">
+					<div class="infoP">
+						<p>
+							김영업 님
+						</p>
+						<p>
+							영업 관리팀
+						</p>
+					</div>
+					<div class="userMenu">
+						<div class="pic">
+						</div>
+						<button class="menu-toggle"></button>
+					</div>
+					<div class="sub">
+						<ul>
+							<li><a href="#">마이페이지</a></li>
+							<li><a href="#">비밀번호 변경</a></li>
+							<li><a href="#">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+				<ul class="btns">
+					<li class="search"><a href="#"></a>
+					<div class="headerSearch">
+						<div class="radioBox">
+							<div>
+								<input type="radio" id="radio1" name="radio" checked>
+								<label for="radio1">가맹점</label>
+							</div>
+							<div>
+								<input type="radio" id="radio2" name="radio">
+								<label for="radio2">제조사</label>
+							</div>
+							<div>
+								<input type="radio" id="radio3" name="radio">
+								<label for="radio3">성명</label>
+							</div>
+						</div>
+						<div class="searchBox">
+							<input type="text">
+							<button class="del">지우기</button>
+							<button class="search">검색</button>
+						</div>
+						<div class="listBox n-tables tb">
+							<table class="n-table2">
+							<caption>가맹점명, 지역, 사업자번호</caption>
+							<colgroup>
+							<col style="width: 50%">
+							<col style="width: 30%">
+							<col style="width: 20%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<td>
+									강남 미니 족발 성수동 왕 족발
+								</td>
+								<td>
+									서울/양천구
+								</td>
+								<td>
+									654-56-8975
+								</td>
+							</tr>
+							<tr>
+								<td>
+									을지로 족발
+								</td>
+								<td>
+									전남/중구
+								</td>
+								<td>
+									512-12-8523
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								</td>
+								<td>
+								</td>
+								<td>
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+					</li>
+					<li class="bell">
+					<a href="#"></a>
+					<div class="cnt">
+						<button>99+</button>
+					</div>
+					<div class="notice">
+						<ul>
+							<li class="notice_today clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 승인되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								02-10 15:30
+							</div>
+							</li>
+							<!--
+						                (D) notice_today : 오늘
+						                      on : 클릭했을 때,,필요없으면 안쓰셔도 됨
+						            -->
+							<li class="notice_today clear on">
+							<div class="notice_txt">
+								<span class="subject">일감</span>
+								<a href="#">협업자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								07:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">고객요청</span>
+								<a href="#">담당자로 지정되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 16:00
+							</div>
+							</li>
+							<li class="clear">
+							<div class="notice_txt">
+								<span class="subject">계약해지</span>
+								<a href="#">결재가 반려되었습니다.</a>
+							</div>
+							<div class="notice_date">
+								01-21 11:00
+							</div>
+							</li>
+							<li class="more">
+							<span>알림 더보기</span>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="set"><a href="#"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="n-content">
+			<div class="n-cti">
+				<div class="tit_box">
+					<!-- (D) 위치변경 -->
+					<div class="tit">
+						센트릭스
+					</div>
+					<!-- (D) 아래버튼 클릭시 cti-form이 show/hide -->
+					<button class="arrow_btn"></button>
+				</div>
+				<div class="cti_form">
+					<div class="callLogin" style="display: block">
+						<div class="cont">
+							<div class="article">
+								<div class="n-radio">
+									<div>
+										<input type="radio" id="skt" name="tel" class="radio">
+										<label for="skt">SKT</label>
+									</div>
+									<div>
+										<input type="radio" id="kt" name="tel" class="radio">
+										<label for="kt">KT</label>
+									</div>
+									<div>
+										<input type="radio" id="lg" name="tel" class="radio">
+										<label for="lg">LGU+</label>
+									</div>
+								</div>
+								<div class="n-check">
+									<input type="checkbox" id="check1">
+									<label for="check1">정보저장</label>
+								</div>
+								<div class="loginBox">
+									<input type="text" placeholder="전화번호">
+									<input type="password" placeholder="비밀번호">
+									<button class="login">상담시작</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="n-mdi">
+				<ul>
+					<li class="home"><button>홈으로이동</button></li>
+					<li class="add"></li>
+					<li class="on">
+					<div class="mdiBox">
+						<a href="#">고객상담</a>
+						<button class="mdi-close"></button>
+					</div>
+					<!-- ★ -->
+					</li>
+					<li>
+					<div class="mdiBox">
+						<a href="#">CMS출금요청</a>
+						<button class="mdi-close"></button>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="n-container">
+		<div class="header">
+			<a href="#" class="logo">브이존</a>
+			<button class="menu-toggler">메뉴여닫기</button>
+		</div>
+		<div class="depth2-wrap tb">
+			<div class="depth2">
+				<ul class="depth2-ul">
+					<li class="depth2-li"><span class="icon cart-arrow-down"></span><a href="#">구매</a></li>
+					<li class="depth2-li">
+					<span class="icon box"></span>
+					<a href="#">입고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li" class="on">
+					<span class="icon box-open"></span>
+					<a href="#">출고</a>
+					<button class="menu-arrow"></button>
+					<div class="depth3">
+						<ul class="depth3-ul">
+							<li class="depth3-li on">
+							<a href="#">전체 출고현황</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">가맹점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">보유재고 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">지점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">자대리점 출고</a>
+							</li>
+							<li class="depth3-li">
+							<a href="#">수리/대체품 출고</a>
+							</li>
+						</ul>
+					</div>
+					</li>
+					<li class="depth2-li"><span class="icon archive"></span><a href="#">보유 재고</a></li>
+					<li class="depth2-li"><span class="icon medkit"></span><a href="#">수리 현황</a></li>
+					<li class="depth2-li"><span class="icon boxes"></span><a href="#">재고 현황</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<span>@ 2018 Pentaon. All right reserved</span>
+		</div>
+	</div>
+	<div id="dtBox">
+	</div>
+</div>
+<script>
+		$(document).ready(function(){
+      $('.n-cti .tit_box .arrow_btn').click(function(){
+        $('.n-cti').toggleClass('on');
+      });
+      $('.bell').click(function(){
+        $(this).toggleClass('on');
+      });
+		});
+	</script>
+</body>
+</html>

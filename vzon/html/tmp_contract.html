@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+    <style>
+        @font-face {
+          font-family: 'nanum';
+          font-style: normal;
+          font-weight: 400;
+          src: url(../fonts/NanumGothic-Regular.eot);
+          src: url(../fonts/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+               url(../fonts/NanumGothic-Regular.woff2) format('woff2'),
+               url(../fonts/NanumGothic-Regular.woff) format('woff'),
+               url(../fonts/NanumGothic-Regular.ttf) format('truetype');
+        }
+        @font-face {
+          font-family: 'nanum';
+          font-style: normal;
+          font-weight: 700;
+          src: url(../fonts/NanumGothic-Bold.eot);
+          src: url(../fonts/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+               url(../fonts/NanumGothic-Bold.woff2) format('woff2'),
+               url(../fonts/NanumGothic-Bold.woff) format('woff'),
+               url(../fonts/NanumGothic-Bold.ttf) format('truetype');
+        }
+
+        .editor{position:relative;width:764px;height:1086px;padding:15px;box-sizing:content-box;border:1px solid #cecece;}
+        .editor.modify{}
+        table{table-layout:fixed;border-collapse:collapse;border-spacing:0;}
+        .editor table tr{}
+        .editor table td{width:15px;height:15px;vertical-align:top;font-size:0;padding:0;}
+        .editor table td > span{font-size:0;display:inline-block;}
+        .editor table td > span:after{clear:both;content:"";display:block;}
+        .editor table td > span span{float:left;min-height:16px;display:block;}
+        .editor table td span > input[type="text"]{}
+        .editor.modify table td{outline:1px dashed #f00;}
+        .editor span[p-widget="selectbox"]{width:100%;height:100%;}
+        .editor span[p-widget="selectbox"] select{width:100%;height:100%;}
+        .editor span{word-break:break-all}
+        .editor select{background-color-color:#fff !important;}
+    </style>
+    <script>
+        $(function(){
+            //initialize();
+            $(".convert_btn").on("click", function(){
+                initialize();
+            });
+        });
+        function initialize(){
+            $(".editor").show().find('div[p-panel="grid"]').each(function(){
+          var _t = $(this).children();
+          var gridColumn = 0;
+          var gridRow = 0;
+
+          _t.find("tr").each(function(j){
+            gridRow++;
+            $(this).attr("p-tr-height", $(this).outerHeight()).find("td").each(function(){
+              $(this).attr("p-td-width",$(this).outerWidth()).find("> span").each(function(){
+                //
+                switch ($(this).attr("p-widget")) {
+                  case "selectbox":
+                      $(this).children().attr("p-text", $(this).find("option:selected").text());
+                    break;
+                  case "radioGroup":
+                      $(this).attr("p-text", $(this).find("input[type='radio']:checked").next().text());
+                    break;
+                }
+                //
+                $(this).attr("p-position",($(this).offset().left - $(this).closest(".editor").offset().left) + "," +  ($(this).offset().top - $(this).closest(".editor").offset().top))
+                  .attr("p-size",Math.ceil($(this).outerWidth()) + "," + $(this).outerHeight())
+                  .children().each(function(){
+                    $(this).attr("p-size", Math.ceil($(this).outerWidth()) + "," + $(this).outerHeight());
+                });
+              })
+              if(j==0)gridColumn += ($(this).attr("colspan") == undefined)?1:Number($(this).attr("colspan"));
+            });
+            if(gridRow == _t.find("tr").length){
+              _t.attr("p-position",(_t.offset().left - $(this).closest(".editor").offset().left) + "," +  (_t.offset().top - $(this).closest(".editor").offset().top))
+                .attr("p-size", _t.outerWidth() + "," + _t.outerHeight())
+                .attr("p-matrix", gridRow + "," + gridColumn);
+            }
+          });
+        });
+        //return $(".editor").html();
+        }
+    </script>
+</head>
+<body>
+<div class="n-modal">
+	<div class="n-pop template">
+		<div class="header">
+      <span>이용 계약서</span>
+      <div class="n-buttons">
+          <button class="close"></button>
+      </div>
+		</div>
+		<div class="content tb">
+        <div style="height: 100%;">
+          <div id="cms_template_wrap" class="cms_template_wrap">
+              <div id="html_pdf_editor" class="editor_wrap">
+                  <div p-page="1" p-ref="contract" class="editor">
+                      <div p-panel="grid">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText">
+                                          <span style="width:744px;margin-top:20px;text-align:center;font: bold 24px nanum;">늘푸른C&S 이용 계약서</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="margin-top:10px;">
+                                          <span style="width:764px;margin-bottom:20px;font: normal 12px nanum;letter-spacing:-1.2px;text-align:center;">늘푸른C&S(이하 "공급자"), 스타벅스 성수(이하 "가맹점") 양자는 아래의 공급내역의 공급, 설치 및 관리에 관하여<br />아래의 내용에 동의하는 서비스 이용 계약을 체결한다. </span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <!-- 고객 정보 -->
+                      <div p-panel="grid">
+                          <table style="margin-top:10px;">
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:10px 5px;">
+                                          <span style="width:764px;font: bold 14px nanum;">▣ 고객 정보</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div p-panel="grid">
+                          <table style="border-top:2px solid #bbb;">
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">상호명</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;" colspan="3">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="font: bold 11px nanum;">스타벅스 성수</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">사업자등록번호</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">123-45-12345</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">대표자명</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">백진욱</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999;letter-spacing:-0.5px;">생년월일(법인번호)</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">1978-08-02</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">대표자 휴대폰</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">010-1515-1515</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">업태</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">서비스</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">종목</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">식음료</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">사업장 전화</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">02-111-2222</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">사업장 주소</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;" colspan="5">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="font: bold 11px nanum;">서울특별시 성동구 성수일로 4길 25(성수동2가) 성수빌딩 1층 스타벅스 성수점</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <!-- 기본 계약 정보 및 결제 정보 -->
+                      <div p-panel="grid">
+                          <table style="margin-top:20px;">
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:10px 5px;">
+                                          <span style="width:764px;font: bold 14px nanum;">▣ 기본 계약 정보 및 결제 정보</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div p-panel="grid">
+                          <table style="border-top:2px solid #bbb;">
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">계약유형</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">신규계약</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">거래분류</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">유상임대</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">밴사</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">한주정보통신</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">계약시작월</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">2019-04</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">계약기간</span>
+                                      </span>
+                                  </td>
+
+                                  <!-- (D) 계약시작일이 도입됐을 땐, YYYY형식을 YY로 바꿔주세요.  -->
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">12개월(2019-04~2020-03)</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">약정기준업종</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;vertical-align:top;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">업종A</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">제품결제방법</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">CMS</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">서비스결제방법</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">CMS</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">청구일</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:157px;font: bold 11px nanum;">15일</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <!-- 제품 공급 내역 -->
+                      <div p-panel="grid">
+                          <table style="margin-top:20px;">
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:10px 5px;">
+                                          <span style="width:644px;font: bold 14px nanum;">▣ 공급 내역</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:20px 5px 0 5px;">
+                                          <span style="width:92px;font: normal 11px nanum;letter-spacing:-0.5px;">(단위 : 원, VAT별도)</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div p-panel="grid">
+                          <table style="border-top:1px solid #bbb;">
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                          <span style="width:60px;font: bold 11px nanum;color:#333;text-align:center">품목 유형</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:460px;font: bold 11px nanum;color:#333;text-align:center">상품명</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                          <span style="width:50px;font: bold 11px nanum;color:#333;text-align:center;">공급 조건</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                          <span style="width:144px;font: bold 11px nanum;color:#333;text-align:center">공급가</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">상품</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:460px;font: normal 11px nanum;color:#333;">[신품] POSA-12004BV 외 3개</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">임대</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">1,300,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">용역</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:460px;font: normal 11px nanum;color:#333;">설치비 외 1개</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">일시불</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">300,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">서비스</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:460px;font: normal 11px nanum;color:#333;">관리비</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">월정액</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">240,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                      <!-- 무상임대 -->
+                      <div p-panel="grid">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: normal 11px nanum;color:#cc3333;">* 상세 공급 내역 뒷장 참조</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">상품 및 용역</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">1,600,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">계약금(선급금)</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">0</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">할인금액</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">-1,600,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">지급 및 할인금액</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">1,600,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;margin-top:5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">공급 잔여금액</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">0</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">서비스 월 이용료</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">20,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 16px nanum;color:#cc3333;text-align:right">월 청구금액</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 16px nanum;color:#cc3333;text-align:right">20,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+
+
+                      <!-- 판매 -->
+                      <!-- <div p-panel="grid">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: normal 11px nanum;color:#cc3333;">* 상세 공급 내역 뒷장 참조</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">상품 및 용역</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">1,600,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">계약금(선급금)</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">0</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">일시불</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">600,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">할인금액</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">-400,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">지급 및 할인금액</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">400,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;margin-top:5px;">
+                                          <span style="width:110px;font: bold 11px nanum;color:#333;text-align:right">소계</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">1,200,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">할부 판매금(6개월)</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;margin-top:5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">100,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:110px;font: normal 11px nanum;color:#333;text-align:right">서비스 월 이용료</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:0 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 11px nanum;color:#333;text-align:right">20,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:520px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:110px;font: bold 16px nanum;color:#cc3333;text-align:right">월 청구금액</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-top:1px solid #bbb;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 16px nanum;color:#cc3333;text-align:right">120,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div> -->
+
+                      <!-- 유지보수 -->
+                      <!-- <div p-panel="grid">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:480px;font: bold 11px nanum;color:#333;text-align:right"></span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:150px;font: bold 16px nanum;color:#cc3333;text-align:right">유지보수 월 청구금액</span>
+                                      </span>
+                                  </td>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:100px;padding:0 5px;font: bold 16px nanum;color:#cc3333;text-align:right">120,000</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div> -->
+
+                      <!-- 특약 사항 -->
+                      <div p-panel="grid">
+                          <table style="margin-top:20px;">
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText" style="padding:10px 5px;">
+                                          <span style="width:764px;font: bold 14px nanum;">▣ 특약사항</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div p-panel="grid">
+                          <table style="border-top:2px solid #bbb;">
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">약정건수</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 0 2px 5px;">
+                                          <span style="width:657px;font: bold 11px nanum;">800(월간)</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:86px;font: normal 11px nanum;color:#999">특약사항</span>
+                                      </span>
+                                  </td>
+                                  <td style="border-bottom:1px solid #dee0e1;">
+                                      <span p-widget="simpleText" style="padding:2px 5px;">
+                                          <span style="width:657px;font: bold 11px nanum;">-POS/단말기 설치 이후(추가, 위치변경, 기타) 변동 사항에 따라 금액이 발생될 수 있습니다.</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+
+                      <div style="position: absolute; left: 15px; bottom: 30px;">
+                          <div p-panel="grid">
+                              <table style="width: 764px; margin-bottom: 30px;">
+                                  <tr>
+                                      <td colspan="3" style="padding: 3px;">
+                                          <span p-widget="simpleText">
+                                              <span style="font: 11px nanum; color: #aaa;">[물품반출동의서] 이용약관 {제6조 제7항}의 사유로 물품회수가 발생한 경우 “공급자”가 본인으로부터 별도의 동의 없이 임의로 잠금 장치를 풀어 물품을 회수함에 동의하고 그에 관하여 민,형사상 어떠한 이의도 제기하지 않을 것이며, 제3자에 대한 반출지시에 갈음하여도 이의 없음을 동의합니다.</span>
+                                          </span>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td style="padding:10px 5px 0 5px">
+
+                                          <span p-widget="simpleImage" style="padding-top: 2px;">
+                                              <img src="../images_web/tmp/tmp_checkbox2.png" style="float: left; margin-right: 5px;">
+                                          </span>
+
+                                          <span p-widget="simpleText" style="padding-top: 2px;">
+                                              <span style="font:normal normal 12px \'nanum\';color: #2a2a2a; font-weight: bold">동의함</span>
+                                          </span>
+
+                                          <span p-widget="simpleImage" style="padding-top: 2px; margin-left: 20px;">
+                                              <img src="../images_web/tmp/tmp_checkbox1.png" width="15" height="15" style="float: left; margin-right: 5px">
+                                          </span>
+
+                                          <span p-widget="simpleText" style="padding-top: 2px;">
+                                              <span style="font:normal normal 12px \'nanum\';color: #aaa">동의안함</span>
+                                          </span>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="3" style="padding: 10px 5px;">
+                                          <span p-widget="simpleText">
+                                              <span style="font: 11px nanum; color: #cc3333;">본인은 위 기재 사항을 사실과 다름없이 기재하였고 “갑”의 영업자로부터 계약서 후면 11조(손해보상)을 포함하여 본 계약 내용에 대하여 충분한 설명을 듣고 잘 이해하였으며 본 약정서의 사본을 확실히 수령하였으므로 본 약정내용을 성실히 이행할 것을 확약합니다.</span>
+                                          </span>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td colspan="2"><span p-widget="simpleText" style="min-width: 60px; padding-left: 5px;">
+                                          <span style="margin-bottom:3px;font: bold 14px nanum;">계약일자</span>
+                                          </span>
+                                              <span p-widget="simpleText" style="min-width: 110px; min-height: 21px; margin-left: 2px;">
+                                              <span class="contract_date" style="font: 400 14px nanum;">2018-05-20</span>
+                                          </span>
+                                      </td>
+                                      <td>
+                                          <span p-widget="simpleText">
+                                              <span style="font: bold 14px nanum; text-align: left; border-bottom: 1px solid #aaa;">대표자 :</span></span>
+                                          <span p-widget="simpleText" style="border-bottom: 1px solid #aaa;">
+                                              <span contenteditable="false" class="contract_name" style="font: 14px nanum; text-align: left; width: 86px; padding: 0px 10px; cursor: pointer;">김대호</span>
+                                          </span>
+                                          <span p-widget="simpleText" style="border-bottom: 1px solid #aaa;">
+                                              <span class="contract_sign" style="font: bold 14px nanum; text-align: left; min-width: 30px; padding: 0 30px; cursor: pointer;">(서명)</span>
+                                          </span>
+                                      </td>
+                                  </tr>
+                              </table>
+                          </div>
+                          <div p-panel="grid">
+                              <table style="position: relative; width: 764px; margin-top: 20px; border-top: 1px solid #aaa;">
+                                  <tr>
+                                      <td>
+                                        <span p-widget="simpleImage" style="margin-top: 5px;">
+                                            <img p-controller="image" src="../../images/bg05_logo.png" height="30" alt="" class="mCS_img_loaded">
+                                        </span>
+                                            <span p-widget="simpleImage" style="position: absolute; top: -5px; right: 0px; z-index: 1;">
+                                                <img p-controller="image" src="http://tapp.vzon.co.kr/api/file/dd752fde837944baa00ef2682ca3e9cd/image" width="45" alt="" class="mCS_img_loaded">
+                                            </span>
+                                            <span p-widget="simpleText" style="float: right; padding: 10px 5px 0px 0px; position: relative; z-index: 2;">
+                                                <span style="width: 30px; font: 14px nanum; text-align: left;">(인)</span>
+                                            </span>
+                                            <span p-widget="simpleText" style="float: right; padding-top: 5px; position: relative; z-index: 2;">
+                                                <span style="margin-right: 20px; font: bold 18px nanum;">김동근 대표이사</span>
+                                            </span>
+                                            <span p-widget="simpleText" style="float: right; padding: 8px 15px 0px 0px;">
+                                                <span style="font: 14px nanum; text-align: left;">밸모어주식회사(12-345-7890)</span>
+                                            </span>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span p-widget="simpleText" style="float: left;">
+                                          <span style="width:250px;font: 13px nanum; text-align: left;">영업자 : 이해일(010-2578-7896)</span>
+                                      </span>
+                                      <span p-widget="simpleText" style="float: right;margin-top:-3px;">
+                                          <span style="font: 9px nanum; text-align: left;">Tel. 1577-5422  / 전라북도 완주군 안전로 107-9 늘푸른빌딩 4층</span>
+                                      </span>
+                                    </td>
+                                  </tr>
+                              </table>
+                          </div>
+                      </div>
+                      <div p-panel="grid" class="sign">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="signInput" class="signature">
+                                      <span p-controller="canvas"></span>
+                                      <span p-controller="canvas"></span>
+                                      <img style="display: none; position: absolute; left: 0px; top: 0px;" class="mCS_img_loaded"></span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                  </div>
+                  <div p-page="2" p-ref="contract" class="editor">
+                      <div p-panel="grid">
+                          <table>
+                              <tr>
+                                  <td>
+                                      <span p-widget="simpleText">
+                                          <span style="width:744px;margin:20px 0;text-align:center;font: bold 24px nanum;">늘푸른C&S 이용 계약서</span>
+                                      </span>
+                                  </td>
+                              </tr>
+                          </table>
+                      </div>
+                    <!-- 상품 -->
+                    <div p-panel="grid">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span p-widget="simpleText" style="padding:10px 5px;">
+                                        <span style="width:744px;font: bold 14px nanum;">▣ 공급 상세내역 : 상품</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div p-panel="grid">
+                        <table style="border-top:1px solid #bbb;">
+                            <tr>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:60px;font: bold 11px nanum;color:#333;text-align:center">품목 유형</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                      <span style="width:460px;font: bold 11px nanum;color:#333;">상품명</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:50px;font: bold 11px nanum;color:#333;text-align:center;">수량</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:144px;font: bold 11px nanum;color:#333;text-align:center;">공급가</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">상품</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">[신품] POSA-12004BV</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">1</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">150,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">상품</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">[중고] A11 영수프린터</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">2</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">200,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">상품</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">[신품] 마우스</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">2</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">10,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">상품</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">[신품] DK9930</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">1</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">10,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:60px;font:bold 11px nanum;color:#333;text-align:center;">소계</span>
+                                </span>
+                              </td>
+                              <td colspan="3">
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:674px;font:bold 11px nanum;color:#333;text-align:right;">370,000</span>
+                                </span>
+                              </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- 용역 -->
+                    <div p-panel="grid">
+                        <table style="margin-top:20px;">
+                            <tr>
+                                <td>
+                                    <span p-widget="simpleText" style="padding:10px 5px;">
+                                        <span style="width:744px;font: bold 14px nanum;">▣ 공급 상세내역 : 용역</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div p-panel="grid">
+                        <table style="border-top:1px solid #bbb;">
+                            <tr>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:60px;font: bold 11px nanum;color:#333;text-align:center">품목 유형</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                      <span style="width:460px;font: bold 11px nanum;color:#333;">상품명</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:50px;font: bold 11px nanum;color:#333;text-align:center;">수량</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:144px;font: bold 11px nanum;color:#333;text-align:center;">공급가</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">용역</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">설치비</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">1</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">300,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:70px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">용역</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">키오스크 세팅비</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">1</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">150,000</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:60px;font:bold 11px nanum;color:#333;text-align:center;">소계</span>
+                                </span>
+                              </td>
+                              <td colspan="3">
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:674px;font:bold 11px nanum;color:#333;text-align:right;">370,000</span>
+                                </span>
+                              </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- 서비스 -->
+                    <div p-panel="grid">
+                        <table style="margin-top:20px;">
+                            <tr>
+                                <td>
+                                    <span p-widget="simpleText" style="padding:10px 5px;">
+                                        <span style="width:744px;font: bold 14px nanum;">▣ 공급 상세내역 : 서비스</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div p-panel="grid">
+                        <table style="border-top:1px solid #bbb;">
+                            <tr>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:60px;font: bold 11px nanum;color:#333;text-align:center">품목 유형</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                      <span style="width:460px;font: bold 11px nanum;color:#333;">상품명</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:50px;font: bold 11px nanum;color:#333;text-align:center;">수량</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;background-color:#eee">
+                                        <span style="width:144px;font: bold 11px nanum;color:#333;text-align:center;">공급가</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width:60px;border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:60px;font:normal 11px nanum;color:#333;text-align:center;">서비스</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:460px;font: normal 11px nanum;color:#333;">관리비</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:50px;font: normal 11px nanum;color:#333;text-align:center;">1</span>
+                                    </span>
+                                </td>
+                                <td style="border-bottom:1px solid #dee0e1;">
+                                    <span p-widget="simpleText" style="padding:2px 5px;">
+                                        <span style="width:144px;font: normal 11px nanum;color:#333;text-align:right;">240,000(월)</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:60px;font:bold 11px nanum;color:#333;text-align:center;">소계</span>
+                                </span>
+                              </td>
+                              <td colspan="3">
+                                <span p-widget="simpleText" style="padding:2px 5px;background-color:#ffffc7">
+                                    <span style="width:674px;font:bold 11px nanum;color:#333;text-align:right;">370,000</span>
+                                </span>
+                              </td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+                    <div style="position: absolute; left: 15px; bottom: 30px;">
+                        <div p-panel="grid">
+                            <table style="width: 764px; margin-bottom: 30px;">
+                                <tr>
+                                    <td><span p-widget="simpleText" style="min-width: 60px; padding-left: 5px;">
+                                        <span style="margin-bottom:3px;font: bold 14px nanum;">계약일자</span>
+                                        </span>
+                                            <span p-widget="simpleText" style="min-width: 110px; min-height: 21px; margin-left: 2px;">
+                                            <span class="contract_date" style="font: 400 14px nanum;">2018-05-20</span>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span p-widget="simpleText" style="margin-left:130px;">
+                                            <span style="font: bold 14px nanum; text-align: left; border-bottom: 1px solid #aaa;">대표자 :</span></span>
+                                        <span p-widget="simpleText" style="border-bottom: 1px solid #aaa;">
+                                            <span contenteditable="false" class="contract_name" style="font: 14px nanum; text-align: left; width: 86px; padding: 0px 10px; cursor: pointer;">김대호</span>
+                                        </span>
+                                        <span p-widget="simpleText" style="border-bottom: 1px solid #aaa;">
+                                            <span class="contract_sign" style="font: bold 14px nanum; text-align: left; min-width: 30px; padding: 0 30px; cursor: pointer;">(서명)</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div p-panel="grid">
+                            <table style="position: relative; width: 764px; margin-top: 20px; border-top: 1px solid #aaa;">
+                                <tr>
+                                    <td>
+                                      <span p-widget="simpleImage" style="margin-top: 5px;">
+                                          <img p-controller="image" src="../../images/bg05_logo.png" height="30" alt="" class="mCS_img_loaded">
+                                      </span>
+                                          <span p-widget="simpleImage" style="position: absolute; top: -5px; right: 0px; z-index: 1;">
+                                              <img p-controller="image" src="http://tapp.vzon.co.kr/api/file/dd752fde837944baa00ef2682ca3e9cd/image" width="45" alt="" class="mCS_img_loaded">
+                                          </span>
+                                          <span p-widget="simpleText" style="float: right; padding: 10px 5px 0px 0px; position: relative; z-index: 2;">
+                                              <span style="width: 30px; font: 14px nanum; text-align: left;">(인)</span>
+                                          </span>
+                                          <span p-widget="simpleText" style="float: right; padding-top: 5px; position: relative; z-index: 2;">
+                                              <span style="margin-right: 20px; font: bold 18px nanum;">김동근 대표이사</span>
+                                          </span>
+                                          <span p-widget="simpleText" style="float: right; padding: 8px 15px 0px 0px;">
+                                              <span style="font: 14px nanum; text-align: left;">밸모어주식회사(12-345-7890)</span>
+                                          </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <span p-widget="simpleText" style="float: left;">
+                                        <span style="width:250px;font: 13px nanum; text-align: left;">영업자 : 이해일(010-2578-7896)</span>
+                                    </span>
+                                    <span p-widget="simpleText" style="float: right;margin-top:-3px;">
+                                        <span style="font: 9px nanum; text-align: left;">Tel. 1577-5422  / 전라북도 완주군 안전로 107-9 늘푸른빌딩 4층</span>
+                                    </span>
+                                  </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div p-panel="grid" class="sign">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span p-widget="signInput" class="signature">
+                                    <span p-controller="canvas"></span>
+                                    <span p-controller="canvas"></span>
+                                    <img style="display: none; position: absolute; left: 0px; top: 0px;" class="mCS_img_loaded"></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

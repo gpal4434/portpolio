@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>관리자</title>
+		<meta name="format-detection" content="telephone=no" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/pages.css" />
+		<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css" />
+		
+		<script src="../lib/jquery/jquery-1.9.1.min.js"></script>
+		<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+		<script src="../lib/bxslider/jquery.bxslider.js"></script>
+		<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+		<script src="../js/common.js"></script>
+
+	</head>
+	<body>
+		<div class="wrap wrap--button revocation"> <!-- (D) 클래스추가 위치무방 scroll_list위에만 있으면 돼요-->
+			<div class="c-header">
+				<a href="#" class="c-header__back">뒤로가기</a>
+				<div class="c-header__aligner">
+					<h1 class="c-heading">계약해지</h1>
+				</div>
+			</div>
+            <div class="c-content">            
+				<div class="c-sections c-sections--small scroll_list">
+					<div class="c-guide">
+                        <ul class="c-tab">
+                            <li class="c-tab__item"><a href="#" class="c-tab__link">코드스캔</a></li>
+                            <li class="c-tab__item c-tab__item--active"><a href="#" class="c-tab__link">코드입력</a></li>
+                        </ul>
+						<div class="c-section">
+                            <div class="c-list__headings c-list__headings--none">
+                                <div class="c-list__heading">로스트아크 PC방<div class="c-list__heading-detail">2018-12-20 등록</div></div>
+                                <div class="c-list__aligner c-list__aligner--right">
+                                    <div class="c-list__currents">
+                                        <div class="c-list__current c-list__current--bright-green">승인</div>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+                        <div class="c-section">
+                            <ul class="c-guide__list">
+                                <li class="c-guide__item">
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">계약유형</div>
+                                        <div class="c-guide__value">
+                                            <p class="c-guide__p">신규계약</p>
+                                        </div>
+                                    </div>
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">거래유형</div>
+                                        <div class="c-guide__value">
+                                            <p class="c-guide__p">임대</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-guide__item">
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">임대유형</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">유상임대(약정)</div>
+                                        </div>
+                                    </div>
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">계약 시작월</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">2018-12</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-guide__item">
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">계약기간(개월)</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">24</div>
+                                        </div>
+                                    </div>
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">잔여기간(개월)</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">12</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-guide__item">
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">반환품 필요여부</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">Y</div>
+                                        </div>
+                                    </div>
+                                    <div class="c-guide__box c-guide__box-50">
+                                        <div class="c-guide__key">위약금 필요여부</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">N</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="c-guide__item">
+                                    <div class="c-guide__box">
+                                        <div class="c-guide__key">해지사유</div>
+                                        <div class="c-guide__value">
+                                            <div class="c-guide__p">단순변심</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="c-guide__headings c-guide__headings--em">
+                            <div class="c-guide__heading">계약 해지 현황</div>
+                            <div class="c-list__aligner c-list__aligner--right">
+                                <div class="c-buttons">
+                                    <div class="c-button blue">승인</div>
+                                    <div class="c-button blue">결재상신</div>
+                                    <div class="c-button">취소</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-section">
+                                <div class="progressBox">
+                                    <div class="progress">
+                                        <h3 class="c-h3">상품반환</h3>
+                                        <ul>
+                                            <!-- (D) 완료된 과정은 li에 completed -->
+                                            <li class="completed">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#">반환품 등록</a></div>
+                                                </div>
+                                            </li>
+                                            <li class="completed">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <!-- (D) 상세보기가 있는 것은 a에 detail -->
+                                                    <div class="tit"><a href="#" class="detail">반환품 회수</a></div>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#">반환품 반입</a></div>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#">자동이체 해지</a></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="progress">
+                                        <h3 class="c-h3">위약금 처리</h3>
+                                        <ul>
+                                            <li class="completed">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#">위약금 청구</a></div>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#" class="detail">위약금 수금</a></div>
+                                                </div>
+                                            </li>
+                                            <li class="">
+                                                <div class="currents">
+                                                    <div class="current"></div>
+                                                    <div class="tit"><a href="#" class="detail">자동이체 해지</a></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+					</div>
+				</div>
+            </div>
+			<div class="c-footer__buttons">
+				<ul>
+					<li><button class="c-footer__button">계약 해지</button></li>
+				</ul>
+			</div>
+		</div>
+        <script type="text/javascript">
+            function slideScroll() {
+                $('.c-slide__aligner').mCustomScrollbar({
+                    axis: "x",
+                    theme: "minimal-dark",
+
+                    callbacks:{
+                        onOverflowX:function(){
+                          $('.c-slide__more').addClass('c-slide__more--show');
+                        },
+                        onOverflowXNone:function(){
+                          $('.c-slide__more').removeClass('c-slide__more--show');
+                        }
+                    }
+                }).mCustomScrollbar('scrollTo','170',{
+                    timeout: 70,
+                    scrollEasing:"easeIn"
+                }); // 처음 scroll 위치
+            }
+
+            slideScroll();
+
+            $('.c-slide__more').on('click', function(){
+                $('.c-slide').addClass('c-slide--active');
+                $('.c-slide__aligner').mCustomScrollbar('destroy');
+                $('.c-slide__up').addClass('c-slide__up--show');
+
+                return false;
+            });
+
+            $('.c-slide__up').on('click', function(){
+                $('.c-slide__up').removeClass('c-slide__up--show');
+                $('.c-slide').removeClass('c-slide--active');
+                slideScroll();
+            });
+
+            $('.c-slide__link').on('click', function(){
+                $('.c-slide__item').removeClass('c-slide__item--active');
+                $(this).parent().addClass('c-slide__item--active');
+
+                return false;
+            });
+
+            $(window).resize(function(){
+                if ( $('.c-slide__list').height() > 40 ){
+                    $('.c-slide__up').addClass('c-slide__up--show');
+                }else {
+                    $('.c-slide__up').removeClass('c-slide__up--show');
+                }
+            });
+        </script>
+	</body>
+</html>

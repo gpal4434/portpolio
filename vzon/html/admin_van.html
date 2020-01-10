@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap admin">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">기본설정</a>
+					</li>
+					<li class="on">
+					<a href="#">상품관리</a>
+					</li>
+					<li>
+					<a href="#">직원관리</a>
+					</li>
+					<li>
+					<a href="#">결제설정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info clear">
+				<p class="name">
+					Admin
+				</p>
+				<button class="setBtn"></button>
+				<button class="logout">로그아웃</button>
+			</div>
+		</div>
+    <div class="n-content">
+	<div class="header">
+		<h1>밴사 및 밴피 관리</h1>
+		<div class="rightBox clear">
+			<div class="buttons">
+				<button class="button gray">취소</button>
+				<button class="button">저장</button>
+			</div>
+		</div>
+	</div>
+	<div class="content van">
+		<div class="tableBox">
+			<div class="form form2 clear">
+				<div class="tableSection">
+					<div class="header">
+						<h3>기본 밴사 설정</h3>
+					</div>
+					<div class="table">
+						<table>
+						<colgroup>
+						<col width="25%">
+						<col width="75%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								밴사 추가
+							</th>
+							<td class="input btn txt">
+								<input type="text" placeholder="밴사명을 입력하세요."><button class="button orange">추가</button>
+							</td>
+						</tr>
+						<!--
+                                            <tr>
+                                                 (D) 추가된 밴사 갯수만큼 rowspan이 늘어나야 됩니다.
+                                                <th scope="row" rowspan="3">추가된 밴사</th>
+                                                <td class="span btn">
+                                                    <span>한주정보통신</span>
+                                                    <div class="buttons">
+                                                        <button class="button trash"></button>
+                                                        <button class="button edit"></button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+-->
+						<tr>
+							<!-- (D) 추가된 밴사 갯수만큼 rowspan이 늘어나야 됩니다. -->
+							<th scope="row">
+								추가된 밴사
+							</th>
+							<td>
+								<div class="table">
+									<table>
+									<colgroup>
+									<col width="*">
+									<col width="12%">
+									<col width="12%">
+									</colgroup>
+									<tbody>
+									<tr>
+										<td>
+											한주정보통신
+										</td>
+										<td>
+											<button class="button edit"></button>
+										</td>
+										<td>
+											<button class="button trash"></button>
+										</td>
+									</tr>
+									<tr>
+										<td class="input">
+											<input type="text" placeholder="밴나이스페이">
+										</td>
+										<td>
+											<button class="button save"></button>
+										</td>
+										<td>
+											<button class="button cancel"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											인포누리
+										</td>
+										<td>
+											<button class="button edit"></button>
+										</td>
+										<td>
+											<button class="button trash"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											제이케이솔루션페이
+										</td>
+										<td>
+											<button class="button edit"></button>
+										</td>
+										<td>
+											<button class="button trash"></button>
+										</td>
+									</tr>
+									</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="form clear">
+				<div class="tableSection iconBtn">
+					<div class="header">
+						<h3>밴피 테이블</h3>
+						<div class="rightBox">
+							<div class="buttons">
+								<button class="button add" title="추가하기"></button>
+							</div>
+						</div>
+					</div>
+					<div class="table vanfee">
+						<table>
+						<colgroup>
+						<col width="12.5%">
+						<col width="87.5%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								밴사명
+							</th>
+							<td class="input van clear">
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="한주정보통신">한주정보통신</option>
+								</select>
+								</label>
+								<!-- (D) 텍스트 모드일때
+                                                    <span class="name">한주정보통신</span>
+                                                     -->
+								<div class="buttons">
+									<button class="button purple">구간 추가</button>
+									<button class="button gray">취소</button>
+									<button class="button">저장</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								구간 및 수수료
+							</th>
+							<td class="section">
+								<!-- (D) 수정모일때만 vanfee에 input이 붙음 -->
+								<div class="vanfee_wrap clear">
+									<div class="vanfee_form input">
+										<div class="interval">
+											<div>
+												<span>100 ≤ 구간1 ＜</span>
+												<input type="text">
+											</div>
+										</div>
+										<div class="commi">
+											<input type="text" placeholder="수수료 입력">
+										</div>
+									</div>
+									<div class="vanfee_form input">
+										<button class="del"></button>
+										<div class="interval">
+											<div>
+												<span>200 ≤ 구간2 ＜</span>
+												<input type="text">
+											</div>
+										</div>
+										<div class="commi">
+											<input type="text" placeholder="수수료 입력">
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="table vanfee">
+						<table>
+						<colgroup>
+						<col width="12.5%">
+						<col width="87.5%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								밴사명
+							</th>
+							<td class="input van clear">
+								<span class="name">에스케이브로드페이</span>
+								<div class="buttons">
+									<button class="button purple">수정</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								구간 및 수수료
+							</th>
+							<td class="section">
+								<div class="vanfee_wrap clear">
+									<div class="vanfee_form">
+										<div class="interval">
+											<span>0 ≤ 구간1 ＜ 100</span>
+										</div>
+										<div class="commi">
+											1000
+										</div>
+									</div>
+									<!-- (D) 텍스트모드일 때는 input이 없음 -->
+									<div class="vanfee_form">
+										<button class="del"></button>
+										<div class="interval">
+											<div>
+												<span>200 ≤ 구간2 ＜ 300</span>
+											</div>
+										</div>
+										<div class="commi">
+											2000
+										</div>
+									</div>
+									<div class="vanfee_form">
+										<button class="del"></button>
+										<div class="interval">
+											<div>
+												<span>300 ≤ 구간3 ＜ 400</span>
+											</div>
+										</div>
+										<div class="commi">
+											3000
+										</div>
+									</div>
+									<div class="vanfee_form">
+										<button class="del"></button>
+										<div class="interval">
+											<div>
+												<span>400 ≤ 구간4 ＜ 500</span>
+											</div>
+										</div>
+										<div class="commi">
+											4000
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="n-container">
+			<div class="header">
+				<a href="#" class="logo">브이존</a>
+			</div>
+			<div class="depth2-wrap tb">
+				<div class="depth2">
+					<ul class="depth2-ul">
+						<li class="depth2-li on"><a href="#">상품 목록</a></li>
+						<li class="depth2-li"><a href="#">상품 구성 설정</a></li>
+						<li class="depth2-li"><a href="#">재고 설정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<span>@ 2018 Pentaon. All right reserved</span>
+			</div>
+		</div>
+		<div id="dtBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+      $('.tab_cont > div').hide();
+      $('.tab_cont > div').eq(0).show();
+      $('.admin .division .tableSection:nth-child(2) .tab li').click(function(){
+        var index = $(this).index();
+        $('.tab_cont > div').hide();
+        $('.tab_cont > div').eq(index).show();
+        if($(this).hasClass('on')){
+        }else{
+          $('.admin .division .tableSection:nth-child(2) .tab li').removeClass('on');
+          $(this).addClass('on');
+        }
+      });
+		});
+	</script>
+	</body>
+	</html>

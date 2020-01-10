@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap admin">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">기본설정</a>
+					</li>
+					<li class="on">
+					<a href="#">상품관리</a>
+					</li>
+					<li>
+					<a href="#">직원관리</a>
+					</li>
+					<li>
+					<a href="#">결제설정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info clear">
+				<p class="name">
+					Admin
+				</p>
+				<button class="setBtn"></button>
+				<button class="logout">로그아웃</button>
+			</div>
+		</div>
+		<div class="n-content">
+		</div>
+		<div class="n-container">
+			<div class="header">
+				<a href="#" class="logo">브이존</a>
+			</div>
+			<div class="depth2-wrap tb">
+				<div class="depth2">
+					<ul class="depth2-ul">
+						<li class="depth2-li on"><a href="#">상품 목록</a></li>
+						<li class="depth2-li"><a href="#">상품 구성 설정</a></li>
+						<li class="depth2-li"><a href="#">재고 설정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<span>@ 2018 Pentaon. All right reserved</span>
+			</div>
+		</div>
+		<div id="dtBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+      $('.tab_cont > div').hide();
+      $('.tab_cont > div').eq(0).show();
+      $('.admin .division .tableSection:nth-child(2) .tab li').click(function(){
+        var index = $(this).index();
+        $('.tab_cont > div').hide();
+        $('.tab_cont > div').eq(index).show();
+        if($(this).hasClass('on')){
+        }else{
+          $('.admin .division .tableSection:nth-child(2) .tab li').removeClass('on');
+          $(this).addClass('on');
+        }
+      });
+		});
+	</script>
+	</body>
+	</html>

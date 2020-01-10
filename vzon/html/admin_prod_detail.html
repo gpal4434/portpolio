@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap admin">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">기본설정</a>
+					</li>
+					<li class="on">
+					<a href="#">상품관리</a>
+					</li>
+					<li>
+					<a href="#">직원관리</a>
+					</li>
+					<li>
+					<a href="#">결제설정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info clear">
+				<p class="name">
+					Admin
+				</p>
+				<button class="setBtn"></button>
+				<button class="logout">로그아웃</button>
+			</div>
+		</div>
+    <div class="n-content manage">
+	<div class="header">
+		<h1>상품 상세</h1>
+		<div class="rightBox">
+			<div class="buttons">
+				<button class="button gray">취소</button>
+				<button class="button purple">수정</button>
+				<button class="button">저장</button>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="tableBox prod_detail">
+			<!-- (D) 클래스 추가 -->
+			<div class="form form3 clear">
+				<div class="tableSection iconBtn">
+					<div class="header">
+						<h3>기본</h3>
+					</div>
+					<div class="table2">
+						<table>
+						<colgroup>
+						<col width="30%">
+						<col width="70%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								상품명
+							</th>
+							<td class="input">
+								<input type="text">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								구성
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="SET">SET</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								상품군
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="포스단말">포스단말</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								밴사명
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="제이케이정보통신">제이케이정보통신</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								판매설정
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								구매처
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								제조사
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								사용용지
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								TID 입력 여부
+							</th>
+							<td class="input">
+								<div class="toggleBox">
+									<label for="toggle2" class="switch">
+									<input type="checkbox" id="toggle2">
+									<span class="slider"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								시리얼 사용 여부
+							</th>
+							<td class="input">
+								<div class="toggleBox">
+									<label for="toggle2" class="switch">
+									<input type="checkbox" id="toggle2">
+									<span class="slider"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								중고 판매 여부
+							</th>
+							<td class="input">
+								<div class="toggleBox">
+									<label for="toggle2" class="switch">
+									<input type="checkbox" id="toggle2">
+									<span class="slider"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								상품코드
+							</th>
+							<td>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tableSection iconBtn">
+					<div class="header">
+						<h3>상품 구매 정보</h3>
+					</div>
+					<div class="table2">
+						<table>
+						<colgroup>
+						<col width="30%">
+						<col width="70%">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								구매 단가
+							</th>
+							<td class="input">
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								발주정책
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="SET">SET</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								발주비용
+							</th>
+							<td class="input unit">
+								<input type="number">
+								<span>원/회</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								월 평균 소요량
+							</th>
+							<td class="input">
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								조달 소요 영업일
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								재고 유지 비율<br/>(구매단가 대비 비율)
+							</th>
+							<td class="input unit">
+								<input type="number">
+								<span>%</span>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								안전 재고량
+							</th>
+							<td class="input">
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" class="tool">
+								발주점 <span class="tip">발주처리 경비 (인건비, 운송비 등)</span>
+							</th>
+							<td>
+								<label class="select-custom">
+								<select name="" id="">
+									<option value="선택">선택</option>
+									<option value="미사용">미사용</option>
+								</select>
+								</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								발주량
+							</th>
+							<td class="input">
+								<input type="number">
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tableSection iconBtn">
+					<div class="header">
+						<h3>판매 가격 정보</h3>
+					</div>
+					<div class="table2">
+						<div class="price">
+							<div class="tit">
+								신품
+							</div>
+							<table>
+							<colgroup>
+							<col width="15%">
+							<col width="35%">
+							<col width="15%">
+							<col width="35%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">
+									판매단가
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									기본할인율(%)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+								<th scope="row">
+									최대할인율(%)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									기본할인가(원)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+								<th scope="row">
+									최대할인가(원)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">
+									기본 할인가
+								</th>
+								<td class="input">
+									<input type="text">
+								</td>
+								<th scope="row">
+									최대 할인가
+								</th>
+								<td class="input">
+									<input type="text">
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="price">
+							<div class="tit">
+								중고품
+							</div>
+							<table>
+							<colgroup>
+							<col width="15%">
+							<col width="35%">
+							<col width="15%">
+							<col width="35%">
+							</colgroup>
+							<tbody>
+							<tr>
+								<th scope="row">
+									기본할인율(%)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+								<th scope="row">
+									최대할인율(%)
+								</th>
+								<td class="input">
+									<input type="number">
+								</td>
+							</tr>
+							</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form clear">
+				<div class="tableSection">
+					<div class="header">
+						<h3>세트 상품 구성</h3>
+					</div>
+					<div class="set">
+						<ul class="clear">
+							<li>
+							<div class="imgBox">
+								<div class="setBox">
+									<img src="../images_web/dummy/monitor.jpg" alt="세트품">
+									<div class="zoom" title="크게 보기">
+									</div>
+								</div>
+								<!-- (D) 수정일때만 보임 -->
+								<button class="del" title="삭제하기"></button>
+								<!-- (D) //수정일때만 보임 -->
+							</div>
+							<div class="textBox">
+								<span>포스기 본체(모니터)</span>
+							</div>
+							</li>
+							<li>
+							<div class="imgBox">
+								<div class="setBox">
+									<img src="../images_web/dummy/signpad.jpeg" alt="세트품">
+									<div class="zoom" title="크게 보기">
+									</div>
+								</div>
+								<button class="del" title="삭제하기"></button>
+							</div>
+							<div class="textBox">
+								<span>사인패드</span>
+							</div>
+							</li>
+							<li>
+							<div class="imgBox">
+								<div class="setBox">
+									<img src="../images_web/dummy/card.JPG" alt="세트품">
+									<div class="zoom" title="크게 보기">
+									</div>
+								</div>
+								<button class="del" title="삭제하기"></button>
+							</div>
+							<div class="textBox">
+								<span>카드단말기</span>
+							</div>
+							</li>
+							<!-- (D) 수정일때만 보임 -->
+							<li class="new">
+							<button title="세트 상품 추가하기"></button>
+							</li>
+							<!-- (D) //수정일때만 보임 -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="form clear">
+				<div class="tableSection">
+					<div class="header">
+						<h3>기타</h3>
+					</div>
+					<div class="table2">
+						<table>
+						<colgroup>
+						<col width="8%">
+						<col width="15%">
+						<col width="8%">
+						<col width="*">
+						</colgroup>
+						<tbody>
+						<tr>
+							<th scope="row">
+								대표 이미지
+							</th>
+							<td class="img none">
+								<!--div class="imgBox">
+                                                <div class="thumb">
+                                                    <div class="repre">대표</div>
+                                                    <img src="../images_web/dummy/install__image6.jpg" alt="대표 이미지">
+                                                    <div class="zoom" title="크게 보기"></div>
+                                                </div>
+                                                <!-- (D) 수정일때만 보임
+                                                <button class="del" title="삭제하기"></button>
+                                                <!-- (D) //수정일때만 보임
+                                            </div-->
+								<div class="imgBox">
+									<div class="thumb">
+										<img src="../images_web/common/noimg.png" alt="대표 이미지">
+									</div>
+								</div>
+							</td>
+							<th scope="row">
+								추가 이미지
+							</th>
+							<td>
+								<div class="adminThumbBox">
+									<ul class="clear">
+										<li>
+										<div class="img">
+											<img src="../images_web/common/noimg.png" alt="추가 이미지">
+										</div>
+										</li>
+										<!--
+                                                    <li>
+                                                        <div class="img">
+                                                            <img src="../images_web/dummy/install__image7.jpg" alt="추가 이미지">
+                                                            <div class="zoom" title="크게 보기"></div>
+                                                        </div>
+                                                        <button class="del" title="삭제하기"></button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="img">
+                                                            <div class="zoom" title="크게 보기"></div>
+                                                            <img src="../images_web/dummy/install__image5.jpg" alt="추가 이미지">
+                                                        </div>
+                                                        <button class="del" title="삭제하기"></button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="img">
+                                                            <div class="zoom" title="크게 보기"></div>
+                                                            <img src="../images_web/dummy/install__image4.jpg" alt="추가 이미지">
+                                                        </div>
+                                                        <button class="del" title="삭제하기"></button>
+                                                    </li>
+                                                    <li>
+                                                        <div class="img">
+                                                            <div class="zoom" title="크게 보기"></div>
+                                                            <img src="../images_web/dummy/install__image3.jpg" alt="추가 이미지">
+                                                        </div>
+                                                        <button class="del" title="삭제하기"></button>
+                                                    </li>
+                                                    <li class="new">
+                                                        <button title="사진 추가하기"></button>
+                                                    </li> -->
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								상품 설명
+							</th>
+							<td colspan="3" class="input">
+								<textarea name="" id="" cols="30" rows="10"></textarea>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="n-container">
+			<div class="header">
+				<a href="#" class="logo">브이존</a>
+			</div>
+			<div class="depth2-wrap tb">
+				<div class="depth2">
+					<ul class="depth2-ul">
+						<li class="depth2-li on"><a href="#">상품 목록</a></li>
+						<li class="depth2-li"><a href="#">상품 구성 설정</a></li>
+						<li class="depth2-li"><a href="#">재고 설정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<span>@ 2018 Pentaon. All right reserved</span>
+			</div>
+		</div>
+		<div id="dtBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+      $('.tab_cont > div').hide();
+      $('.tab_cont > div').eq(0).show();
+      $('.admin .division .tableSection:nth-child(2) .tab li').click(function(){
+        var index = $(this).index();
+        $('.tab_cont > div').hide();
+        $('.tab_cont > div').eq(index).show();
+        if($(this).hasClass('on')){
+        }else{
+          $('.admin .division .tableSection:nth-child(2) .tab li').removeClass('on');
+          $(this).addClass('on');
+        }
+      });
+		});
+	</script>
+	</body>
+	</html>

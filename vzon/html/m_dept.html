@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title>관리자</title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../css/common_mobile.css"/>
+<link rel="stylesheet" type="text/css" href="../css/pages.css"/>
+<script src="../lib/jquery/jquery-1.9.1.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../js/common_mobile.js"></script>
+</head>
+<body>
+<div class="navigation_wrap2">
+	<div class="snotice">
+		<div class="header">
+			<span>알림</span>
+		</div>
+		<div class="box">
+			<ul>
+				<li class="new clear">
+				<div class="cont clear">
+					<span class="status">계약</span>
+					<span class="txt">결재가 승인되었습니다.</span>
+				</div>
+				<div class="date">
+					오늘 17:30
+				</div>
+				</li>
+				<li class="new clear">
+				<div class="cont clear">
+					<span class="status">계약</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					오늘 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">일감</span>
+					<span class="txt">협업자로 지정되었습니다.</span>
+				</div>
+				<div class="date">
+					03-07 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">고객요청</span>
+					<span class="txt">담당자로 지정되었습니다.</span>
+				</div>
+				<div class="date">
+					03-05 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+				<li class="clear">
+				<div class="cont clear">
+					<span class="status">구매</span>
+					<span class="txt">상신된 문서가 있습니다.</span>
+				</div>
+				<div class="date">
+					03-03 17:30
+				</div>
+				</li>
+			</ul>
+		</div>
+		<div class="footer">
+			<span>알림 더 보기</span>
+		</div>
+	</div>
+</div>
+<div class="navigation_wrap">
+	<div class="smenu">
+		<div class="smenu__header">
+			<div class="smenu__header--title">
+				<span class="smenu__header--name">박영업</span>
+				<span class="smenu__header--rank">대리</span>
+			</div>
+			<div class="smenu__header--att">
+				<span class="smenu__header--company">한주정보통신 (서울 본사)</span>
+				<span class="smenu__header--dep">영업부 / 영업 1팀</span>
+			</div>
+			<div class="smenu_buttons clear">
+				<button class="mypage">마이페이지</button>
+				<button class="set">개인정보수정</button>
+			</div>
+		</div>
+		<div class="smenu__cont">
+			<div class="smenu__depths">
+				<div class="smenu__depth">
+					<a href="#" class="smenu__key">일감</a>
+					<div class="smenu__value">
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">고객요청</a>
+							<div class="smenu__value">
+								<ul class="smenu__form">
+									<li class="smenu__item smenu__depth--active">
+									<a href="#" class="smenu__link">나의 등록</a>
+									<span class="smenu__toggle"></span>
+									</li>
+									<li class="smenu__item">
+									<span class="smenu__toggle"></span>
+									<a href="#" class="smenu__link">수임</a>
+									</li>
+									<li class="smenu__item">
+									<span class="smenu__toggle"></span>
+									<a href="#" class="smenu__link">피드백</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">일감</a>
+							<span class="smenu__toggle"></span>
+						</div>
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">진행</a>
+							<span class="smenu__toggle"></span>
+						</div>
+					</div>
+				</div>
+				<div class="smenu__depth">
+					<a href="#" class="smenu__key">용지</a>
+					<div class="smenu__value">
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">용지요청 등록</a>
+						</div>
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">용지보급 집계 상세</a>
+						</div>
+						<div class="smenu__depth">
+							<a href="#" class="smenu__list">용지보급 요청 현황</a>
+							<div class="smenu__value">
+								<ul class="smenu__form">
+									<li class="smenu__item">
+									<a href="#" class="smenu__link">용지보급상세</a>
+									<span class="smenu__toggle"></span>
+									</li>
+									<li class="smenu__item">
+									<a href="#" class="smenu__link">용지보급 요청 집계</a>
+									<span class="smenu__toggle"></span>
+									</li>
+									<li class="smenu__item">
+									<a href="#" class="smenu__link">용지보급 집계 상세</a>
+									<span class="smenu__toggle"></span>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="smenu__depth">
+					<a href="#" class="smenu__key">공급</a>
+				</div>
+				<div class="smenu__depth">
+					<a href="#" class="smenu__key">영업</a>
+				</div>
+			</div>
+		</div>
+		<div class="smenu__footer">
+			<a href="#" class="smenu__out">Logout</a>
+		</div>
+	</div>
+</div>
+<div class="wrap">
+	<div class="c-header">
+		<div class="c-header__aligner">
+			<h1 class="c-h1"><a href="#" class="c-h1__link"></a></h1>
+			<div class="logo_center">
+			</div>
+			<div class="c-header__functions">
+				<div class="alarm">
+					<div class="cnt">
+						99+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="c-gnb c-gnb--4">
+			<ul class="c-gnb__list">
+				<li class="c-gnb__item"><a href="#" class="c-gnb__link">구매</a></li>
+				<li class="c-gnb__item"><a href="#" class="c-gnb__link">입고</a></li>
+				<li class="c-gnb__item c-gnb__item--active"><a href="#" class="c-gnb__link">출고</a></li>
+				<li class="c-gnb__item"><a href="#" class="c-gnb__link">지점</a></li>
+				<li class="c-gnb__item"><a href="#" class="c-gnb__link">수리</a></li>
+			</ul>
+			<a href="#" class="c-depth__arrow c-depth__arrow--gnb">depth버튼</a>
+		</div>
+		<!-- <div class="c-depth c-depth2">
+			<ul class="c-depth__list">
+				<li class="c-depth__item"><a href="#" class="c-depth__link">출고현황</a></li>
+				<li class="c-depth__item c-depth__item--active"><a href="#" class="c-depth__link">가맹점</a></li>
+				<li class="c-depth__item"><a href="#" class="c-depth__link">보유재고</a></li>
+				<li class="c-depth__item"><a href="#" class="c-depth__link">지점</a></li>
+				<li class="c-depth__item"><a href="#" class="c-depth__link">자대리점</a></li>
+				<li class="c-depth__item"><a href="#" class="c-depth__link">수리/대체품</a></li>
+			</ul>
+			<a href="#" class="c-depth__arrow">depth버튼</a>
+		</div> -->
+
+	</div>
+	<div class="c-content">
+	<div class="c-sections">
+		<ul class="c-tab">
+			<li class="c-tab__item"><a href="#" class="c-tab__link">사원</a></li>
+			<li class="c-tab__item c-tab__item--active"><a href="#" class="c-tab__link">부서</a></li>
+		</ul>
+	</div>
+	<div class="c-sections">
+		<div class="c-section">
+			<div class="c-accordions">
+				<div class="c-accordion c-accordion--active">
+					<span class="c-toggle"></span>
+					<a href="#" class="c-accordion__key">부서명1</a>
+					<div class="c-accordion__value">
+						<div class="c-accordion c-accordion--active">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명1-1</a>
+							<div class="c-accordion__value">
+								<div class="c-accordion c-accordion--active">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명1-1-1</a>
+									<div class="c-accordion__value">
+										<ul class="c-accordion__form">
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명1</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명2</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="c-accordion">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명1-1-2</a>
+									<div class="c-accordion__value">
+										<ul class="c-accordion__form">
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명3</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명4</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명5</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명6</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="c-accordion">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명1-1-3</a>
+									<div class="c-accordion__value">
+										<ul class="c-accordion__form">
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명7</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+											<li class="c-accordion__list">
+											<a href="#" class="c-accordion__link">사원명8</a>
+											<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="c-accordion__value">
+						<div class="c-accordion c-accordion--active">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명1-2</a>
+							<div class="c-accordion__value">
+								<div class="c-accordion">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명1-2-1</a>
+									<div class="c-accordion__value">
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명9</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명10</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명11</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명12</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-accordion">
+					<span class="c-toggle"></span>
+					<a href="#" class="c-accordion__key">부서명2</a>
+					<div class="c-accordion__value">
+						<div class="c-accordion">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명2-1</a>
+							<div class="c-accordion__value">
+								<div class="c-accordion">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명2-1-1</a>
+									<div class="c-accordion__value">
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명11</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명12</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c-accordion">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명2-2</a>
+							<div class="c-accordion__value">
+								<div class="c-accordion">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명2-2-1</a>
+									<div class="c-accordion__value">
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명13</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명14</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="c-accordion c-accordion--active">
+					<span class="c-toggle"></span>
+					<a href="#" class="c-accordion__key">부서명3</a>
+					<div class="c-accordion__value">
+						<div class="c-accordion c-accordion--active">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명3-1</a>
+							<div class="c-accordion__value">
+								<div class="c-accordion c-accordion--active">
+									<span class="c-toggle"></span>
+									<a href="#" class="c-accordion__key">부서명3-1-1</a>
+									<div class="c-accordion__value">
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명15</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+										<li class="c-accordion__list">
+										<a href="#" class="c-accordion__link">사원명16</a>
+										<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+										</li>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="c-accordion">
+							<span class="c-toggle"></span>
+							<a href="#" class="c-accordion__key">부서명3-2</a>
+							<div class="c-accordion__value">
+								<li class="c-accordion__list">
+								<a href="#" class="c-accordion__link">사원명15</a>
+								<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+								</li>
+								<li class="c-accordion__list">
+								<a href="#" class="c-accordion__link">사원명16</a>
+								<span href="#c-pop--emp" class="c-accordion__link--search" onclick="popup('c-pop--emp')"></span>
+								</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="c-pop--emp" class="c-popup c-popup">
+	<div class="c-popup__aligner">
+		<div class="c-popup__box">
+			<div class="c-popup__headings">
+				<div class="c-popup__heading">
+					사원 상세 정보
+				</div>
+			</div>
+			<div class="c-sections">
+				<ul class="c-list">
+					<li class="c-list__item c-list__item--no-line">
+					<div class="c-section">
+						<div class="c-list__heading">
+							김중원
+						</div>
+						<div class="c-list__heading c-list__heading--add">
+							대리 (팀장)
+						</div>
+						<div class="c-list__heading-detail">
+							부서명<br/>상위부서명 / 상위부서명
+						</div>
+					</div>
+					<div class="c-section">
+						<div class="info-lists">
+							<div class="info-list">
+								<div class="slashs">
+									<div class="slash">
+										<p class="c-guide__p">
+											010-5404-5584
+										</p>
+									</div>
+									<div class="slash">
+										<p class="c-guide__p">
+											010-5404-5584
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="info-list">
+								<a href="mailto:freebud85@navers.com" class="text-link">freebud85@navers.com</a>
+							</div>
+							<div class="info-list">
+								<p class="c-guide__p">
+									담당업무, 담당업무, 담당업무, 담당업무, 담당업무
+								</p>
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+			<div class="c-popup__bottons">
+				<ul>
+					<li><button class="c-popup__botton">닫기</button></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+	<script type="text/javascript">
+		$('.c-list-slide__link').on('click', function(){
+			if ( $(this).parent().hasClass('c-list-slide--active')){
+				$(this).parent().removeClass('c-list-slide--active');
+			}else {
+				$(this).parent().addClass('c-list-slide--active');
+			}
+			return false;
+		});
+	</script>
+</div>
+<div id="vzon_spinner">
+	<sapn class="c-spinner"></sapn>
+</div>
+</body>
+</html>

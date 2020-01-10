@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-modal">
+	<div class="n-pop w960">
+		<div class="header">
+      <span>시리얼 리스트</span>
+			<button class="close">닫기</button>
+		</div>
+		<div class="content">
+      <div class="n-sections">
+        <div class="n-section">
+          <div class="n-heading">
+            <h2 class="n-h2">POS-1004A(차량) 재고 시리얼</h2>
+          </div>
+          <div class="n-tables stock_status">
+            <table class="n-table row">
+              <colgroup>
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+                <col width="25%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">신품</th>
+                  <th scope="col" colspan="2">중고품</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="col">양품</th>
+                  <th scope="col">불량</th>
+                  <th scope="col">양품</th>
+                  <th scope="col">불량</th>
+                </tr>
+                <tr>
+                  <td><button class="click">1</button></td>
+                  <td><button class="click">20</button></td>
+                  <td><button class="click">2</button></td>
+                  <td><button class="click">1</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="n-section">
+          <div class="n-heading">
+            <h2 class="n-h2">POS-1005A 소유자 리스트</h2>
+          </div>
+          <div class="n-searchs">
+            <div class="n-search">
+              <div class="keybox">
+                <input type="text" id="search" class="keyword" placeholder="소유자 또는 시리얼번호를 입력하세요.">
+                <!-- (D) input이 focus되면 label은 안보이고 button이 보임 -->
+                <label for="search" class="search"></label>
+                <button class="search-close"></button>
+              </div>
+              <div class="searchBtn">
+                <button class="reset">새로고침</button>
+                <button class="search">검색</button>
+              </div>
+            </div>
+          </div>
+          <div class="serial_list owner clear">
+            <div class="left">
+              <div class="n-tableBox">
+                <div class="n-tables th">
+                  <table class="n-table row">
+                    <colgroup>
+                      <col width="40%">
+                      <col width="15%">
+                      <col width="15%">
+                      <col width="15%">
+                      <col width="15%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col" rowspan="2">소유자</th>
+                        <th scope="col" colspan="2">신품</th>
+                        <th scope="col" colspan="2">중고품</th>
+                      </tr>
+                      <tr>
+                        <th scope="col">양품</th>
+                        <th scope="col">불량</th>
+                        <th scope="col">양품</th>
+                        <th scope="col">불량</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="n-tables tb">
+                  <table class="n-table row">
+                    <colgroup>
+                      <col width="40%">
+                      <col width="15%">
+                      <col width="15%">
+                      <col width="15%">
+                      <col width="15%">
+                    </colgroup>
+                    <tbody>
+                      <tr class="on">
+                        <td><span class="click">마준석 전무</span></td>
+                        <td><span class="click">1</span></td>
+                        <td>0</td>
+                        <td><span class="click">3</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">김용진 상무</span></td>
+                        <td><span class="click">2</span></td>
+                        <td><span class="click">1</span></td>
+                        <td><span class="click">3</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">나영석 이사</span></td>
+                        <td><span class="click">1</span></td>
+                        <td><span class="click">2</span></td>
+                        <td><span class="click">7</span></td>
+                        <td><span class="click">4</span></td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">민소희 부장</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><span class="click">3</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">박영진 차장</span></td>
+                        <td><span class="click">2</span></td>
+                        <td>0</td>
+                        <td><span class="click">1</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">금벽준 과장</span></td>
+                        <td><span class="click">5</span></td>
+                        <td>0</td>
+                        <td><span class="click">1</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">홍민상 대리</span></td>
+                        <td><span class="click">1</span></td>
+                        <td>0</td>
+                        <td><span class="click">2</span></td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <td><span class="click">최영미 사원</span></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td><span class="click">7</span></td>
+                        <td>0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="center">
+              <div class="n-tables th">
+                <table class="n-table row">
+                  <colgroup>
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="60%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th scope="col" colspan="5">마준석 전무 POS-1005A 보유재고 현황</th>
+                    </tr>
+                    <tr>
+                      <th scope="row" colspan="2">상품구분</th>
+                      <th scope="row">시리얼</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="n-tables tb">
+                <table class="n-table row">
+                  <colgroup>
+                    <col width="20%">
+                    <col width="20%">
+                    <col width="60%">
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <td>신품</td>
+                      <td>양품</td>
+                      <td>ASD858950058</td>
+                    </tr>
+                    <tr>
+                      <td>신품</td>
+                      <td>양품</td>
+                      <td>DASD32504044</td>
+                    </tr>
+                    <tr class="on">
+                      <td>중고</td>
+                      <td>양품</td>
+                      <td>ADFR30334013</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="right">
+              <span class="tit">시리얼 이력</span>
+              <div class="history">
+                <div class="box tb">
+                  <ul>
+                    <li class="sn">SN. ASD895058</li>
+                    <li class="clear">
+                      <span class="tit">수리품 출고</span>
+                      <span class="date">2019-03-03</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">수리품 입고</span>
+                      <span class="date">2019-02-28</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">수리 등록</span>
+                      <span class="date">2019-02-27</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">설치</span>
+                      <span class="date">2019-02-20</span>
+                      <span class="etc">(아트박스/123-45-78945)</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">가맹점 출고</span>
+                      <span class="date">2019-01-15</span>
+                      <span class="etc">(아트박스/123-45-78945)</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">구매품 입고</span>
+                      <span class="date">2019-01-13</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">구매품 입고</span>
+                      <span class="date">2019-01-13</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">구매품 입고</span>
+                      <span class="date">2019-01-13</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">구매품 입고</span>
+                      <span class="date">2019-01-13</span>
+                    </li>
+                    <li class="clear">
+                      <span class="tit">구매품 입고</span>
+                      <span class="date">2019-01-13</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="btns">
+          <button class="n-button x">취소</button>
+          <button class="n-button o">확인</button>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+<!-- <script>
+  $(function(){
+    //tr의 갯수가 늘어날 때마다 rowspan을 잡아줘야 함
+    var num = $('.serial_list.owner .right .n-tables.tb .n-table tr').length;
+    $('.serial_list.owner .right .n-tables.tb .n-table tr:first-child td:last-child').attr('rowspan', num);
+  });
+</script> -->
+</body>
+</html>

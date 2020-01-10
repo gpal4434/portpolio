@@ -1,0 +1,991 @@
+@charset 'utf-8';
+.admin input[type="number"]::-webkit-outer-spin-button,
+.admin input[type="number"]::-webkit-inner-spin-button,
+.admin input[type="number"]::-webkit-outer-spin-button,
+.admin input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.admin .n-contents > .header{background: #6c72b1; box-shadow: none}
+.admin .n-container .header{background-color: #6c72b1}
+.admin .n-contents .header .depth1 li a{color: #fff; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .n-contents .header .depth1 li.on a,
+.admin .n-contents .header .depth1 li.on:hover a{background: #505692; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .n-contents .header .depth1 li:hover a{background: #8288c2; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .n-contents .header .depth1 li.on a:after{display: none}
+.admin .n-container > .depth2-wrap,
+.admin .n-container .footer{background-color: #38363a}
+.admin .n-container .depth2-wrap .depth2-li.on{background: #2c2b2d}
+.admin .n-container .depth2-wrap .depth2-li.on:before{background-color: #f58220}
+.admin .n-container .depth2-wrap .depth2-li > a{width: 100%}
+.admin .n-container .header .logo{background: url(../images_web/common/vzon_admin_logo.png)left no-repeat}
+.admin .depth2-li{padding-left: 20px}
+.admin .depth2-li a{font-size: 14px}
+.admin .n-contents .header .depth1{width: calc(100% - 350px)}
+.admin .n-contents .header .info{width: 350px; cursor: pointer}
+.admin .n-contents .header .info .name{float: left; width: 170px; height: 100%; padding: 18px 0; font-size: 18px; font-weight: bold; color: #fff; text-align: right}
+.admin .n-contents .header .info .setBtn{float: left; width: 50px; height: 100%; border: 0; background: url(../images_web/common/admin_setBtn.png)center no-repeat}
+.admin .n-contents .header .info button.logout{width: 80px; height: 30px; border: 1px solid #fff; background: none; margin: 15px 10px 0 10px; color: #fff; -webkit- transition: background .2s; -ms- transition: background .2s;}
+.admin .n-contents .header .info button.logout:hover{background: rgba(255,255,255,0.3); -webkit- transition: background .2s; -ms- transition: background .2s; transition: background .2s;}
+.admin .n-contents .n-content{overflow-y: auto; padding: 0; background: #eee}
+.admin .n-content > .header{position: relative; width: 100%; background: #eee}
+.admin .n-content .tableSection .header{background: #fff}
+.admin .n-content .header h1{padding: 28px; padding-bottom: 18px; font-size: 24px; font-weight: bold}
+.admin .n-content .content{width: 100%; background: #eee}
+.admin .content .searchBox{width: 100%; border: 2px solid #6c72b1}
+.admin .content .searchBox + .listBox .header{min-height: 24px}
+.admin .content .search{position: relative; width: 100%; padding: 28px; background: #fff; }
+.admin .content .search .fields + .fields{margin-top: 10px;}
+.admin .content .field{float: left;}
+.admin .content .field + .field{margin-left: 20px}
+.admin .content .field .tit{height: 25px;}
+.admin .content .field input{width: 150px; height: 35px; border: 0; border-bottom: 1px solid #cacaca; font-weight: bold}
+.admin .content .field.keyboard input{width: 300px;}
+.admin .content .search .buttons{position: absolute; bottom: 28px; right: 28px;}
+.admin .content .search .buttons .button.sync{min-width: auto; padding: 0 15px; border-right: 0; background-size: 60%}
+.admin .content .search .searchBtn{float: left; width: 75px; height: 35px; background: #464d53; border: 1px solid #464d53; margin-left: 0; color: #fff; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .content .search .searchBtn:hover{border: 1px solid #3a3736; background: #fff; color: #3a3736; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .tableBox{position: relative; width: 100%; padding-top: 10px}
+.admin .tableBox + .tableBox{padding-top: 0}
+.admin .tableBox .listBox{margin-top: 15px}
+.admin .tableBox .listBox .header{position: relative; min-height: 45px}
+.admin .tableSection{position: relative; padding: 28px; background: #fff; box-shadow: 0 0 10px 3px #dadada}
+.admin .pt0{padding-top: 0 !important;}
+.admin .tableSection .tab{position: relative; width: 100%; height: 55px; border-bottom: 1px solid #dee0e1}
+.admin .tableSection .tab li{float: left; cursor: pointer}
+.admin .tableSection .tab li a{display: block; padding: 15px 20px 11px; font-size: 16px; font-weight: bold; color: #9d9d9d}
+.admin .tableSection .tab li.on{border-bottom: 5px solid #6c72b1}
+.admin .tableSection .tab li.on a,
+.admin .tableSection .tab li:hover a{color: #6c72b1}
+.admin .tableSection .tab .rightBox{top: 10px; right: 0px}
+
+/* 테이블 */
+.admin .table table, .admin .table2 table{width: 100%; table-layout: fixed; border-collapse: collapse; border-spacing: 0}
+.admin table tr.nodata td{padding: 100px 0; text-align: center}
+.admin table td{word-break: break-all}
+.admin .table th,
+.admin .table td{border-bottom: 1px solid #dee0e1}
+.admin .table th,
+.admin .table td,
+.admin .table2 th,
+.admin .table2 td{height: 50px; padding: 0 10px; text-align: left}
+.admin .center{text-align: center !important}
+.admin .table th{background: #f5f5f5; font-weight: bold}
+.admin .table .table2 th,
+.admin .table .table2 td{background: none; border: 0;}
+.admin .table.row .table2 th,
+.admin .table.row .table2 td{border: 0}
+.admin .table2{width: 50%}
+.admin .table2.w100{width: 100%}
+.admin td.input{font-weight: bold}
+.admin td.img{padding: 10px}
+.admin td.img img{width: 100%; height: 90px}
+.admin td.img.ht130 img{height: 130px}
+.admin table td.input input{width: 100%; height: 35px; border: 1px solid #ccc;  padding: 0 10px}
+.admin table td.input.unit input{width: 80%}
+.admin table td.input.unit input + span{margin-left: 10px;}
+.admin table td.input.btn input{float: left;width: calc(100% - 75px)}
+.admin table td.input.btn.btn2 input{width: calc(100% - 100px)}
+.admin table td.span.btn span{float: left; padding: 15px 0}
+.admin table td.span.btn .buttons{float: right}
+.admin table td.span.btn button{float: right}
+.admin table td.input.btn .buttons{float: right}
+.admin table td.input.btn button{float: right}
+.admin table td.input .select-custom{width: 100%}
+.admin table td.input .select-custom select{width: 100%}
+.admin table td.input.stp{padding: 10px;}
+.admin table td.input.ci img{width:150px}
+.admin table td.input.stp img{width:50px}
+.admin table td.input.img span{width: calc(100% - 60px);}
+.admin table td.input select{width: 100%; font-weight: bold}
+.admin table td.input button + span{margin-left: 10px; line-height: 2.7}
+.admin table td.input.img > button{float: none}
+.admin table td.input .imgInfo{margin-top: 10px}
+.admin table td.input .imgInfo span{float: left;}
+.admin table td.input .imgInfo span + button{float: left;}
+.admin table td.input.form2 input{float: left; width: calc(50% - 10px)}
+.admin table td.input.form2 span{float: left; margin: 8px}
+.admin table td.input.form3 input{float: left; width: calc(33.3333% - 10px)}
+.admin table td.input.form3 span{float: left; margin: 4px}
+.admin table td.input.form3 .select-custom{float: left; width: calc(33.3333% - 10px); margin-left: 10px}
+/*.admin .table2 td.input.form3 .select-custom:after{right: 20px}*/
+.admin .table2 td.input .dates{float: left; width: 100%; padding: 6px 0;}
+.admin .table2 td.input .date{position: relative; width: 100%; height: 35px}
+.admin .table2 td.input .date .inputDate{display: block; position: relative; width: 60%; height: 35px; background: #fff; padding: 0 10px; border: 1px solid #bbb; line-height: 2.7}
+.admin .table2 td.input .date label{position: absolute; top: 0; right: 10px; width: 19px; height: 35px; background: url(../images_web/common/admin_calendar.png)0 center no-repeat; background-size: 100%}
+.admin td.input.select2{float: none; width: 100%;}
+.admin td.input.select2 .select-custom{width: calc(50% - 5px)}
+.admin td.input.select2 .select-custom + .select-custom{margin-left: 10px}
+.admin .detail tbody tr:hover{background: #f5f5ff; cursor: pointer}
+.admin .table.row td,
+.admin .table.row th{border-right: 1px solid #dee0e1;}
+.admin .table.row th:last-child,
+.admin .table.row td:last-child{border-right: 0}
+/* //테이블 */
+
+.admin .rightBox{position: absolute; top: 0; right: 0}
+.admin .buttons button + button{float: left; margin-left: 10px}
+/* 버튼 */
+.admin .button{display: block; float: left; min-width: 50px; height: 35px; padding: 0 20px; border: 1px solid #464d53; color: #fff; background: #464d53; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .button:hover{border: 1px solid #464d53; background: none; color: #464d53; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .button.purple{background: #6c72b1; border: 1px solid #6c72b1}
+.admin .button.purple:hover{background: none; border: 1px solid #6c72b1; color: #6c72b1; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .button.gray{background: #bbb; border: 1px solid #bbb}
+.admin .button.gray:hover{background: none; color: #868686}
+.admin .button.white{background: none; border: 1px solid #fff; color: #fff}
+.admin .button.white:hover{background: #fff; color: inherit}
+.admin .button.orange{background: none; border: 1px solid #f58220; color: #f58220}
+.admin .button.orange:hover{background: #f58220;  color: #fff}
+.admin button.edit{min-width: auto; padding: 0; width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_editBtn.png)center no-repeat; background-size: 40%}
+.admin button.edit:hover{ border: 0;background: url(../images_web/common/admin_editBtn-over.png)center no-repeat; background-size: 40%}
+.admin button.trash{min-width: auto; padding: 0;width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_delBtn.png)center no-repeat; background-size: 40%}
+.admin button.trash:hover{ border: 0;background: url(../images_web/common/admin_delBtn_over.png)center no-repeat; background-size: 40%}
+.admin button.cancel{min-width: auto; padding: 0;width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_cancel.png)center no-repeat; background-size: 40%}
+.admin button.cancel:hover{ border: 0;background: url(../images_web/common/admin_cancel_purple.png)center no-repeat; background-size: 40%}
+.admin button.save{min-width: auto; padding: 0;width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_save.png)center no-repeat; background-size: 40%}
+.admin button.save:hover{ border: 0;background: url(../images_web/common/admin_save_purple.png)center no-repeat; background-size: 40%}
+.admin button.add{min-width: auto; padding: 0;width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_add.png)center no-repeat; background-size: 40%}
+.admin td .add{position: static}
+.admin button.add:hover{ border: 0;background: url(../images_web/common/admin_add_over.png)center no-repeat; background-size: 40%}
+.admin button.sort{min-width: auto; padding: 0;width: 50px; height: 50px; border: 0; background: url(../images_web/common/admin_sort.png)center no-repeat; background-size: 40%}
+.admin button.sort:hover{ border: 0;background: url(../images_web/common/admin_sort_over.png)center no-repeat; background-size: 40%}
+.admin button.button.small{height: 30px; padding: 5px; margin-left: 10px}
+.admin button.sync{background: url(../images_web/common/admin_sync.png)center no-repeat}
+.admin button.sync:hover{background: #464D53 url(../images_web/common/admin_sync_white.png)center no-repeat}
+
+.admin .submit{width: 100%; height: 65px}
+.admin .submit .buttons{width: 100%; height: 100%; padding: 15px 0 15px 10px}
+
+/* //버튼 */
+.admin .rightBox .select-custom,
+.admin .rightBox .buttons{float: left}
+.admin .rightBox .select-custom{position: relative; margin-left: 10px}
+.admin .header .rightBox{top: 32px; right: 28px}
+.admin .tableBox > .header .rightBox{top: 28px; right: 0}
+.admin .header h2{margin-bottom: 10px; font-size: 16px; font-weight: bold;padding-left:15px;height:24px;line-height:24px;background: url(../images_web/common/admin_h3.png)left center no-repeat}
+/*.admin .header h2:after{content: ""; float: left; display: block; width: 15px; height: 25px; background: url(../images_web/common/admin_h3.png)left center no-repeat}*/
+.admin .header h3{font-size: 14px; font-weight: bold; line-height: 4}
+
+/* form */
+.admin .form{padding: 0 28px}
+.admin .form:last-child{margin-bottom: 28px}
+.admin .form + .form{margin-top: 30px}
+.admin .form2 .tableSection,
+.admin .form3 .tableSection,
+.admin .form4 .tableSection{float: left}
+.admin .form.form2 .tableSection{width: calc(50% - 15px); height: 380px; margin-top: 30px;}
+.admin .form.form3 .tableSection{width: calc(33.3333% - 20px)}
+.admin .form.form4 .tableSection{width: calc(25% - 22.5px)}
+.admin .form .tableSection + .tableSection{margin-top: 30px}
+.admin .form2 .tableSection + .tableSection,
+.admin .form3 .tableSection + .tableSection,
+.admin .form4 .tableSection + .tableSection{margin-left: 30px; margin-top: 0}
+.admin .form .tableSection .header{min-height: auto; height: 55px; padding-left: 15px; border-bottom: 1px solid #dee0e1}
+.admin .form .tableSection .header + .table,
+.admin .form .tableSection .header + .table2{overflow-y: auto; height: calc(100% - 55px);}
+
+.admin .tableSection.iconBtn .header .rightBox{top: 2px; right: 0}
+.admin .tableSection.iconBtn .header .rightBox button + button{margin-left: 0}
+.admin .form .tableSection .trees{padding: 28px}
+
+.admin .form .header{min-height: 35px}
+.admin .form.form2 .table2{width: 100%; padding: 15px}
+.admin .form.form2 .tableSection:first-child,
+.admin .form.form2 .tableSection:nth-child(2){margin-top: 0}
+.admin .form.form2 .tableSection:nth-child(2n+1){margin-left: 0}
+.admin .form.form2 > .header{width: calc(50% - 10px); height: 100%}
+.admin .form .tableSection{width: 100%; padding: 0}
+.admin .form .tableSection .table2{padding: 10px}
+/* //form */
+
+/* 부서및역할설정 */
+.admin .teamSet{padding: 28px}
+.admin .n-content .content .teamSet .fields + .fields{margin-top: 30px}
+.admin .trees{height: auto;}
+.admin .tree .key{width:100%;height: 40px;border: 1px solid #8288c2;background: #fcfcff; padding: 0 10px; font-size: 15px; font-weight: bold; color: #6067a9; line-height: 2.7;}
+.admin .tree .key.select{background: #fff7f0; border: 1px solid #f58220; color: #f58220;}
+.admin .tree + .new{margin-top: 10px}
+.admin .value .tree + .new{margin-top: 0}
+.admin .value.last .tree + .new{margin-left: 10px}
+.admin .treeBox{overflow-y: auto; height: 268px; border: 1px solid #ccc;padding: 10px}
+.admin .treeBox .new input{width: calc(100% - 111px); height: 40px; border: 0; padding: 0 10px;border-bottom: 1px solid #ccc;}
+.admin .treeBox .new input:hover,
+.admin .treeBox .new input:focus{border-bottom: 1px solid #8288c2}
+.admin .treeBox .new .buttons{float: right}
+.admin .treeBox .new .buttons button{height: 40px}
+.admin .tree.on > ul > li > .value{display: block}
+.admin .tree .value{padding-left: 30px; display: block}
+.admin .tree li{position: relative}
+.admin .tree ul > li + li,
+.admin .tree .value li,
+.admin .tree > .new,
+.admin .treeBox > .new{padding-top: 10px;}
+.admin .n-pop .tree .value{display: none}
+.admin .n-pop .tree.on .value{display: block}
+.admin .n-pop .tree .value.last{padding-left: 55px}
+.admin .tree .value > ul > li:before{content: ""; position: absolute; top: 0; left: -15px; width: 1px; height: 100%; background: #dee0e1;}
+.admin .tree .value > ul > li:last-child:before{height: 30px;}
+.admin .tree .value > ul > li > .key:after,
+.admin .tree .value > ul > li > .new:after{content: ""; position: absolute; top: 30px; left: -15px; width: 15px; height: 1px; background: #dee0e1;}
+/* //부서및역할설정 */
+
+/* 권역설정 */
+.admin .tableSection .header .rightBox{top: 10px; right: 10px}
+.admin .tableSection.area .list li span{display: block; float: left; margin-right: 20px; font-size: 16px; font-weight: bold}
+.admin .area  .list li .button{float: right}
+.admin .area table tbody tr:hover{background: #f9f9f9}
+.admin .area table tbody tr.on,
+.admin .area table tbody tr.on:hover{background: #6b7488}
+.admin .area table tbody tr.on td,
+.admin .area table tbody tr.on:hover td{color: #fff; cursor: pointer}
+.admin .selectedBoxs + .tableBox .rightBox{top: -46px; right: 28px}
+.admin .area .rightBox + .tableSection{margin: 0 28px}
+/* //권역설정 */
+
+/* 결재및기타설정 */
+.admin .etc .tableBox table{width: 40%}
+/* //결재및기타설정 */
+
+/* 기타청구설정 */
+.admin .form .add_forms{width: 100%; padding: 20px;}
+.admin .form .add_form{border: 1px solid #dee0e1}
+.admin .form .add_form .left{float: left; width: 25%; background: #f5f5f5;}
+.admin .form .add_form .right{float: left; width:  75%; margin-left: 0}
+.admin .form .add_form .right li{height: 50px; border-bottom: 1px solid #dee0e1}
+.admin .form .add_form .right span{float: left; padding: 15px 10px;}
+.admin .form .add_form .right .buttons{float: right;}
+.admin .form .add_form .right .buttons button{float: left;}
+.admin .tableSection .content.btn.center{width: 100%; padding: 10px; background: #fff}
+.admin .tableSection .content.btn.center > div{display: inline-block; margin-top: 10px;}
+.admin .tableSection .content.btn.center > div > button{display: inline-block; float: none !important}
+.admin .tableSection .content.btn.center > div > p{margin-top: 15px; text-align: center;}
+.admin #ps_etc_manage .tableSection:nth-child(1){height: 447gpx}
+.admin #ps_etc_manage .tableSection:nth-child(2) .table td .table{height: 230px; overflow-y: auto}
+/* //기타청구설정 */
+
+
+/* modal */
+.admin .content + .footer{height: 80px; text-align: center}
+.admin .content + .footer .btns{display: inline-block; margin: 22px 0;}
+.admin .content + .footer .btns button + button{margin-left: 10px}
+.admin .n-pop .content .tableBox .header{padding: 0; margin: 0}
+.admin .n-pop .tableSection{padding: 0; box-shadow: none}
+
+/* 테이블 */
+.admin .n-pop .table{overflow-y: auto; max-height: 500px}
+.admin td span, .admin td p{font-weight: 400}
+/* 테이블 */
+
+/* 부서 선택 */
+.admin .n-pop.dept{width: 400px}
+.admin .n-pop .header span{color: #6c72b1}
+.admin .n-pop .tree{border: 1px solid #ccc; padding: 10px}
+.admin .n-pop .value .tree{border-top: 10px; padding-top: 10px;}
+.admin .n-pop .tree .key{width: calc(100% - 29px)}
+.admin .n-pop .treeBox{overflow-y: auto; max-height: 600px;}
+.admin .tree + .tree{padding-top: 10px}
+.admin .tree.on > .key{color: inherit; font-weight: inherit}
+.admin .value .tree{border: 0; padding: 0;}
+.admin .value .tree + .tree{margin-top: 0}
+.admin .n-pop .tree .key.select{position: relative; color: #f58220; font-weight: bold;}
+.admin .n-pop .tree .key.select:after{content: "";position: absolute; top: 15px; right: 10px; width: 5px; height: 5px; border-radius: 30px; background: #f58220}
+/* //부서 선택 */
+
+/* 역할 설정 */
+.admin .content .tableBox > .header{position: relative; margin-right: 28px}
+.admin .n-pop .role{width: 100%; box-shadow: 0 0 10px 3px #dadada}
+.admin .role table{width: 100%; table-layout: fixed; border-spacing: 0; border-collapse: collapse}
+.admin .role td{border: 1px solid #ccc}
+.admin .role td div{width: 100%; height: 50px; padding: 16px 0; font-weight: bold; text-align: center; cursor: pointer; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s; background: #fff}
+.admin .role td div:hover{background: #f9f9f9}
+.admin .role td div.on,
+.admin .role td div.on:hover{background: #6b7488; color: #fff; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+/* //역할 설정 */
+
+/* 소속 직원 */
+.admin .list{padding: 20px}
+.admin .list ul{height: 285px; overflow-y: auto}
+.admin .list li{height: 35px; border-bottom: 1px solid #dee0e1; padding-left: 20px}
+.admin .list li a{display: block; float: left; height: 100%; line-height: 2}
+.admin .list li button.ellip{display: block; overflow: visible; position: relative; float: right; width: 35px; height: 35px; border: 0; background: url(../images_web/common/admin_ellipsis.png)center no-repeat; background-size: 50%; outline: 0}
+.admin .list li button.ellip:hover,
+.admin .list li button.ellip:focus{background: url(../images_web/common/admin_ellipsis_over.png)center no-repeat; background-size: 50%}
+.admin .list li .ellip .sub{opacity: 0; visibility: hidden; z-index: 10; position: absolute; top: 0%; right: 112%; width: 130px; background: #fff; box-shadow: 0 0 10px 3px #dadada; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s; outline: 0}
+.admin .list li .ellip .sub.show{opacity: 1; visibility: visible; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .list li .ellip .sub ul{padding: 0;}
+.admin .list li .ellip .sub li{height: 40px; padding: 10px 20px; text-align: center}
+.admin .list li .ellip .sub li:hover,
+.admin .list li .ellip .sub li.on{color: #6c72b1; font-weight: bold}
+.admin .list li .ellip .sub li + li{margin-top: 0}
+.admin .list li.master a:after{content: ""; float: right; width: 40px; height: 23px; background: url(../images_web/common/admin_crown.png)center no-repeat}
+.admin .list li + li{margin-top: 10px;}
+/* //소속 직원 */
+
+/* 리스트 */
+.admin .list .basic{height: 40px; line-height: 3; cursor: pointer;-webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .list .basic + .basic{margin-top: 0}
+.admin .list .basic:hover{background: #f9f9f9}
+.admin .list .basic.on,
+.admin .list .basic.on:hover{background: #6b7488; color: #fff; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .list .trash{width: 35px; height: 35px; float: right; background-size: 50%}
+.admin .list .trash:hover{background-size: 50%}
+.admin .list .basic button{width:100%;height:100%;border:0;text-align:left;background:none;}
+.admin .list .basic.on button{color:#fff}
+/* //리스트 */
+
+/* 직원 추가 */
+.admin .field.keyboard .select-custom{margin-right: 10px}
+.admin td.input textarea{width: 100%; height: 80px; padding: 10px; border: 1px solid #ccc; font-weight: bold;}
+/* //직원 추가 */
+
+/* 직원 추가(팝업) */
+.admin .n-pop .content .table{width: 100%; float: none; margin-left: 0}
+.admin .n-pop .content .listBox .table{max-height: 300px}
+.admin .addEmp{max-height: 620px; overflow-y: auto}
+.admin td.input input[type="checkbox"],
+.admin th.input input[type="checkbox"]{width: 18px; height: 18px}
+.admin .selectedBox li{float: left; width: 8%; height: 30px; margin-top: 15px; border: 1px solid #dee0e1; border-radius: 30px; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .n-pop .selectedBox li{width: 12.5%}
+.admin .selectedBox li:hover{border: 1px solid #6c72b1;  -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .selectedBox li:nth-child(12n){margin-left: 0}
+.admin .n-pop .selectedBox li:nth-child(8n){margin-left: 0}
+.admin .selectedBox li:nth-child(1),
+.admin .selectedBox li:nth-child(2),
+.admin .selectedBox li:nth-child(3),
+.admin .selectedBox li:nth-child(4),
+.admin .selectedBox li:nth-child(5),
+.admin .selectedBox li:nth-child(6),
+.admin .selectedBox li:nth-child(7){margin-top: 0}
+.admin .n-pop .selectedBox li:nth-child(8),
+.admin .n-pop .selectedBox li:nth-child(9){margin-top: 15px}
+.admin .selectedBox li a{float: left; display: block; overflow: hidden; width: calc(100% - 30px); height: 30px; padding: 5px 0px 5px 10px; text-overflow: ellipsis; white-space: nowrap}
+.admin .selectedBox li .delBtn{float: right; width: 30px; height: 28px; border: 0; background: url(../images_web/common/mdi-close.png)center no-repeat; background-size: 30%}
+.admin .selectedBox li + li{margin-left: 15px}
+.admin .selectedBoxs .listBox tr.on,
+.admin .selectedBoxs .listBox tr.on:hover{background: #6b7488; cursor: pointer}
+.admin .selectedBoxs .listBox table tr:hover{background: #f1f5fd; cursor: pointer}
+.admin .selectedBoxs .listBox tr.on td,
+.admin .selectedBoxs .listBox tr.on:hover td{color: #fff}
+/* //직원 추가(팝업) */
+
+/* 선택된 직원 */
+.admin .selectedBoxs + .tableBox{padding-bottom: 20px}
+.admin .n-pop .selectedBoxs + .tableBox{padding: 20px; padding-bottom: 0}
+.admin .content.selectedBoxs{overflow-y: auto; max-height: calc(100% - 199px)}
+.admin .selectedBoxs + .tableBox + .footer{height: 80px; text-align: center}
+.admin .selectedBoxs + .tableBox + .footer .btns{display: inline-block; margin: 22px 0;}
+.admin .selectedBoxs + .tableBox + .footer .btns button + button{margin-left: 10px}
+.admin .selectedBoxs + .tableBox .selectedBox .nodata{border: 0; width: 100%; text-align: center; line-height: 2.5}
+.admin .n-pop .selectedBoxs + .tableBox .tableSection{padding: 28px; box-shadow: 0 0 10px 3px #dadada}
+/* //선택된 직원 */
+/* //직원 추가 */
+/* //modal */
+
+/* 로그인 */
+.login{width: 100%; height: 100%; position: relative; background: #565656}
+.login .loginBox{position: absolute; top: 50%; left: 50%; width: 500px; height: 500px; margin-top: -280px; margin-left: -250px}
+.login.admin_login .loginBox .logo{width: 150px; height: 150px; margin: 0 auto; background: url(../images_web/common/vzon_bi_shape.png)center no-repeat; background-size: 70%}
+.login .loginBox .section{width: 100%; height: calc(100% - 150px); background: #111822}
+.login .loginBox .section .title{width: 100%; height: 80px; font-size: 24px; background: #6c72b1; color: #fff; text-align: center; line-height: 3.5}
+.login .loginBox .section .content{width: 300px; height:
+calc(100% - 80px); margin: 0 auto; padding: 60px 0}
+.login .section .id label{float: left; width: 50px; height: 35px; background: url(../images_web/common/admin_login_id.png)left center no-repeat; background-size: 50%}
+.login .section .id input{width: calc(100% - 50px); height: 35px; border: 0; padding: 0 10px; background: #dee0e1;}
+.login .section .id input:focus,
+.login .section .pw input:focus{background: #fff}
+.login .section .pw{margin-top: 20px}
+.login .section .pw label{float: left; width: 50px; height: 35px; background: url(../images_web/common/admin_login_pw.png)left center no-repeat; background-size: 50%}
+.login .section .pw input{width: calc(100% - 50px); height: 35px; border: 0; padding: 0 10px; background: #dee0e1;}
+.login .section .button{margin-top: 20px}
+.login .section .button .forget{float: left; width: calc(100% - 80px)}
+.login .section .button .forget a{border-bottom: 1px solid #25628f; color: #25628f;line-height: 2.5}
+.login .section .button .forget a:hover,
+.login .section .button .forget a:focus{border-bottom: 1px solid #dee0e1; color: #dee0e1}
+.login .section .button .loginBtn{width: 80px; float: right}
+.login .section .button .loginBtn button{width: 100%; height: 35px; border:1px solid #6c72b1; background: #6c72b1; color: #fff;  -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.login .section .button .loginBtn button:hover{ border:1px solid #6c72b1; background: none; color:#6c72b1;-ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.login .footer{margin-top: 20px; text-align: center; color: #bbb}
+
+.login.vzon_login{background: #8288c2; }
+.login.vzon_login .loginBox{margin-top: -250px}
+.login.vzon_login .loginBox .logo{width: 150px; height: 150px; margin: 30px auto 0 auto; background: url(../images_web/common/vzon_bi_shape.png) center no-repeat; background-size: 70%}
+.login.vzon_login .loginBox .section{height: calc(100% - 39px); background: #ffffff; border: 1px solid #8288c2; border-radius: 10px}
+.login.vzon_login .loginBox .section .content{height: auto; padding: 47px 0}
+.login.vzon_login .section .id input,
+.login.vzon_login .section .pw input{border: 1px solid #bbb; border-radius: 5px; background: none}
+.login.vzon_login .section .forget{text-align: right; margin-top: 10px}
+.login.vzon_login .section .forget a{border-bottom: 1px solid #aaa; color: #aaa}
+.login.vzon_login .section .forget a:hover{border-bottom: 1px solid #1b5f8b; color: #1b5f8b}
+.login.vzon_login .section .button .loginBtn{float: inherit; width: 100%; text-align: center}
+.login.vzon_login .section .button .loginBtn button{display: inline-block; width: 150px; border: 1px solid #f58220; border-radius: 30px; background: #f58220; color: #fff; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.login.vzon_login .section .button .loginBtn button:hover{background: #fff; color: #f58220; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.login.vzon_login .section .button{margin-top: 30px}
+.login.vzon_login .footer{color: #fff}
+/* //로그인 */
+
+/* 토글 */
+.admin .rightBox .toggleBox{margin-top: 4px}
+.admin .toggleBox{height: 22px}
+.admin .switch{position: relative; display: inline-block; width: 40px; height: 22px;}
+.admin .switch input{display: none}
+.admin .switch .slider{position: absolute; top: 4px; left: 0; right: 0; bottom: 0; border-radius: 25px; background-color: #ccc; color: #fff;  padding: 3px 6px 3px 28px; transition: .4s; -ms- transition: .4s; transition: .4s; cursor: pointer; line-height: 1.7}
+.admin .n-table td .switch .slider{padding: 3px 6px 3px 28px}
+.admin .n-table td .switch.yesno .slider{padding: 3px 6px 3px 35px}
+.admin .switch input.on + .slider{padding: 3px 6px}
+.admin .switch .slider:before{content: ""; position: absolute; height: 20px; width: 20px; left: 0; top:  -1px; border-radius: 50%; background-color: #fff; -webkit-transition: .4s; -ms-transition: .4s; transition: .4s; box-shadow: 0 0 10px 1px #aaa}
+.admin .switch input:checked + .slider{background-color: #6c72b1}
+.admin .switch input:focus + .slider{box-shadow: 0 0 1px #1b5f8b}
+.admin .switch input:checked + .slider:before{content: ""; transform: -webkit-translateX(20px); transform: -ms-translateX(20px); transform: translateX(20px); box-shadow: 0 0 10px 1px #7c658c}
+/* //토글 */
+
+/* 운영관리 */
+.admin .rightBox .buttons + .toggleBox{float: left; margin: 13px 10px 0 10px}
+.admin .form .left, .admin .form .right{float: left; width: calc(50% - 15px)}
+.admin .form .right{margin-left: 30px}
+.admin .form .left .tableSection, .admin .form .right .tableSection{margin-left: 0; margin-top: 0}
+.admin .form .left .tableSection + .tableSection,
+.admin .form .right .tableSection + .tableSection{margin-top: 30px}
+.admin .form .left .tableSection .table2,
+.admin .form .right .tableSection .table2{width: 100%}
+/* //운영관리 */
+
+/* 재고관리 */
+.admin .inventory .form.form3 .area3{position: relative}
+.admin .inventory .form.form3 .area3 > .header > .rightBox{top: 0; right: 0}
+.admin .inventory .form.form3 .area3{float: left; width: calc(33.3333% - 10px)}
+.admin .inventory .form.form3 .area3 + .area3{margin-left: 15px}
+.admin .inventory .form.form3 .area3 .tableSection{width: 100%; height: 404px;}
+.admin .inventory .table2{width: 100%;}
+.admin .inventory .form .tableSection .header + .table2{height: auto;}
+.admin .inventory .form.form3 .area3 td.input .select-custom{width: 28%}
+.admin .inventory .form.form3 .area3 td.input .select-custom + button{margin-left: 10px}
+.admin .inventory .list{width: 100%}
+.admin .inventory .list ul{padding: 0}
+.admin .inventory .list li{padding-left: 15px; cursor: inherit}
+.admin .inventory .list li:hover{background: none; cursor: inherit}
+/* //재고관리 */
+
+/* 청구 설정 */
+.admin .table2 .input.dateSelect .select-custom{float: left; width: 70px}
+.admin .table2 .input.dateSelect .select-custom select{text-align: center}
+.admin .table2 .input.dateSelect span{float: left; margin:0 5px; line-height: 2.7}
+/* //청구 설정 */
+
+/* 커스텀셀렉트 */
+.admin label.select-custom {position: relative;display: inline-block; /*float: left;*/}
+.admin .select-custom select{display: inline-block; overflow: hidden; height: 35px;border: 1px solid #cacaca;padding: 0 23px 0 13px;margin: 0;background: #fff;line-height: 2.8;-webkit-appearance:none; -moz-appearance: none;-ms-appearance: none;appearance:none; text-overflow: ellipsis; white-space: nowrap}
+.admin .search .select-custom select{max-width: 100px}
+.admin .select-custom select:focus::-ms-value{background: none; color: #2b3034}
+.admin .select-custom select::-ms-expand {display: none;}
+.admin .select-custom:after {content: "▼";position: absolute;top: 4px;right: 2px;bottom: 0;font-size: 60%;line-height: 30px;padding: 0 7px;pointer-events:none;}
+/* //커스텀셀렉트 */
+
+/* 상품목록 */
+.admin .division .tableBox{padding: 28px;}
+.admin .division .tableSection{float: left; width: calc(50% - 10px); height: 956px}
+.admin.n-modal .division .table2{width: 100%;}
+.admin .division table td.input .select-custom{width: 60%;}
+.admin .division .search .select-custom select{max-width: 90px;}
+.admin .division .tableSection + .tableSection{margin-left: 20px;}
+.admin .division .tableBox .tableSection:nth-child(2) .listBox{margin-top: 0;}
+.admin .division .table2{width: 80%}
+.admin td .unit{float: left; width: calc(25% - 2.3px);}
+.admin td .unit span{display: block; float: left; width: 25px; line-height: 1.8}
+.admin td .unit input{display: block; float: left; width: calc(100% - 54px); margin: 0 2px; text-align: center;}
+.admin .n-pop .toggleBox{position: static; top: inherit; right: inherit; padding: 0;}
+.admin .n-pop .toggleBox .switch{width: 40px; height: 22px;}
+.admin .n-pop .switch .slider{padding: 3px 6px 3px 28px !important;}
+.admin .n-pop .toggleBox .switch .slider:before{width: 20px; height: 20px;}
+.admin .n-pop .toggleBox .switch input:checked + .slider:before{content: "";-ms-transform: translateX(22px);-webkit-transform: translateX(22px);transform: translateX(22px);}
+.admin td.bold{font-weight: bold}
+.admin .division .listBox > div .header{min-height: auto; padding: 10px 0}
+.admin .division .price .header span{display: block; margin: 20px 0; text-indent: 20px}
+.admin .stock table td.input.unit input{width: 60%;}
+.admin .division .stock .table2{width: 100%;}
+.admin .division textarea{height: 100px; padding: 10px;}
+.admin .division .prod_detail td .adminThumbBox li{margin: 5px;}
+.admin .division .prod_detail td .adminThumbBox li:first-child{margin-left: 0;}
+.admin .division .scroll_table{padding: 0;}
+.admin .division .t_category .scroll_table .table.tbody{height: 651px}
+.admin .category_search select{display: block; float: left; width: 120px; height: 35px}
+.admin .category_search input{display: block; float: left; width: calc(100% - 197px); height: 35px; margin: 0 5px;}
+.admin .category_table{margin: 20px 0 10px 0; border-bottom: 1px solid #dee0e1}
+.admin .category_table > select{height: 35px;}
+.admin .category_table .head{width: 100%; height: 35px; margin-top: 10px; padding: 10px 5px; background: #eee;}
+.admin .category_table .head span{display: block; float: left;}
+.admin .category_table .head span:nth-child(1){width: 40%;}
+.admin .category_table .head span:nth-child(2){width: 30%;}
+.admin .category_table .head span:nth-child(3){width: 30%;}
+.admin .category_table .body{height: 330px; overflow-y: auto}
+.admin .category_table .body li{}
+.admin .category_table .body li .trigger{display: block; float: left; width: 37px; height: 37px; border: 0; background: url(../images_web/common/array-arrow3.png)center no-repeat;}
+.admin .category_table .body li .cont.on .trigger{background: url(../images_web/common/array-arrow.png)center no-repeat;}
+.admin .category_table .body li .cont + ul{display: none;}
+.admin .category_table .body li .cont.on + ul{display: block;}
+.admin .category_table .body li .cont span{display: block; float: left; line-height: 2.8; cursor: pointer;}
+.admin .category_table .body li .cont span:nth-child(1){width: 40%; padding-left: 20px;}
+.admin .category_table .body li .cont.last span:nth-child(1){padding-left: 57px;}
+.admin .category_table .body > ul > li:nth-child(1) > .cont.last > span:nth-child(1){padding-left: 37px}
+.admin .category_table .body li .cont:hover{background: #f6fcff}
+.admin .category_table .body li .cont.select{background: #d7e8ff}
+.admin .category_table .body > ul > li:nth-child(1) > .cont > span:nth-child(1){padding-left: 0}
+.admin .category_table .body li .cont span:nth-child(2){width: 30%;}
+.admin .category_table .body li .cont span:nth-child(3){width: 30%;}
+.admin .content .category_add_btn{width: 100%; height: 37px; border: 0; background: #8288c2; color: #fff; line-height: 2.5}
+.admin .category_select ul{width: 100%; margin-top: 10px; padding: 10px; background: #eee}
+.admin .category_select li{float: left; position: relative; width: 189px; padding: 5px; margin-top: 5px; background: #fff; border: 1px solid #bbb; border-radius: 50px;}
+.admin .category_select li + li{margin-left: 5px;}
+.admin .category_select li:nth-child(1),
+.admin .category_select li:nth-child(2),
+.admin .category_select li:nth-child(3){margin-top: 0;}
+.admin .category_select li:nth-child(4n){margin-left: 0px;}
+.admin .category_select li span{display: block; overflow: hidden; width: calc(100% - 30px); text-overflow: ellipsis; white-space: nowrap;}
+.admin .category_select li button{position: absolute; top: 0px; right: 0px; width: 30px; height: 30px; border:0; background: url(../images_web/common/mdi-close.png)center no-repeat;}
+.admin .division .tableSection .tab li a{padding: 15px 12px 11px;}
+/* //상품목록 */
+
+/* 상품상세 */
+.admin .prod_detail .form.form3 .tableSection:first-child{width: 30%}
+.admin .prod_detail .form.form3 .tableSection:nth-child(2){width: 30%}
+.admin .prod_detail .form.form3 .tableSection:last-child{width: calc(40% - 60px)}
+.admin .prod_detail .table2{width: 100%}
+.admin .prod_detail .form.form3 .tableSection{height: 500px}
+.admin .prod_detail td.img .imgBox{position: relative; width: 130px; height: 130px;}
+.admin .prod_detail td .thumb{overflow: hidden; position: relative; width: 100%; height: 100%;}
+.admin .prod_detail td .thumb .repre{position: absolute; bottom: 0; left:0; padding: 0 10px; padding-top: 2px; background: #8288c2; font-size: 10px; color: #fff; line-height: 2}
+.admin .prod_detail td .thumb + .del{position: absolute; top: 0; right: 0; width: 40px; height: 40px; border: 0; background: url(../images_web/common/delete.png)center no-repeat; background-size: 50%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .thumb +  .del:hover{background-size: 70%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .thumb img{width: 130px; height: 100%}
+.admin .prod_detail td .thumb .zoom{position: absolute; top: 100%; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7) url(../images_web/common/file-zoom.png)center no-repeat; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .thumb:hover .zoom{top: 0; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s; cursor: pointer}
+
+.admin th.tool{position: relative;}
+.admin th.tool:after{content: ""; position: absolute; top: 17px; right: 0; width: 30px; height: 30px; background-image: url(../images_web/common/tooltip.png); background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
+.admin th.tool:hover .tip{display: block;}
+.admin th.tool .tip{display: none; position: absolute; top: 2px; left: 100%; width: 230px; padding: 10px; border: 1px solid #f58220; background: #fff; z-index: 10}
+
+.admin .prod_detail .price + .price{margin-top: 20px;}
+/* .admin .prod_detail .tit{float: left; margin: 5px 10px; font-size: 15px; font-weight: bold;}
+.admin .prod_detail .tit:before{content: ""; float: left; display: block; width: 5px; height: 5px; margin-top: 8px; margin-right: 10px; background: #8288c2; border-radius: 50%} */
+.admin .prod_detail .tit{width: 100%; padding: 10px; background: #efefef; font-size: 15px; font-weight: bold; text-align: center;}
+
+.admin .prod_detail td .adminThumbBox li{float: left; width: 130px; height: 130px}
+.admin .prod_detail td .adminThumbBox li{position: relative; margin-left: 10px;}
+.admin .prod_detail td .adminThumbBox li .img{overflow: hidden; position: relative; width: 100%; height: 100%}
+.admin .prod_detail td .adminThumbBox li .del{z-index: 10; position: absolute; top: 0; right: 0; width: 40px; height: 40px; border: 0; background: url(../images_web/common/delete.png)center no-repeat; background-size: 50%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .adminThumbBox li .del:hover{background-size: 70%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .adminThumbBox li .img img{width: 100%; height: 100%}
+.admin .prod_detail td .adminThumbBox li .img .zoom{position: absolute; top: 100%; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7) url(../images_web/common/file-zoom.png)center no-repeat; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .adminThumbBox li .img:hover .zoom{top: 0; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s; cursor: pointer}
+.admin .prod_detail td .adminThumbBox li.new button{width: 100%; height: 100%; background: none; border: 1px solid #bbb; background: url(../images_web/common/admin_add_gray.png)center no-repeat; background-size: 20%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail td .adminThumbBox li.new button:hover{border: 1px solid #8288c2; background: url(../images_web/common/admin_add_purple.png)center no-repeat; background-size: 20%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+
+.admin .prod_detail .set{width: 100%; height: 100%; padding: 10px}
+.admin .prod_detail .set li{float: left; width: 130px; height: 160px; margin-top: 20px}
+.admin .prod_detail .set li:nth-child(1),
+.admin .prod_detail .set li:nth-child(2),
+.admin .prod_detail .set li:nth-child(3),
+.admin .prod_detail .set li:nth-child(4),
+.admin .prod_detail .set li:nth-child(5),
+.admin .prod_detail .set li:nth-child(6),
+.admin .prod_detail .set li:nth-child(7){margin-top: 0}
+.admin .prod_detail .set li:nth-child(8n){margin-left: 0 !important}
+.admin .prod_detail .set li .imgBox{position: relative;width: 100%; height: 130px}
+.admin .prod_detail .set li .imgBox .setBox{overflow: hidden; position: relative; width: 100%; height: 100%;}
+.admin .prod_detail .set li .imgBox .setBox .zoom{position: absolute; top: 100%; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7) url(../images_web/common/file-zoom.png)center no-repeat; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail .set li .imgBox .setBox:hover .zoom{top: 0; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s; cursor: pointer}
+.admin .prod_detail .set li .imgBox .del{position: absolute; top: 0; right: 0; width: 40px; height: 40px; border: 0;  background: url(../images_web/common/delete.png)center no-repeat; background-size: 50%}
+.admin .prod_detail .set li .imgBox .del:hover{background-size: 70%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail .set li .imgBox .setBox img{width: 100%; height: 100%}
+.admin .prod_detail .set li .textBox{width: 100%; height: 30px;}
+.admin .prod_detail .set li .textBox span{display: block; width: 100%; padding: 10px 0; font-weight: bold; text-align: center}
+.admin .prod_detail .set li + li{position: relative; margin-left: 65px}
+.admin .prod_detail .set li + li:before{content: ""; position: absolute; top: 0; right: 100%; width: 65px; height: 130px; background: url(../images_web/common/admin_add_purple.png)center no-repeat; background-size: 25%}
+.admin .prod_detail .set li.new button{width: 100%; height: 130px; background: none; border: 1px solid #bbb; background: url(../images_web/common/admin_add_gray.png)center no-repeat; background-size: 20%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail .set li.new button:hover{border: 1px solid #8288c2; background: url(../images_web/common/admin_add_purple.png)center no-repeat; background-size: 20%; -webkit-transition: .2s; -ms-transition: .2s; transition: .2s;}
+.admin .prod_detail .set li.new{margin-left: 30px}
+.admin .prod_detail .set li.new:before{display: none}
+
+/* //상품상세 */
+
+/* 페이징 */
+.admin .paging__btn{border-radius: 0;}
+.admin .paging__list{border: 1px solid #dee0e1}
+
+
+.admin .pagings{position: relative; padding-top:20px; text-align: center;}
+.admin .paging{display: inline-block;}
+.admin .paging li{float: left; padding:3px 13px; border: 0; color: #8288c2; font-size: 15px; cursor: pointer}
+.admin .paging__list li + li{margin-left: 0; border-left: 1px solid #dee0e1}
+.admin li.btn{padding: 0}
+.admin .paging__btn,
+.admin .paging__Left,
+.admin .paging__Right{border: 0; padding: 0}
+.admin .paging__btn:hover,
+.admin .paging__btn:active,
+.admin .paging li:hover,
+.admin .paging__Left:hover, .paging__Right:hover{background: #8288c2; color: #fff}
+.admin .paging li.on{background: #8288c2; color: #fff;}
+.admin .paging li.ellip{border: 0;}
+.admin .paging button.paging__Left{width: 28px; height: 28px; background: #fff url(../images_web/common/pagingLeft.png)center no-repeat}
+.admin .paging button.paging__Left:hover,
+.admin .paging button.paging__Left.on{background: #8288c2 url(../images_web/common/pagingLeft-over.png)center no-repeat}
+.admin .paging button.paging__Right{width: 28px; height: 28px; background: #fff url(../images_web/common/pagingRight.png)center no-repeat; }
+.admin .paging button.paging__Right:hover,
+.admin .paging button.paging__Right.on{background: #8288c2 url(../images_web/common/pagingRight-over.png)center no-repeat}
+.admin .paging__btn{width: 28px; height: 28px; }
+.admin li.btn:first-child .paging__btn{background: #fff url(../images_web/common/paging-first.png) center no-repeat;}
+.admin li.btn:last-child .paging__btn{background: #fff url(../images_web/common/paging-last.png) center no-repeat;}
+.admin li.btn:first-child .paging__btn.on,
+.admin li.btn:first-child .paging__btn:hover{background: #8288c2 url(../images_web/common/paging-first-over.png) center no-repeat;}
+.admin li.btn:last-child .paging__btn:hover,
+.admin li.btn:last-child .paging__btn.on{background: #8288c2 url(../images_web/common/paging-last-over.png) center no-repeat;}
+.admin .paging__list{float: left;}
+/* //페이징 */
+
+/* CMS 밴사 설정 */
+.admin .header.tool h3{float: left}
+.admin .header.tool .tip{float: left; width: 50px; height: 55px; border: 0; background: url(../images_web/common/admin_question.png)center no-repeat; background-size: 40%}
+/* //CMS 밴사 설정 */
+
+/* 은행 코드 */
+.admin .code .tableSection .table2{width: 100%}
+.admin .code .tableSection .table2 th,
+.admin .code .tableSection .table2 td{height: 30px; padding: 5px; border-right: 1px solid #dee0e1; border-bottom: 1px solid #dee0e1; text-align: center;}
+.admin .code .tableSection .table2 th{border-top: 1px solid #8896a1; background: #fafafa}
+.admin .code .table2 th:nth-child(5),
+.admin .code .table2 th:nth-child(10),
+.admin .code .table2 td:nth-child(5),
+.admin .code .table2 td:nth-child(10){border-right: 1px solid #8896a1}
+/* //은행 코드 */
+
+/* VZON ID 관리 */
+.admin table td .left{float: left; line-height: 3.5}
+.admin table td .left + .buttons{float: right}
+.admin .topTxt{width: 30%; margin: 0 auto; padding: 10px 30px; text-align: center;  border-radius: 30px; font-size: 0}
+.admin .topTxt table{width: 100%; table-layout:fixed; border-collapse: collapse; border-spacing: 0; text-align: left}
+.admin .topTxt table th,
+.admin .topTxt table td{height: 45px; padding: 0 20px; border: 1px solid #eee}
+.admin .topTxt table th{background: #eee}
+.admin strong.em{color: #8288c2; font-size: 65px; font-weight: bold; line-height: 1}
+.admin .topTxt .fields{display: inline-block}
+.admin .topTxt .field + .field{margin-left: 50px;}
+.admin .header button.empInfo{display: block; width: 100%; height: 100%; border: 0; outline: 0; background: none; font-size: 16px; text-align: left;}
+.admin .header button.empInfo:before{content: ""; display: block; float: left; width: 50px; height: 54px; background: url(../images_web/common/admin_add_gray.png)center no-repeat; background-size: 30%;}
+.admin .header button.empInfo:hover:before{background: url(../images_web/common/admin_add_over.png)center no-repeat; background-size: 30%}
+.admin .header button.empInfo span{text-align: left; line-height: 3.5; font-size: 16px; font-weight: bold; color: #bbb}
+.admin .header button.empInfo:hover span{color: #8288c2}
+.admin td.blue{color: #1d50c7}
+.admin td.red,
+.admin td.blue{font-weight: bold}
+/* //VZON ID 관리 */
+
+/* 밴피테이블 */
+#um_vender_vanfee .form.form2 .tableSection:first-child{height: auto}
+.admin .van td .table{padding: 0}
+.admin .van td .table table{border: 0}
+.admin .van .form2 .tableSection > .table > table > tbody > tr:nth-child(2) > td{padding: 0}
+.admin .table.vanfee{padding: 10px}
+.admin .table.vanfee table{border: 1px solid #dee0e1}
+.admin td.input.btn{padding: 7px 10px;}
+.admin td.input.btn button{width: 45px; height: 35px; background-size: 45%}
+.admin td.input.btn.txt button{width: 75px; height: 35px}
+.admin table td.input.btn.txt input{width: calc(100% - 85px)}
+.admin td.input.van{position: relative}
+.admin td.input.van span.name{line-height: 3}
+.admin td.input.van .select-custom{float: left; width: auto; min-width: 200px}
+.admin td.input.van .buttons{float: right}
+.admin td.section{padding: 10px}
+.admin td.section .vanfee_wrap{width: 100%}
+.admin td.section .vanfee_wrap .vanfee_form{position: relative; float: left; width: calc(16.6666% - 10px); margin-top: 10px; border: 1px solid #cacaca}
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(1),
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(2),
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(3),
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(4),
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(5),
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(6){margin-top: 0}
+.admin td.section .vanfee_wrap .vanfee_form + .vanfee_form{margin-left: 10px}
+.admin td.section .vanfee_wrap .vanfee_form:nth-child(7n){margin-left: 0}
+.admin td.section .vanfee_wrap .vanfee_form .del{position: absolute; top: -10px; right: -10px; width: 25px; height: 25px; border: 0; background: url(../images_web/common/delete.png) center no-repeat; background-size: 80%;}
+.admin td.section .vanfee_wrap .vanfee_form .del:hover{background-size: 100%}
+.admin td.section .vanfee_wrap .vanfee_form .interval{width: 100%; height: 45px; padding: 10px; border-bottom: 1px solid #cacaca; text-align: center}
+.admin td.section .vanfee_wrap .vanfee_form .interval span{line-height: 2.5}
+.admin td.section .vanfee_wrap .vanfee_form.input .interval,
+.admin td.section .vanfee_wrap .vanfee_form.input .commi{padding: 7px 10px;}
+.admin td.section .vanfee_wrap .vanfee_form.input .interval span,
+.admin td.section .vanfee_wrap .vanfee_form.input .interval input{float: left}
+.admin td.section .vanfee_wrap .vanfee_form.input .interval input{width: 60px; padding: 0 10px;}
+.admin td.section .vanfee_wrap .vanfee_form.input .interval > div{display: inline-block}
+.admin td.section .vanfee_wrap .vanfee_form.input input{height: 30px; border: 1px solid #cacaca; text-align: center}
+.admin td.section .vanfee_wrap .vanfee_form .commi{width: 100%; height: 45px; padding: 10px; text-align: center; line-height: 2}
+/* //밴피테이블 */
+
+
+/* tbl-50 센트릭스 기타관리 계약약관관리 */
+.admin .form2 .table,
+.admin .form2 .table{padding: 20px}
+.admin .form2 .table table{border: 1px solid #dee0e1}
+
+.admin .tbl-50 .listBox{width: 50%; min-height: 35px}
+.admin .tbl-50 .listBox{margin-top: 0}
+.admin .tbl-50 table td.input.btn input{width: calc(100% - 100px)}
+.admin .tbl-50 .tableBox > .header{width: 50%; min-height: 35px}
+.admin .tbl-50 .tableBox > .header .rightBox{top: 0; right: 28px}
+.admin .tbl-50 .tableSection .rightBox{top: 0; right: 0}
+.admin .tbl-50 td .bb{border-bottom: 1px solid #2b3034}
+.admin .tbl-50 tr.on td .bb{border-bottom: 1px solid #fff}
+.admin .tbl-50 tr.on td a{color: #fff}
+.admin .tableSection tr.on .button.edit{background: url(../images_web/common/admin_editBtn_white.png)center no-repeat; background-size: 40%}
+.admin .tableSection tr.on .button.trash{background: url(../images_web/common/admin_delBtn_white.png)center no-repeat; background-size: 40%}
+.admin input[type="radio"] + label{margin-left: 5px;}
+.admin input[type="radio"] + label:hover{font-weight: bold}
+.admin input[type="radio"]:checked + label{color: #6c72b1; font-weight: bold}
+.admin .etc table + span.red{display: block; margin-top: 20px; color: #cc3333; font-weight: bold; font-size: 11px}
+.admin .centrix .tableSection .table th span{font-weight: bold; line-height: 3.8}
+.admin .centrix .tableSection .table th .view{float: right}
+.admin .centrix .tableSection .table th .view button{width: 30px; height: 49px; border: 0; background: url(../images_web/common/admin_view.png)center no-repeat; background-size: 90%}
+.admin .centrix .tableSection .table th .view button.off{background: url(../images_web/common/admin_view_off.png)center no-repeat; background-size: 90%}
+.admin .centrix .tableSection .header .rightBox .selectbox{float: left; margin-right: 10px;}
+.admin td.input.percent:after{content: "%"; display: block; float: right; line-height: 2.8}
+.admin td.input.percent input{width: 90%}
+/* //tbl-50 */
+
+/* scroll_table설정 */
+.admin .scroll_table{height: calc(100% - 55px); padding: 20px}
+.admin .scroll_table .table.thead{padding: 0 !important}
+.admin .scroll_table .table.thead th{border-bottom: 0}
+.admin .table.row.thead th{border-right: 0}
+.admin .scroll_table .table.tbody{overflow-y: auto; height: calc(100% - 51px)}
+.admin .scroll_table .table.tbody table{border-top: 0 !important}
+.admin .scroll_table .table.tbody{padding: 0 !important}
+/* //scroll_table설정 */
+.admin .tableSection > .area2{height:100%}
+/* 상품구성설정 */
+#um_prod_etc_set .form.form3 .area2:first-child .tableSection{max-height: 285px}
+.admin .prodComp .area3{float: left; width: calc(33.3333% - 10px)}
+.admin .prodComp .area3 + .area3{margin-left: 15px;}
+.admin .prodComp .area3 .tableSection{width: 100%;}
+.admin .prod_comp{width: 100%; padding: 20px}
+.admin .prodComp .add_category{padding: 5px 20px; margin-bottom: 10px; border: 0; background: #969696; color: #fff}
+.admin .prodComp .add_category:active{background-color: #6f6f6f}
+.admin .prod_list{overflow-y: auto; width: 100%; max-height: 245px}
+.admin .prod_list li + li{margin-top: 10px;}
+.admin .prod_list .tit{position: relative; width: calc(100% - 40px); height: 40px; border: 1px solid #bbb; cursor: pointer;}
+.admin .prod_list .tit .name, .admin .prod_list .tit .num, .admin .prod_list .tit .trigger, .admin .prod_list .tit .button.add{float: left;}
+.admin .prod_list .tit .name{float: left; position: relative; width: calc(100% - 80px); line-height: 3; text-indent: 20px;}
+.admin .prod_list .tit .name:before{content: ""; position: absolute; top: 0px; left: 5px; width: 10px; height: 40px; background: url(../images_web/common/pkg-prod.png)center no-repeat}
+.admin .prod_list .tit .num{float: left; overflow: hidden; width: 40px; line-height: 3; text-align: center; text-overflow: ellipsis; white-space: nowrap; color: #8288c2}
+.admin .prod_list .tit .trigger{width: 40px; height: 40px; border: 0; border-left: 1px solid #bbb; background: url(../images_web/common/array-arrow.png)center no-repeat;}
+.admin .prod_list .tit .trigger.on{background: url(../images_web/common/array-arrow3.png)center no-repeat;}
+.admin .prod_list .tit + .add_menu{position: absolute; top:0;   right: 0;width: 40px; height: 40px; border: 0; background: #8288c2; font-size: 20px; font-weight: 100; color: #fff}
+.admin .prod_list ul{margin-top: 10px;}
+.admin .prod_list ul:first-child{width: 50%; margin-top: 0;}
+.admin .prod_list ul:first-child > li{margin: 0; margin-top: 10px;}
+.admin .prod_list li > div,
+.admin .prod_list ul > li > div{position: relative;}
+.admin .prod_list ul,
+.admin .prod_list ul li + li{margin-top: 10px;}
+.admin .prod_list ul li{width: 100%; margin-left: 40px}
+.admin .prod_list ul li span{display: block; float: left; width: calc(100% - 110px); height: 100%; line-height: 4}
+.admin .prod_list ul li.input:hover{background: none}
+.admin .prod_list ul li.input:hover:before{display: none}
+.admin .prod_list li input{float: left; width: calc(100% - 90px); height: 30px; margin-top: 5px; padding: 0 10px; border: 1px solid #dee0e1}
+.admin .prod_list li.input .box{width: 100%; padding-left: 10px; border: 1px solid #bbb}
+.admin .prod_list ul li .buttons{float: right}
+.admin .prod_list li .buttons button{width: 40px; height: 40px;}
+.admin .prod_list li .buttons button + button{margin-left: 0;}
+.admin .prodComp .form4 .table{padding: 20px}
+.admin .prodComp .form4 .table table{border: 1px solid #dee0e1}
+.admin .prodComp .form4 .table td.input.btn input{width: calc(100% - 45px)}
+.admin td.input.btn span{float: left; line-height: 2.5}
+.admin td.input.btn span + button{height: 32px}
+.admin .prodComp .tableSection .table{padding: 20px}
+.admin .prodComp .tableSection .table table{border: 1px solid #dee0e1}
+.admin .prodComp .tableSection .table table th:nth-child(3),
+.admin .prodComp .tableSection .table table td:nth-child(3){border-right: 0}
+.admin .prodComp .select-custom select{margin-top: 8px}
+.admin .prodComp .select-custom:after{top: 9px;}
+/* //상품구성설정 */
+
+/* 계약 약관 관리 에디터 */
+.admin .editor .table2{width: 100%}
+.admin .editor .tableSection.w70{width: 50%}
+.admin .editor .table2 .edit{width: 60%}
+.admin .editor .table2 .edit tr{border: 1px solid #dee0e1;}
+.admin .editor .table2 .edit th{height: 35px; background: #dee0e1}
+.admin .editor .table2 .edit td{height: 35px; padding: 0}
+.admin .editor .table2 .edit td + td{border-left: 1px solid #dee0e1}
+.admin .editor .table2 .edit td:hover,
+.admin .editor .table2 .edit td:hover button{background: #f1f1f1}
+.admin .editor .table2 .edit td button{float: left; display: block; width: 100%; height: 100%; border: 0; background: #fff; text-indent: -9999px}
+.admin .editor .table2 .edit td button.b{width: 100%; height: 100%; background: url(../images_web/common/editor_b.png)center no-repeat; background-size: 25%}
+.admin .editor .table2 .edit td button.i{width: 100%; height: 100%; background: url(../images_web/common/editor_i.png)center no-repeat; background-size: 13%}
+.admin .editor .table2 .edit td button.u{width: 100%; height: 100%; background: url(../images_web/common/editor_u.png)center no-repeat; background-size: 34%}
+.admin .editor .table2 .edit td button.color{width: 100%; height: 100%; background: url(../images_web/common/editor_color.png)center no-repeat; background-size: 40%}
+.admin .editor .table2 .edit td button.txt{text-indent: 0}
+.admin .editor .table2 .edit td.input:hover{background: none}
+.admin .editor .table2 .edit .toggleBox{text-align: center}
+.admin .editor .table2 textarea{width: 100%; border: 1px solid #dee0e1; padding: 10px}
+/* //계약 약관 관리 에디터 */
+
+/* 상품선택 */
+.admin .n-pop .selectedBoxs .table td.img{display: table-cell}
+.admin .n-pop td.img img{height: 300%}
+/* //상품선택 */
+
+/* 대리점정보설정 */
+.admin .table.w50{width: 50%}
+.admin th span.red{color: #cc3333; font-weight: bold; font-size: 11px}
+/* 대리점정보설정 */
+
+/*마이그레이션*/
+.admin.n-modal.white{background: rgba(255,255,255,0.5)}
+.admin.n-modal.white .spinnerBox{width: 200px; height: 100px; margin-left: -100px}
+.admin.n-modal.white .spinner{width: 200px;}
+.admin.n-modal.white span{display: block; margin-top: 20px; text-align: center; font-weight: bold;}
+.admin .spinner{background: url(../images_web/common/admin_spinner.gif)center no-repeat; background-size: 50%}
+.admin .migration.selectedBoxs.content{max-height: 100%; height: calc(100% - 82px)}
+.admin .migration .tableBox{padding-top: 0}
+.admin .migration .tableBox + .tableBox{padding-top: 30px}
+.admin .migration .progress{display: table; width: 80%; padding: 28px; margin: 0 auto}
+.admin .migration .progress ul{display: table-row; text-align: center}
+.admin .migration .progress li{display: table-cell; position: relative; width: 25%}
+.admin .migration .progress li + li:before{content: ""; position: absolute; top: 15px; right: 50%; width: 100%; height: 2px; background: #dee0e1}
+.admin .migration .progress li + li.complete:before,
+.admin .migration .progress li + li.current:before{background: #6c72b1}
+.admin .migration .progress li .statusBox{z-index: 10; display: inline-block; position: relative; width: 20px; height: 20px}
+.admin .migration .progress li .statusBox:before{content: ""; display: block; position: absolute; top: 6px; left: 0; width: 20px; height: 20px; border-radius: 30px; background: #ccc; border: 0}
+.admin .migration .progress li.complete .statusBox:before{background: #6c72b1}
+.admin .migration .progress li.current .statusBox:before{content: ""; display: block; position: absolute; top: 0; left: 0; width: 35px; height: 35px; border-radius: 30px; background: #6c72b1; border: 7px solid #fff; box-shadow: 0 0 10px 3px #dadada}
+.admin .migration .progress li p{display: block;margin-top: 20px; text-align: center; color: #aaa; font-size: 16px}
+.admin .migration .progress li.complete p,
+.admin .migration .progress li.current p{font-weight: bold; color: #6c72b1}
+.admin .migration .progress li.current p{margin-left: 15px}
+.admin .migration .tableBox .listBox{margin-top: 0; padding: 20px;}
+.admin .migration .tableBox .listBox table{border: 1px solid #dee0e1}
+.admin .migration .rightBox .detail_date{color: #bbb; font-size: 12px; line-height: 3}
+.admin .migration .excelBtn{width: 500px; margin: 37px auto 36px; text-align: center}
+.admin .migration .excelBtn button{width: 130px; height: 160px; border-radius: 5px; border: 1px solid #dee0e1; background: url(../images_web/common/excel.png)center no-repeat; background-size: 50%; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .migration .excelBtn:hover button{border: 1px solid #217346; background: #e8fbe7  url(../images_web/common/excel.png)center no-repeat; background-size: 50%; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s;}
+.admin .migration .excelBtn span{display: block; margin: 10px 0; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s; text-align: center}
+.admin .migration .excelBtn:hover span{font-weight: bold; color: #217346; -ms-transition: .2s; -webkit-transition: .2s; transition: .2s}
+.admin .migration .warning{height: 63px; border-top: 1px solid #dee0e1; padding: 10px;}
+.admin .migration .warning span{font-weight: bold; color: #cc3333; font-size: 11px}
+
+.admin .tooltip{position: absolute; top: 15px;}
+.admin .migration .tableBox:nth-child(2) .form3 .tableSection{height: 380px}
+.admin .migration .migration_step{height: calc(100% - 55px); padding: 20px 20px 20px 30px}
+.admin .migration .migration_step ol{height: 100%; overflow-y: auto}
+.admin .migration .migration_step li{position: relative; padding-left: 20px; font-size: 15px; font-weight: 400; line-height: 2; color: #cc3333}
+.admin .migration .migration_step li:before{content: ""; position: absolute; top: 12px; left: 0; width: 5px; height: 5px; border: 1px solid #cc3333; border-radius: 50%;}
+.admin .migration .imgAttach{position: relative;}
+.admin .migration .fileAttach,
+.admin .migration .imgAttach{padding: 20px;}
+.admin .migration .fileAttach span{float: left;  margin-left: 20px; line-height: 2.7}
+.admin .migration .fileAttach button{float: left;}
+.admin .migration .imgAttach .rightBox{top: 10px; right: 20px;}
+.admin .migration .imgAttach > span{font-weight: bold;}
+.admin .migration .imgAttach .img_list{overflow-y: auto; height: 141px; padding: 0; margin-top: 39px}
+.admin .migration .imgAttach .img_list li{position: relative; text-indent: 15px}
+.admin .migration .imgAttach .img_list li:before{content: ""; position: absolute; top: 8px; left: 0; width: 3px; height: 3px; border-radius: 50px; background: #f58220}
+.admin .migration .imgAttach .img_list li.nodata:before{display: none}
+.admin .migration .imgAttach .img_list li.nodata{padding: 50px; text-align: center;}
+.admin .migration .imgAttach .img_list li > span{float: left; display: block; width: 230px; text-overflow: ellipsis; white-space: nowrap}
+.admin .migration .imgAttach .img_list li button.trash{position: absolute; top: -3px; right: 20px; width: 19px; height: 19px; background-size: 100%}
+.admin .migration .imgAttach .img_list li button:hover + span{font-weight: bold
+;}
+.admin .migration .imgAttach .img_list li + li{margin-top: 10px}
+.admin .migration .imgAttach.tooltips > span{float: left;}
+.admin .migration .progress_wrap{position: relative; float: left; width: 200px;}
+.admin .migration .img_progress{float: left; margin-right:10px; border-radius: 50px; border: 1px solid #bbb; width: calc(100% - 30px); height: 15px;}
+.admin .migration .img_progress span{display: block; width: 0; height: 100%; border-radius: 50px; background: #f58220;}
+.admin .migration .img_progress + button.del{float: left; width: 20px; height: 20px; margin-top: -3px; border: 0; background: url(../images_web/common/migration_fail.png)center 70% no-repeat; background-size: 80%;}
+
+
+.admin .migration .center{padding: 30px 0}
+.admin .migration .center .buttons{display: inline-block}
+.admin .migration .center button,
+.admin .migration .aside button{height: 50px; border-radius: 30px; padding: 0 80px; border: 1px solid #f58220; background: #f58220; color: #fff; font-size: 16px}
+.admin .migration .center button.gray{background: none; border: 1px solid #bbb; color: #bbb}
+.admin .migration .center button.gray:hover{background: none; border: 1px solid #666; color: #666}
+.admin .migration .center button:hover,
+.admin .migration .aside button:hover{background: #e66c04}
+.admin .migration .data_result{overflow-y: auto; width: 100%; max-height: 650px; padding: 20px}
+.admin .migration .data_result .head{width: 100%; margin-bottom: 20px;}
+.admin .migration .data_result .head h2{font-weight: bold; font-size: 18px;}
+.admin .migration .data_result .head .red{color: #cc3333}
+.admin .migration .data_result li{position: relative; width: 50%; height: 40px; padding: 10px 20px; margin-top: 10px}
+.admin .migration .data_result li:after{content: ""; position: absolute; top: 5px; right: 15px; width: 20px; height: 30px}
+.admin .migration .data_result li .coordinate{float: left; overflow: hidden; width: 90px; font-size: 16px; font-weight: bold; color: #d54c53; text-overflow: ellipsis; white-space: nowrap}
+.admin .migration .data_result li .resultTxt{float: left; font-weight: bold; line-height: 1.8}
+.admin .migration .data_result li.fail{background: #fff5ef; border: 1px solid #d54c53}
+.admin .migration .data_result li.fail:before{content: ""; position: absolute; top: 0; left: 0; width: 10px; height: 100%; background: #d54c53}
+.admin .migration .data_result li.fail:after{background: url(../images_web/common/admin_migration_warning.png)center no-repeat; background-size: 100%}
+.admin .migration .data_result li.success{padding: 10px 20px; background: #f3faef; border: 1px solid #77b259}
+.admin .migration .data_result li.success:before{content: ""; display: block; position: absolute; top: 0; left: 0; width: 10px; height: 100%; background: #77b259}
+.admin .migration .data_result li.success:after{background: url(../images_web/common/admin_migration_success.png)center no-repeat; background-size: 100%}
+.admin .migration .data_result li.success .resultTxt{font-size: 14px; line-height: 1.5}
+.admin .migration .aside{padding: 28px}
+.admin .migration .aside button:last-child{float: right}
+.admin .migration .center .box{width: 920px;  display: inline-block; height: 500px; padding: 90px 0}
+.admin .migration .center .box .result{display: inline-block; width: 128px; height: 128px; white-space: pre-line;}
+.admin .migration .center .box p{padding: 50px 0; font-size: 24px; font-weight: bold;}
+.admin .migration .center .box .result.success{background: url(../images_web/common/migration_success.png)center no-repeat;}
+.admin .migration .center .box .result.fail{background: url(../images_web/common/migration_fail.png)center no-repeat;}
+.admin .migration .data_result .xls_file{margin-top: 50px}
+.admin .migration .data_result .xls_file button{overflow: hidden; position: relative; max-width: 50%; padding: 15px 15px 15px 50px; border: 1px solid #77b259; background-color: #fff; border-radius: 3px; text-align: left; text-overflow: ellipsis; white-space: nowrap}
+.admin .migration .data_result .xls_file button:before{content: ""; position: absolute; top: 13px; left:15px; width: 25px; height: 25px; background: url(../images_web/common/excel.png)center no-repeat; -webkit-background-size: 100%;
+background-size: 100%;}
+.admin .migration .data_result .xls_file button:hover{border: 1px solid #51803a; background-color: #f9fff7;}
+.admin .migration .data_result .xls_file strong{display: block; margin-top: 10px; color: #cc3333}
+
+
+.admin .migration .reslut_info{padding:20px;}
+.admin .migration .reslut_info .head{position: relative;padding-bottom: 20px;}
+.admin .migration .reslut_info .head:before{content: ""; position: absolute; top: 0; left: 0; width: 50px; height: 50px;}
+.admin .migration .reslut_info .head.processing:before{background: url(../images_web/common/admin_spinner.gif)center no-repeat; background-size: 100%}
+.admin .migration .reslut_info .head.success:before{background: url(../images_web/common/migration_success.png)center no-repeat; background-size: 100%}
+.admin .migration .reslut_info .head.fail:before{background: url(../images_web/common/migration_fail.png)center no-repeat; background-size: 100%}
+.admin .migration .reslut_info .head h2,
+.admin .migration .reslut_info .head .description{padding-left: 60px;}
+.admin .migration .reslut_info .head h2{font-size: 18px; font-weight: bold;}
+.admin .migration .reslut_info li{position:relative;padding-left:40px;height:36px;border-bottom:1px solid #ccc}
+.admin .migration .reslut_info li .icon{position:absolute;left:0;top:0;display:block;width:36px;height:36px;}
+.admin .migration .reslut_info li.success .icon{background: url(../images_web/common/migration_success.png)center no-repeat; background-size:50%}
+.admin .migration .reslut_info li.fail .icon{background: url(../images_web/common/migration_fail.png)center no-repeat; background-size:50%}
+.admin .migration .reslut_info li.processing .icon{background: url(../images_web/common/migration_processing.gif)center no-repeat; background-size:50%}
+.admin .migration .reslut_info li .column{float:left;width:7%;height:100%;line-height:36px;text-align:center;display:block;}
+.admin .migration .reslut_info li dl{float:left;width:93%;height:100%;}
+.admin .migration .reslut_info li dt{float:left;width:6%;height:100%;font-weight:bold;padding:0 5px;line-height:36px;}
+.admin .migration .reslut_info li dd{float:left;width:28%;height:100%;padding:0 5px;line-height:35px;}
+.admin .migration .reslut_info li dd:last-child{width:26%}
+.admin .migration .reslut_info li.processing{background:#deebf7}
+.admin .migration .reslut_info li.processing .icon{}
+.admin .migration .reslut_info li.success{background:#d9f3c9}
+.admin .migration .reslut_info li.success .icon{}
+.admin .migration .reslut_info li.fail{background:#fdd9d9}
+.admin .migration .reslut_info li.fail .icon{}
+
+
+/*//마이그레이션*/
+
+/*상품재고설정*/
+/*//상품재고설정*/
+
+/* 업종및객단가관리 */
+.admin .category .tableSection .table{padding: 20px}
+.admin .category .tableSection .table table{border: 1px solid #dee0e1}
+.admin .category .form.form2 .tableSection:nth-child(1){width: calc(30% - 5px)}
+.admin .category .form.form2 .tableSection:nth-child(2){width: calc(70% - 5px); margin-left: 10px;}
+.admin .category .submit{text-align: center;}
+.admin .category .submit .buttons{display: inline-block; width: auto}
+/* //업종및객단가관리 */
+
+[v-cloak]{display:none !important;}
+
+/* dateTimePicker */
+.admin td.n-input .date{height: 35px;}
+.admin td.n-input .date span.inputDate{width: 60%; border-radius: 0; border: 1px solid #cacaca; padding: 9px;}
+.admin td.n-input .date span.inputDate:after{width: 35px; height: 35px;}
+.admin td.n-input .date span.inputDate:after{right: 40%;}
+/* //dateTimePicker */

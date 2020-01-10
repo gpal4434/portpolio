@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<title></title>
+<meta name="format-detection" content="telephone=no"/>
+<link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
+<link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker-ltie9.css">
+<link rel="stylesheet" href="../css/common_web.css"/>
+<link rel="stylesheet" href="../css/admin.css"/>
+<script src="../lib/jquery/jquery-3.1.0.min.js"></script>
+<script src="../lib/placeholder/jquery.placeholder.min.js"></script>
+<script src="../lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker.js"></script>
+<script src="../lib/datetimepicker/src/DateTimePicker-ltie9.js"></script>
+<script src="../lib/datetimepicker/src/i18n/DateTimePicker-i18n.js"></script>
+<script src="../lib/jquery-ui/jquery-ui.js"></script>
+<script src="../js/common_web.js"></script>
+</head>
+<body>
+<div class="n-wrap admin">
+	<div class="n-contents">
+		<div class="header">
+			<div class="depth1">
+				<ul>
+					<li>
+					<a href="#">기본설정</a>
+					</li>
+					<li class="on">
+					<a href="#">상품관리</a>
+					</li>
+					<li>
+					<a href="#">직원관리</a>
+					</li>
+					<li>
+					<a href="#">결제설정</a>
+					</li>
+				</ul>
+			</div>
+			<div class="info clear">
+				<p class="name">
+					Admin
+				</p>
+				<button class="setBtn"></button>
+				<button class="logout">로그아웃</button>
+			</div>
+		</div>
+    <div class="n-content">
+	<div class="header">
+		<h1>직원정보 조회</h1>
+	</div>
+	<div class="content">
+		<div class="tableBox pt0">
+			<div class="tableSection">
+				<div class="searchBox clear">
+					<div class="search clear">
+						<div class="fields">
+							<div class="field keyboard">
+								<div class="tit">
+									직원 검색
+								</div>
+								<div class="value">
+									<label class="select-custom">
+									<select name="" id="">
+										<option value="전체">이름</option>
+										<option value="재직중">아이디</option>
+										<option value="퇴사">연락처</option>
+									</select>
+									</label>
+									<input type="text" id="key" placeholder="이름을 검색하세요.">
+									<label for="key"></label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="tit">
+									상태
+								</div>
+								<div class="value">
+									<label class="select-custom">
+									<select name="" id="">
+										<option value="전체">전체</option>
+										<option value="재직중">재직중</option>
+										<option value="퇴사">퇴사</option>
+									</select>
+									</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="tit">
+									상태
+								</div>
+								<div class="value">
+									<label class="select-custom">
+									<select name="" id="">
+										<option value="전체">전체</option>
+										<option value="영업팀">영업팀</option>
+									</select>
+									</label>
+								</div>
+							</div>
+							<div class="field">
+								<div class="tit">
+									역할
+								</div>
+								<div class="value">
+									<label class="select-custom">
+									<select name="" id="">
+										<option value="전체">전체</option>
+										<option value="고객상담 관리자">고객상담 관리자</option>
+									</select>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="buttons">
+							<button class="button sync"></button>
+							<button class="searchBtn">검색</button>
+						</div>
+					</div>
+				</div>
+				<div class="listBox">
+					<div class="header">
+						<h2>직원 목록</h2>
+					</div>
+					<div class="tab">
+						<ul class="clear">
+							<!-- (D) li를 클릭하면 on클래스 추가 -->
+							<li class="on"><a href="#">전체</a></li>
+							<li><a href="#">부서</a></li>
+							<li><a href="#">지점</a></li>
+							<li><a href="#">자대리점</a></li>
+						</ul>
+						<div class="rightBox clear">
+							<div class="right clear">
+								<div class="buttons clear">
+									<button class="button purple">직원 추가</button>
+								</div>
+								<label class="select-custom">
+								<select name="view">
+									<option value="20개씩 보기">20개씩 보기</option>
+								</select>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="table pt0">
+						<table>
+						<colgroup>
+						<col width="8%">
+						<col width="10%">
+						<col width="10%">
+						<col width="10%">
+						<col width="28%">
+						<col width="10%">
+						<col width="10%">
+						<col width="16%">
+						<col width="4%">
+						<col width="4%">
+						</colgroup>
+						<thead>
+						<tr>
+							<th scope="col">
+								상태
+							</th>
+							<th scope="col">
+								이름
+							</th>
+							<th scope="col">
+								근무지
+							</th>
+							<th scope="col">
+								소속 부서
+							</th>
+							<th scope="col">
+								역할
+							</th>
+							<th scope="col">
+								아이디
+							</th>
+							<th scope="col">
+								연락처
+							</th>
+							<th scope="col">
+								메일주소
+							</th>
+							<th scope="col" colspan="2" class="center">
+								기능
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								재직중
+							</td>
+							<td>
+								최벽현
+							</td>
+							<td>
+								본사
+							</td>
+							<td>
+								영업
+							</td>
+							<td>
+								영업관리자, 재고관리자
+							</td>
+							<td>
+								choi123
+							</td>
+							<td>
+								01032779090
+							</td>
+							<td>
+								choi@naver.com
+							</td>
+							<td>
+								<button class="edit"></button>
+							</td>
+							<td>
+								<button class="trash"></button>
+							</td>
+						</tr>
+						</tbody>
+						</table>
+					</div>
+					<div class="pagings">
+						<div class="paging">
+							<ul class="paging__list">
+								<li class="btn"><button class="paging__btn"></button></li>
+								<li class="btn"><button class="paging__Left"></button></li>
+								<li class="on">1</li>
+								<li>2</li>
+								<li>3</li>
+								<li>4</li>
+								<li>5</li>
+								<li>6</li>
+								<li>7</li>
+								<li>8</li>
+								<li>9</li>
+								<li>10</li>
+								<li class="btn"><button class="paging__Right"></button></li>
+								<li class="btn"><button class="paging__btn"></button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="n-container">
+			<div class="header">
+				<a href="#" class="logo">브이존</a>
+			</div>
+			<div class="depth2-wrap tb">
+				<div class="depth2">
+					<ul class="depth2-ul">
+						<li class="depth2-li on"><a href="#">상품 목록</a></li>
+						<li class="depth2-li"><a href="#">상품 구성 설정</a></li>
+						<li class="depth2-li"><a href="#">재고 설정</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<span>@ 2018 Pentaon. All right reserved</span>
+			</div>
+		</div>
+		<div id="dtBox">
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+      $('.tab_cont > div').hide();
+      $('.tab_cont > div').eq(0).show();
+      $('.admin .division .tableSection:nth-child(2) .tab li').click(function(){
+        var index = $(this).index();
+        $('.tab_cont > div').hide();
+        $('.tab_cont > div').eq(index).show();
+        if($(this).hasClass('on')){
+        }else{
+          $('.admin .division .tableSection:nth-child(2) .tab li').removeClass('on');
+          $(this).addClass('on');
+        }
+      });
+		});
+	</script>
+	</body>
+	</html>
