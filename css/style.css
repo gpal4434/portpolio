@@ -190,4 +190,6 @@ html, body, #wrap{height: 100%;}
   #wrap #aboutme .profile .info .row h3{font-size: 14px;}
   #wrap #aboutme .profile .info .row li{font-size: 12px;}
   #wrap #aboutme .profile .info .row + .row{margin-top: 15px;}
+  #wrap #aboutme .txt{margin-left: 305px;margin-top: -37px;}
+  #wrap #aboutme .txt span{font-size: 72px;}
 }
