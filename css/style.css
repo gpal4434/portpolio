@@ -50,7 +50,7 @@ html, body, #wrap{height: 100%;}
 
 #wrap .swiper-wrapper .swiper-slide .inner .left .top{}
 #wrap .swiper-wrapper .swiper-slide .inner .left .top .num{font-size: 48px;color:#Fff;}
-#wrap .swiper-wrapper .swiper-slide .inner .left .top h1{margin:50px 0 20px 0;color:#fff;font-size: 48px;font-weight: 100;}
+#wrap .swiper-wrapper .swiper-slide .inner .left .top h1{margin:50px 0 20px 0;color:#fff;font-size: 35px;font-weight: 100;}
 #wrap .swiper-wrapper .swiper-slide .inner .left .top h1 em{font-style:normal;font-weight: bold;color:#fff;margin-right:20px;}
 #wrap .swiper-wrapper .swiper-slide .inner .left .top .desc{color:#fff;line-height: 1.5;}
 #wrap .swiper-wrapper .swiper-slide .inner .left .bottom{position: absolute;bottom: 20px;left: 50px;margin-right: 50px;}
@@ -178,6 +178,6 @@ html, body, #wrap{height: 100%;}
 .clear:after{content: "";display: block;clear:both;}
 
 @media (max-height: 760px){
-  #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:170px; overflow-y: auto;}
+  #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:130px; overflow-y: auto;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .top h1{font-size: 42px;}
 }
