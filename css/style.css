@@ -178,12 +178,16 @@ html, body, #wrap{height: 100%;}
 .clear:after{content: "";display: block;clear:both;}
 
 @media screen and (max-width: 1320px), screen and (max-height: 730px){
-  #wrap .swiper-wrapper .swiper-slide#main #typed-strings p, #wrap .swiper-wrapper .swiper-slide#main #typed{font-size: 100px;}
+  #wrap .swiper-wrapper .swiper-slide#main #typed-strings p, #wrap .swiper-wrapper .swiper-slide#main #typed{font-size: 86px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:130px; overflow-y: auto;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .top h1{font-size: 35px;}
   #wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li button{padding: 0 45px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left{padding: 50px 30px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .bottom{left:0;margin-right:0;padding:0 30px}
   #wrap #aboutme .txt span{font-size: 72px;}
-  #wrap #aboutme.swiper-slide.swiper-slide-active .profile .inf{height:calc(100% - 256px); overflow-y: auto;}
+  #wrap #aboutme.swiper-slide.swiper-slide-active .profile .info{height:calc(100% - 256px); overflow-y: auto;}
+}
+@media screen and (max-height: 863px){
+  #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:130px; overflow-y: auto;}
+  #wrap .swiper-wrapper .swiper-slide .inner .left .top h1{font-size: 35px;}
 }
