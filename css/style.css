@@ -177,13 +177,16 @@ html, body, #wrap{height: 100%;}
 
 .clear:after{content: "";display: block;clear:both;}
 
-@media (max-width: 1280px){
+@media (max-width: 1320px){
   #wrap .swiper-wrapper .swiper-slide#main #typed-strings p, #wrap .swiper-wrapper .swiper-slide#main #typed{font-size: 100px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:130px; overflow-y: auto;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .top h1{font-size: 35px;}
   #wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li button{padding: 0 45px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left{padding: 50px 30px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .bottom{left:0;margin-right:0;padding:0 30px}
+}
+
+/* @media (max-height: 760px){
   #wrap #aboutme .profile{padding: 30px 50px;}
   #wrap #aboutme .profile .line{width: 45px;}
   #wrap #aboutme .profile h1{margin: 30px 0;font-size: 24px;}
@@ -192,4 +195,5 @@ html, body, #wrap{height: 100%;}
   #wrap #aboutme .profile .info .row + .row{margin-top: 15px;}
   #wrap #aboutme .txt{margin-left: 305px;margin-top: -37px;}
   #wrap #aboutme .txt span{font-size: 72px;}
-}
+
+} */
