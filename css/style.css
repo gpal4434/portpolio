@@ -178,6 +178,7 @@ html, body, #wrap{height: 100%;}
 .clear:after{content: "";display: block;clear:both;}
 
 @media (max-height: 760px){
+  #wrap .swiper-wrapper .swiper-slide#main #typed-strings p, #wrap .swiper-wrapper .swiper-slide#main #typed{font-size: 100px;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .bottom table td.point{display: block;height:130px; overflow-y: auto;}
   #wrap .swiper-wrapper .swiper-slide .inner .left .top h1{font-size: 35px;}
   #wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li button, #wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li button{padding: 0 45px;}
