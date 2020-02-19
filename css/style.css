@@ -4,6 +4,7 @@ html, body, #wrap{height: 100%;}
 #wrap .swiper-wrapper{height: 100%;}
 #wrap .swiper-wrapper .swiper-slide{overflow: hidden;position: relative;}
 #wrap .swiper-wrapper .swiper-slide#main{background: url(../images/bg.png)center no-repeat;}
+#wrap .swiper-wrapper .swiper-slide#main > h1{text-indent: -9999px;}
 #wrap .swiper-wrapper .swiper-slide#main #typed-strings p,
 #wrap .swiper-wrapper .swiper-slide#main #typed{font-family: 'Black Han Sans', sans-serif;font-size: 140px;opacity: 0.1}
 #wrap .swiper-wrapper .swiper-slide#main .typed-cursor,
@@ -16,6 +17,7 @@ html, body, #wrap{height: 100%;}
 #wrap .swiper-wrapper .swiper-slide#main article .stroke{position: absolute;top: 50%;left: 50%;width: 500px;height: 500px;border:5px solid #616161;margin-top: -225px;margin-left: -300px;}
 #wrap .swiper-wrapper .swiper-slide#main article .line{position: absolute;top: 60px;right: 80px;width: 50px;height: 5px;background: #fff;}
 #wrap .swiper-wrapper .swiper-slide#main article {font-size: 82px;}
+#wrap .swiper-wrapper .swiper-slide#main article h2{text-indent: -9999px;}
 #wrap .swiper-wrapper .swiper-slide#main article span{display: block;}
 #wrap .swiper-wrapper .swiper-slide#main article .port{margin: 60px 0 0 30px;font-weight: bold;}
 #wrap .swiper-wrapper .swiper-slide#main article .folio{margin: 0 0 0 30px;letter-spacing: 8px;font-weight: bold;}
