@@ -15,10 +15,10 @@ html, body, #wrap{height: 100%;}
     translateY(calc(var(--mouse-y) * 0.1px));}
 #wrap .swiper-wrapper .swiper-slide#main article .stroke{position: absolute;top: 50%;left: 50%;width: 500px;height: 500px;border:5px solid #616161;margin-top: -225px;margin-left: -300px;}
 #wrap .swiper-wrapper .swiper-slide#main article .line{position: absolute;top: 60px;right: 80px;width: 50px;height: 5px;background: #fff;}
-#wrap .swiper-wrapper .swiper-slide#main article h1{font-size: 82px;}
-#wrap .swiper-wrapper .swiper-slide#main article h1.port{margin: 60px 0 0 30px}
-#wrap .swiper-wrapper .swiper-slide#main article h1.folio{margin: 0 0 0 30px;letter-spacing: 8px;}
-#wrap .swiper-wrapper .swiper-slide#main article h3{transform: rotate(-90deg) translate(10px, -200px); font-size: 18px;}
+#wrap .swiper-wrapper .swiper-slide#main article {font-size: 82px;}
+#wrap .swiper-wrapper .swiper-slide#main article .port{margin: 60px 0 0 30px}
+#wrap .swiper-wrapper .swiper-slide#main article .folio{margin: 0 0 0 30px;letter-spacing: 8px;}
+#wrap .swiper-wrapper .swiper-slide#main article .birth{transform: rotate(-90deg) translate(10px, -200px); font-size: 18px;}
 #wrap .swiper-wrapper .swiper-slide#main article .part{position: absolute;bottom: 30px;right: 80px;text-align: right;}
 #wrap .swiper-wrapper .swiper-slide#main article .part ul{}
 #wrap .swiper-wrapper .swiper-slide#main article .part li{font-size: 18px;font-weight: bold;line-height: 1.5;}
