@@ -16,8 +16,9 @@ html, body, #wrap{height: 100%;}
 #wrap .swiper-wrapper .swiper-slide#main article .stroke{position: absolute;top: 50%;left: 50%;width: 500px;height: 500px;border:5px solid #616161;margin-top: -225px;margin-left: -300px;}
 #wrap .swiper-wrapper .swiper-slide#main article .line{position: absolute;top: 60px;right: 80px;width: 50px;height: 5px;background: #fff;}
 #wrap .swiper-wrapper .swiper-slide#main article {font-size: 82px;}
-#wrap .swiper-wrapper .swiper-slide#main article .port{margin: 60px 0 0 30px}
-#wrap .swiper-wrapper .swiper-slide#main article .folio{margin: 0 0 0 30px;letter-spacing: 8px;}
+#wrap .swiper-wrapper .swiper-slide#main article span{display: block;}
+#wrap .swiper-wrapper .swiper-slide#main article .port{margin: 60px 0 0 30px;font-weight: bold;}
+#wrap .swiper-wrapper .swiper-slide#main article .folio{margin: 0 0 0 30px;letter-spacing: 8px;font-weight: bold;}
 #wrap .swiper-wrapper .swiper-slide#main article .birth{transform: rotate(-90deg) translate(10px, -200px); font-size: 18px;}
 #wrap .swiper-wrapper .swiper-slide#main article .part{position: absolute;bottom: 30px;right: 80px;text-align: right;}
 #wrap .swiper-wrapper .swiper-slide#main article .part ul{}
@@ -111,26 +112,25 @@ html, body, #wrap{height: 100%;}
 #wrap .swiper-wrapper .swiper-slide .inner .right .btns li:nth-child(8),
 #wrap .swiper-wrapper .swiper-slide .inner .right .btns li:nth-child(9),
 #wrap .swiper-wrapper .swiper-slide .inner .right .btns li:nth-child(10){margin-top: 12.5px;}
-#wrap .swiper-wrapper .swiper-slide .inner .right .btns li button{width: 100%;height: 100%;background: none;-ms-transition: .3s;-webkit-transition: .3s;transition: .3s;}
-#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li button a,
-#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li button a,
-#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li button a{padding: 0 50px;}
-#wrap .swiper-wrapper .swiper-slide#vzon .inner .right .btns li button{border: 1px solid #1b5f8b;}
-#wrap .swiper-wrapper .swiper-slide#vzon_m .inner .right .btns li button{border: 1px solid #3390b7;}
-#wrap .swiper-wrapper .swiper-slide#admin .inner .right .btns li button{border: 1px solid #8288c2;}
-#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li button{border: 1px solid #f7b527;}
-#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li button{border: 1px solid #ec6516;}
-#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li button{border: 1px solid #8d9d52;}
-#wrap .swiper-wrapper .swiper-slide#vzon .inner .right .btns li:hover button{background: #1b5f8b;}
-#wrap .swiper-wrapper .swiper-slide#vzon_m .inner .right .btns li:hover button{background: #3390b7;}
-#wrap .swiper-wrapper .swiper-slide#admin .inner .right .btns li:hover button{background: #8288c2;}
-#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li:hover button{background: #f7b527;}
-#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li:hover button{background: #ec6516;}
-#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li:hover button{background: #8d9d52;}
+#wrap .swiper-wrapper .swiper-slide .inner .right .btns li a{width: 100%;height: 100%;background: none;-ms-transition: .3s;-webkit-transition: .3s;transition: .3s;}
+#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li a,
+#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li a,
+#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li a{padding: 0 50px;}
+#wrap .swiper-wrapper .swiper-slide#vzon .inner .right .btns li a{border: 1px solid #1b5f8b;}
+#wrap .swiper-wrapper .swiper-slide#vzon_m .inner .right .btns li a{border: 1px solid #3390b7;}
+#wrap .swiper-wrapper .swiper-slide#admin .inner .right .btns li a{border: 1px solid #8288c2;}
+#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li a{border: 1px solid #f7b527;}
+#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li a{border: 1px solid #ec6516;}
+#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li a{border: 1px solid #8d9d52;}
+#wrap .swiper-wrapper .swiper-slide#vzon .inner .right .btns li:hover a{background: #1b5f8b;}
+#wrap .swiper-wrapper .swiper-slide#vzon_m .inner .right .btns li:hover a{background: #3390b7;}
+#wrap .swiper-wrapper .swiper-slide#admin .inner .right .btns li:hover a{background: #8288c2;}
+#wrap .swiper-wrapper .swiper-slide#museum .inner .right .btns li:hover a{background: #f7b527;}
+#wrap .swiper-wrapper .swiper-slide#valmore .inner .right .btns li:hover a{background: #ec6516;}
+#wrap .swiper-wrapper .swiper-slide#dazzle .inner .right .btns li:hover a{background: #8d9d52;}
 
-#wrap .swiper-wrapper .swiper-slide .inner .right .btns li:hover button{color:#fff;}
-#wrap .swiper-wrapper .swiper-slide .inner .right .btns li button a{display: block; width: 100%;height: 100%;line-height: 2.5;}
-#wrap .swiper-wrapper .swiper-slide .inner{}
+#wrap .swiper-wrapper .swiper-slide .inner .right .btns li:hover a{color:#fff;}
+#wrap .swiper-wrapper .swiper-slide .inner .right .btns li a{display: block; width: 100%;height: 100%;line-height: 2.5;}
 #wrap .swiper-container .swiper-button-next, .swiper-button-prev{width: 70px;height: 70px;margin-top: -50px;}
 #wrap .swiper-container .swiper-button-prev{left:auto;top: 46%;right: 1%;background: url(../images/swiper-button-prev.png)center / 100% no-repeat;}
 #wrap .swiper-container .swiper-button-next{top: 54%;right: 1%;background: url(../images/swiper-button-next.png)center / 100% no-repeat;}
