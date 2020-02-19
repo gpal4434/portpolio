@@ -3476,6 +3476,7 @@ td.ellip{width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: no
 	background: #fff;
 	border-bottom: 1px solid #fff;
 	color: #333;
+  border-left:1px solid #bdbdbd;
 }
 .c-tab__link {
 	display: block;

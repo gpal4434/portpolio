@@ -449,7 +449,6 @@ td.n-input.email .custom-select{width: 33%;right: 0;left:auto;}
 .n-tables.tb .n-table2 tr.close:hover td{background: #ffe1e3 !important}
 .n-input.btn input{width: calc(100% - 65px)}
 .n-input.btn2 input{width: calc(100% - 100px);}
-#cs_content_main .n-input.btn input{width: calc(100% - 50px)}
 /* 설치 - 수리 프로세스 */
 #repair .n-sections.tb{height: 290px; border-bottom: 1px solid #dee0e1;}
 #repair .n-tables.mt10.select{height: 340px}
@@ -668,7 +667,7 @@ td.n-input.level_input .n-check input{width: 0; height: 0;}
 #contract .tab .n-sections.contents, #quote .tab .n-sections.content{height: 539px}
 #contract .open .n-sections.contents,
 #quote .open .n-sections.contents{height:526px}
-#contract .n-align.right .open .n-tables.tb.inputData{height: 386px}
+#contract .n-align.right .open .n-tables.tb.inputData{height: 301px}
 #contract .n-align.right .tab .n-tables.tb.inputData{height: calc(100% - 134px);}
 .n-section.register{height:607px}
 #contract .n-align.left table th:nth-child(4),

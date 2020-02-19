@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<title></title>
+<title>스케쥴</title>
 <meta name="format-detection" content="telephone=no"/>
 <link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
@@ -385,8 +385,7 @@
           					<div class="n-tables th">
           						<table class="n-table2">
           						<colgroup>
-          						<col style="width: 6%">
-          						<col style="width: 6%">
+          						<col style="width: 12%">
           						<col style="width: 15%">
           						<col style="width: 33%">
           						<col style="width: 10%">
@@ -395,7 +394,7 @@
           						</colgroup>
           						<tbody>
           						<tr>
-          							<th scope="col" colspan="2">
+          							<th scope="col">
           								상태
           							</th>
           							<th scope="col">
@@ -718,8 +717,7 @@
           						<col style="width: 20%">
           						<col style="width: 13.3333%">
           						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
+          						<col style="width: 33.3333%">
           						</colgroup>
           						<tbody>
           						<tr>
@@ -730,7 +728,7 @@
           								<div class="dates">
           									<div class="date">
           										<input type="text" id="date1" class="inputDate" data-field="datetime" readonly>
-          										<label id="date1"></label>
+          										<label for="date1"></label>
           									</div>
           								</div>
           							</td>
@@ -743,7 +741,7 @@
           								<span class="slider">NO</span>
           								</label>
           							</td>
-          							<td colspan="2">
+          							<td>
           							</td>
           						</tr>
           						<tr>
@@ -751,7 +749,7 @@
           								수행계획내용
           							</th>
           							<!-- (D) view(text모드)형태는 td에 class제거, textarea지우면 됩니다. -->
-          							<td colspan="5" class="n-input">
+          							<td colspan="4" class="n-input">
           								<textarea class=""></textarea>
           							</td>
           						</tr>
@@ -762,19 +760,15 @@
           						<table class="n-table">
           						<caption>수행담당자 : 수행계획일시, 방문계획여부, 수행계획내용</caption>
           						<colgroup>
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
+          						<col style="width: 13.33%">
+          						<col style="width: 86.66%">
           						</colgroup>
           						<tbody>
           						<tr>
           							<th scope="col">
           								수행일시
           							</th>
-          							<td colspan="5">
+          							<td>
           								 2018-10-30 11:00 ~ 2018-10-30 18:30
           								<div class="n-heading__adds">
           									<div class="n-heading__add">
@@ -790,7 +784,7 @@
           							<th scope="col">
           								방문여부
           							</th>
-          							<td colspan="3" class="n-input">
+          							<td class="n-input">
           								<label class="switch yesno">
           								<input type="checkbox">
           								<span class="slider">NO</span>
@@ -801,7 +795,7 @@
           							<th scope="col">
           								수행내용
           							</th>
-          							<td colspan="5" class="n-input">
+          							<td class="n-input">
           								<textarea class=""></textarea>
           							</td>
           						</tr>
@@ -824,7 +818,7 @@
           				</div>
           				<div class="manager">
           					<div class="n-heading">
-          						<h3 class="n-h3"></h3>
+          						<h3 class="n-h3">&nbsp;</h3>
           						<div class="n-heading__adds">
           							<div class="n-heading__add">
           								<button class="n-button white n-button--add">내역 추가</button>
@@ -835,22 +829,20 @@
           						<table class="n-table">
           						<caption>수행담당자 : 수행계획일시, 방문계획여부, 수행계획내용</caption>
           						<colgroup>
-          						<col style="width: 13.3333%">
+          						<col style="width: 13.33%">
           						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
+          						<col style="width: 13.33%">
+          						<col style="width: 53.33%">
           						</colgroup>
           						<tbody>
           						<tr>
           							<th scope="col">
           								수행일시
           							</th>
-          							<td colspan="3">
+          							<td colspan="2">
           								2018-10-30 11:00 ~ 2018-10-30 18:30
           							</td>
-          							<td colspan="3">
+          							<td>
           								<div class="n-heading__adds">
           									<div class="n-heading__add">
           										<div class="n-buttons">
@@ -882,7 +874,7 @@
           							<th scope="col">
           								수행내용
           							</th>
-          							<td colspan="5">
+          							<td colspan="3">
           								 수행내용입니다.
           							</td>
           						</tr>
@@ -893,22 +885,20 @@
           						<table class="n-table">
           						<caption>수행담당자 : 수행계획일시, 방문계획여부, 수행계획내용</caption>
           						<colgroup>
-          						<col style="width: 13.3333%">
+          						<col style="width: 13.33%">
           						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
+          						<col style="width: 13.33%">
+          						<col style="width: 53.33%">
           						</colgroup>
           						<tbody>
           						<tr>
           							<th scope="col">
           								수행일시
           							</th>
-          							<td colspan="3">
+          							<td colspan="2">
           								2018-10-30 11:00 ~ 2018-10-30 18:30
           							</td>
-          							<td colspan="3">
+          							<td>
           								<div class="n-heading__adds">
           									<div class="n-heading__add">
           										<div class="n-buttons">
@@ -940,7 +930,7 @@
           							<th scope="col">
           								수행내용
           							</th>
-          							<td colspan="5">
+          							<td colspan="3">
           								 수행내용입니다.
           							</td>
           						</tr>
@@ -951,27 +941,25 @@
           						<table class="n-table">
           						<caption>수행담당자 : 수행계획일시, 방문계획여부, 수행계획내용</caption>
           						<colgroup>
-          						<col style="width: 13.3333%">
+          						<col style="width: 13.33%">
           						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
-          						<col style="width: 13.3333%">
-          						<col style="width: 20%">
+          						<col style="width: 13.33%">
+          						<col style="width: 53.33%">
           						</colgroup>
           						<tbody>
           						<tr>
           							<th scope="col">
           								수행일시
           							</th>
-          							<td colspan="6" class="n-input">
+          							<td colspan="3" class="n-input">
           								<div class="dates two">
           									<div class="date">
-          										<input type="text" id="date1" class="inputDate" data-field="datetime" readonly>
-          										<label id="date1"></label>
+          										<input type="text" id="date3" class="inputDate" data-field="datetime" readonly>
+          										<label for="date3"></label>
           									</div>
           									<div class="date">
           										<input type="text" id="date2" class="inputDate" data-field="datetime" readonly>
-          										<label id="date2"></label>
+          										<label for="date2"></label>
           									</div>
           								</div>
           								<div class="n-heading__adds">
@@ -1016,7 +1004,7 @@
           							<th scope="col">
           								수행내용
           							</th>
-          							<td colspan="5" class="n-input">
+          							<td colspan="3" class="n-input">
           								<textarea class=""></textarea>
           							</td>
           						</tr>
@@ -1093,7 +1081,7 @@
 						</ul>
 					</div>
 					</li>
-					<li class="depth2-li" class="on">
+					<li class="depth2-li on">
 					<span class="icon box-open"></span>
 					<a href="#">출고</a>
 					<button class="menu-arrow"></button>

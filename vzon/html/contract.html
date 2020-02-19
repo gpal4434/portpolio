@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<title></title>
+<title>계약</title>
 <meta name="format-detection" content="telephone=no"/>
 <link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
@@ -357,8 +357,7 @@
           					<table class="n-table2">
           					<caption>등록현황 : 상태, 등록일자, 계약일자, 가맹점명, 계약유형</caption>
           					<colgroup>
-          					<col style="width: 6%">
-          					<col style="width: 10%">
+          					<col style="width: 16%">
           					<col style="width: 15%">
           					<col style="width: 15%">
           					<col style="width: 39%">
@@ -366,7 +365,7 @@
           					</colgroup>
           					<thead>
           					<tr>
-          						<th scope="row" colspan="2">
+          						<th scope="row">
           							상태<button class="trigger on"></button>
           						</th>
           						<th scope="row">
@@ -790,8 +789,8 @@
           							<td class="n-input">
           								<div class="dates">
           									<div class="date">
-          										<span class="inputDate">2018-10</span>
-          										<label for=""></label>
+          										<input id="date4" class="inputDate" data-field="date" readonly>
+          										<label for="date4"></label>
           									</div>
           								</div>
           							</td>
@@ -805,8 +804,6 @@
           										<li class="on"><span>전체</span></li>
           									</ul>
           								</div>
-          							</td>
-          							<td>
           							</td>
           							<td>
           							</td>
@@ -868,7 +865,7 @@
           								(0/200)
           							</th>
           							<td class="n-input" colspan="5">
-          								<textarea name="" id="" cols="30" rows="10">특약사항입니다.</textarea>
+          								<textarea name="ta1" cols="30" rows="10">특약사항입니다.</textarea>
           							</td>
           						</tr>
           						</tbody>
@@ -1165,16 +1162,14 @@
           								<table class="n-table">
           								<colgroup>
           								<col style="width: 20%">
-          								<col style="width: 30%">
-          								<col style="width: 20%">
-          								<col style="width: 30%">
+          								<col style="width: 80%">
           								</colgroup>
           								<tbody>
           								<tr>
           									<th scope="row">
           										총 공급가
           									</th>
-          									<td colspan="3" class="red">
+          									<td class="red">
           										360,000
           									</td>
           								</tr>
@@ -1361,8 +1356,8 @@
           									<td class="n-input">
           										<div class="dates">
           											<div class="date">
-          												<span class="inputDate"></span>
-          												<label for=""></label>
+          												<input id="date5" class="inputDate" data-field="date" readonly>
+          												<label for="date5"></label>
           											</div>
           										</div>
           									</td>
@@ -1383,7 +1378,7 @@
           									<th scope="row">
           										상품명
           									</th>
-          									<td class="n-input">
+          									<td class="n-input" colspan="3">
           										<input type="text">
           									</td>
           								</tr>
@@ -1391,11 +1386,11 @@
           								</table>
           								<!-- 결제방식 : 일시불/할부 -->
           								<table class="n-table row">
-          								<colspan>
+          								<colgroup>
           								<col style="width: 20%">
           								<col style="width: 40%">
           								<col style="width: 40%">
-          								</colspan>
+												</colgroup>
           								<tbody>
           								<tr>
           									<th scope="row" rowspan="2" class="rowspan">
@@ -1483,8 +1478,8 @@
           										<td class="n-input">
           											<div class="dates">
           												<div class="date">
-          													<span class="inputDate"></span>
-          													<label for=""></label>
+          													<input id="date6" class="inputDate" data-field="date" readonly>
+          													<label for="date6"></label>
           												</div>
           											</div>
           										</td>
@@ -1689,8 +1684,8 @@
           											<div class="dates">
           												<span>청구시작월</span>
           												<div class="date">
-          													<span class="inputDate">2018-08</span>
-          													<label for=""></label>
+          													<input id="date3" class="inputDate" data-field="date" readonly>
+          													<label for="date3"></label>
           												</div>
           											</div>
           										</div>
@@ -1846,18 +1841,20 @@
           						<!-- 총 청구금액 -->
           						<div class="n-tables">
           							<table class="n-table">
-          							<colgroup>
-          							<col style="width: 20%">
-          							<col style="width: *">
-          							</colgroup>
-          							<tbody>
-          							<th>
-          								총 청구금액
-          							</th>
-          							<td class="red">
-          								360,000원
-          							</td>
-          							</tbody>
+	          							<colgroup>
+		          							<col style="width: 20%">
+		          							<col style="width: 80%">
+	          							</colgroup>
+	          							<tbody>
+														<tr>
+															<th>
+			          								총 청구금액
+			          							</th>
+			          							<td class="red">
+			          								360,000원
+			          							</td>
+														</tr>
+	          							</tbody>
           							</table>
           						</div>
           					</div>
@@ -1870,19 +1867,15 @@
           							<table class="n-table">
           							<caption>상세내역 : 청구처</caption>
           							<colgroup>
-          							<col style="width: 13.3333%">
-          							<col style="width: 20%">
-          							<col style="width: 13.3333%">
-          							<col style="width: 20%">
-          							<col style="width: 13.3333%">
-          							<col style="width: 20%">
+          							<col style="width: 13.33%">
+          							<col style="width: 86.66%">
           							</colgroup>
           							<tbody>
           							<tr>
           								<th scope="row">
           									가맹점명
           								</th>
-          								<td class="em" colspan="5">
+          								<td class="em">
           									파리바게트 성수동지점 왕족발 체인
           									<div class="n-heading__adds">
           										<div class="n-heading__add">
@@ -2026,7 +2019,7 @@
 						</ul>
 					</div>
 					</li>
-					<li class="depth2-li" class="on">
+					<li class="depth2-li on">
 					<span class="icon box-open"></span>
 					<a href="#">출고</a>
 					<button class="menu-arrow"></button>

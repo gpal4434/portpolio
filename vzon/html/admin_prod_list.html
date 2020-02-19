@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<title></title>
+<title>상품 목록</title>
 <meta name="format-detection" content="telephone=no"/>
 <link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
@@ -60,7 +60,7 @@
                           <div class="tit">상품 검색</div>
                           <div class="value">
                               <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select2">
                                       <option value="상품명">상품명</option>
                                       <option value="상품코드">상품코드</option>
                                   </select>
@@ -75,7 +75,7 @@
                           <div class="tit">밴사</div>
                           <div class="value">
                               <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select3">
                                       <option value="전체">전체</option>
                                   </select>
                               </label>
@@ -85,7 +85,7 @@
                           <div class="tit">상품 유형</div>
                           <div class="value">
                               <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select4">
                                       <option value="전체">전체</option>
                                       <option value="카드단말">카드단말</option>
                                   </select>
@@ -96,7 +96,7 @@
                           <div class="tit">제조사</div>
                           <div class="value">
                               <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select5">
                                       <option value="전체">전체</option>
                                       <option value="한주정보통신">한주정보통신</option>
                                   </select>
@@ -127,22 +127,17 @@
                             <div class="buttons clear">
                                 <button class="button purple">상품 등록</button>
                             </div>
-                            <!-- <label class="select-custom">
-                                <select name="view">
-                                    <option value="20개씩 보기">20개씩 보기</option>
-                                </select>
-                            </label> -->
                         </div>
                     </div>
                   </div>
                   <div class="table pt0 detail">
                     <table>
                       <colgroup>
-                        <col width="20%">
-                        <col width="35%">
-                        <col width="10%">
-                        <col width="15%">
-                        <col width="20%">
+                        <col style="width:20%">
+                        <col style="width:35%">
+                        <col style="width:10%">
+                        <col style="width:15%">
+                        <col style="width:20%">
                       </colgroup>
                       <thead>
                         <tr>
@@ -285,8 +280,8 @@
                       <div class="table2">
                         <table>
                           <colgroup>
-                            <col width="30%">
-                            <col width="70%">
+                            <col style="width:30%">
+                            <col style="width:70%">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -303,7 +298,7 @@
                               <th scope="row" class="star">상품 유형</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select6">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -313,7 +308,7 @@
                               <th scope="row">제조사</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select7">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -323,7 +318,7 @@
                               <th scope="row">구매처</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select8">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -333,7 +328,7 @@
                               <th scope="row" class="star">밴사</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select9">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -343,7 +338,7 @@
                               <th scope="row" class="star">사용 용지</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select10">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -380,7 +375,7 @@
                               <th scope="row" class="star">수량 단위</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select11">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -412,7 +407,7 @@
                               <th scope="row" class="star">고객 상품평가</th>
                               <td class="input">
                                 <label class="select-custom">
-                                  <select name="" id="">
+                                  <select name="select12">
                                     <option value="">선택</option>
                                   </select>
                                 </label>
@@ -440,10 +435,10 @@
                           <div class="table2">
                             <table>
                               <colgroup>
-                                <col width="15%">
-                                <col width="35%">
-                                <col width="15%">
-                                <col width="35%">
+                                <col style="width:15%">
+                                <col style="width:35%">
+                                <col style="width:15%">
+                                <col style="width:35%">
                               </colgroup>
                               <tbody>
                                 <tr>
@@ -463,20 +458,19 @@
                           <div class="table">
                             <table>
                               <colgroup>
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="15%">
-                                <col width="10%">
-                                <col width="3%">
-                                <col width="10%">
-                                <col width="32%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:15%">
+                                <col style="width:13%">
+                                <col style="width:10%">
+                                <col style="width:32%">
                               </colgroup>
                               <tbody>
                                 <tr>
                                   <td class="bold">1년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -484,7 +478,7 @@
                                   <td class="bold">1년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -492,7 +486,7 @@
                                   <td class="bold">2년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -500,7 +494,7 @@
                                   <td class="bold">3년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -508,7 +502,7 @@
                                   <td class="bold">4년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -516,7 +510,7 @@
                                   <td class="bold">5년경과</td>
                                   <td>할인율</td>
                                   <td class="input"><input type="number"></td>
-                                  <td colspan="2">%</td>
+                                  <td>%</td>
                                   <td>할인가</td>
                                   <td>234,000</td>
                                 </tr>
@@ -531,15 +525,17 @@
                           <div class="table2">
                             <table>
                               <colgroup>
-                                <col width="15%">
-                                <col width="35%">
-                                <col width="15%">
-                                <col width="35%">
+                                <col style="width:15%">
+                                <col style="width:35%">
+                                <col style="width:15%">
+                                <col style="width:35%">
                               </colgroup>
                               <tbody>
                                 <tr>
                                   <th scope="row">구매단가</th>
                                   <td class="input"><input type="text"></td>
+																	<td></td>
+																	<td></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -565,17 +561,17 @@
                           <div class="table2">
                             <table>
                               <colgroup>
-                                <col width="25%">
-                                <col width="25%">
-                                <col width="25%">
-                                <col width="25%">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col style="width:25%">
+                                <col style="width:25%">
                               </colgroup>
                               <tbody>
                                 <tr>
                                   <th scope="row">발주정책</th>
                                   <td class="input">
                                     <label class="select-custom">
-                                      <select name="" id="">
+                                      <select name="select1">
                                         <option value="">선택</option>
                                       </select>
                                     </label>
@@ -615,11 +611,14 @@
                                   <td class="input">
                                     <input type="text">
                                   </td>
-                                </tr><tr>
+                                </tr>
+																<tr>
                                   <th scope="row">경제적발주량</th>
                                   <td class="input">
                                     <input type="text">
                                   </td>
+																	<td></td>
+																	<td></td>
                                 </tr>
                               </tbody>
                             </table>
@@ -655,8 +654,8 @@
                           <div class="table2">
                             <table>
                               <colgroup>
-                                <col width="20%">
-                                <col width="80%">
+                                <col style="width:20%">
+                                <col style="width:80%">
                               </colgroup>
                               <tbody>
                                 <tr>
@@ -677,7 +676,7 @@
                                       <ul class="clear">
                                         <li>
                                             <div class="img">
-                                                <img src="../images/dummy/install__image7.jpg" alt="추가 이미지">
+                                                <img src="../images_web/dummy/install__image7.jpg" alt="추가 이미지">
                                                 <div class="zoom" title="크게 보기"></div>
                                             </div>
                                             <button class="del" title="삭제하기"></button>
@@ -685,21 +684,21 @@
                                         <li>
                                             <div class="img">
                                                 <div class="zoom" title="크게 보기"></div>
-                                                <img src="../images/dummy/install__image5.jpg" alt="추가 이미지">
+                                                <img src="../images_web/dummy/install__image5.jpg" alt="추가 이미지">
                                             </div>
                                             <button class="del" title="삭제하기"></button>
                                         </li>
                                         <li>
                                             <div class="img">
                                                 <div class="zoom" title="크게 보기"></div>
-                                                <img src="../images/dummy/install__image4.jpg" alt="추가 이미지">
+                                                <img src="../images_web/dummy/install__image4.jpg" alt="추가 이미지">
                                             </div>
                                             <button class="del" title="삭제하기"></button>
                                         </li>
                                         <li>
                                             <div class="img">
                                                 <div class="zoom" title="크게 보기"></div>
-                                                <img src="../images/dummy/install__image3.jpg" alt="추가 이미지">
+                                                <img src="../images_web/dummy/install__image3.jpg" alt="추가 이미지">
                                             </div>
                                             <button class="del" title="삭제하기"></button>
                                         </li>
@@ -743,11 +742,11 @@
                             <div class="table thead">
                               <table>
                                 <colgroup>
-                                  <col width="5%">
-                                  <col width="18%">
-                                  <col width="18%">
-                                  <col width="18%">
-                                  <col width="41%">
+                                  <col style="width:5%">
+                                  <col style="width:18%">
+                                  <col style="width:18%">
+                                  <col style="width:18%">
+                                  <col style="width:41%">
                                 </colgroup>
                                 <thead>
                                   <tr>
@@ -763,11 +762,11 @@
                             <div class="table tbody">
                               <table>
                                 <colgroup>
-                                  <col width="5%">
-                                  <col width="18%">
-                                  <col width="18%">
-                                  <col width="18%">
-                                  <col width="41%">
+                                  <col style="width:5%">
+                                  <col style="width:18%">
+                                  <col style="width:18%">
+                                  <col style="width:18%">
+                                  <col style="width:41%">
                                 </colgroup>
                                 <tbody>
                                   <tr>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-<title></title>
+<title>메인</title>
 <meta name="format-detection" content="telephone=no"/>
 <link rel="stylesheet" type="text/css" href="../lib/mCustomScrollbar/jquery.mCustomScrollbar.css"/>
 <link rel="stylesheet" type="text/css" href="../lib/datetimepicker/src/DateTimePicker.css">
@@ -511,11 +511,11 @@
 										<table class="n-table">
 										<caption>신규상담등록 : 간판명, 사업자번호, 요청자명, 전화번호, 요청유형, 피드백, 우선순위, 상담내용, 전달내용, 담당자</caption>
 										<colgroup>
-										<col style="width: 13.3333%">
+										<col style="width: 13.33%">
 										<col style="width: 20%">
-										<col style="width: 13.3333%">
+										<col style="width: 13.33%">
 										<col style="width: 20%">
-										<col style="width: 13.3333%">
+										<col style="width: 13.33%">
 										<col style="width: 20%">
 										</colgroup>
 										<tbody>
@@ -526,10 +526,10 @@
 											<!-- (D) n-input search on 이면 검색어 자동완성 기능이 생김-->
 											<td colspan="5" class="n-input search on">
 												<div>
-													<input type="text" id="search" class="search" placeholder="">
-													<label for="search" class="search"></label>
+													<input type="text" id="search3" class="search" placeholder="">
+													<label for="search3" class="search"></label>
 												</div>
-												<div class="autoSearch n-tables tb">
+												<!-- <div class="autoSearch n-tables tb">
 													<table class="n-table2">
 													<caption>가맹점명, 지역</caption>
 													<colgroup>
@@ -581,7 +581,7 @@
 													</tr>
 													</tbody>
 													</table>
-												</div>
+												</div> -->
 											</td>
 										</tr>
 										<tr>
@@ -594,18 +594,9 @@
 											<th scope="col" class="star">
 												전화번호
 											</th>
-											<td colspan="2" class="n-input btn">
+											<td class="n-input">
 												<input type="text">
-												<div class="n-heading__adds">
-													<div class="n-heading__add">
-														<button class="n-button n-button--add white">추가</button>
-													</div>
-												</div>
 											</td>
-											<td>
-											</td>
-										</tr>
-										<tr>
 											<th scope="col" class="star">
 												요청유형
 											</th>
@@ -623,33 +614,13 @@
 													</div>
 												</div>
 											</td>
-											<th scope="col" class="star">
-												피드백
-											</th>
-											<td colspan="3" class="n-input optionSet">
-												<div class="dates">
-													<div class="date">
-														<span class="inputDate"></span>
-														<label for="date"></label>
-													</div>
-												</div>
-												<div class="feedCheck">
-													<input type="checkbox" id="check2">
-													<label for="check2">피드백</label>
-												</div>
-												<span>우선순위</span>
-												<label for="priority" class="switch priority">
-												<input type="checkbox" id="priority">
-												<span class="slider">일반</span>
-												</label>
-											</td>
 										</tr>
 										<tr>
 											<th scope="col" class="star">
 												상담내용
 											</th>
 											<td colspan="5" class="n-input">
-												<textarea name="" id="" cols="30" rows="10" class="middle"></textarea>
+												<textarea name="ta1" cols="30" rows="10" class="middle"></textarea>
 											</td>
 										</tr>
 										<tr>
@@ -657,7 +628,7 @@
 												응대내용
 											</th>
 											<td colspan="5" class="n-input">
-												<textarea name="" id="" cols="30" rows="10" class="small"></textarea>
+												<textarea name="ta2" cols="30" rows="10" class="small"></textarea>
 											</td>
 										</tr>
 										<tr>
@@ -665,7 +636,7 @@
 												전달내용
 											</th>
 											<td colspan="5" class="n-input">
-												<textarea name="" id="" cols="30" rows="10" class="small"></textarea>
+												<textarea name="ta3" cols="30" rows="10" class="small"></textarea>
 											</td>
 										</tr>
 										<tr>
@@ -851,9 +822,7 @@
 										<caption>가맹점정보 : 간판명, 상태, 상호명, 대표자, 개업일, 사업자번호, 법인번호, 업태, 업종, 전화번호, 주소</caption>
 										<colgroup>
 										<col style="width: 13.3333%">
-										<col style="width: 20%">
-										<col style="width: 13.3333%">
-										<col style="width: 20%">
+										<col style="width: 53.33%">
 										<col style="width: 13.3333%">
 										<col style="width: 20%">
 										</colgroup>
@@ -862,12 +831,12 @@
 											<th scope="row">
 												가맹점명
 											</th>
-											<td class="em" colspan="3">
+											<td class="em">
 												파리바게트 성수동지점 왕족발 체인
 												<div class="n-heading__adds">
-													<divl class="n-heading__add">
+													<div class="n-heading__add">
 													<button class="organization"></button>
-													</divl>
+													</div>
 												</div>
 											</td>
 											<th scope="row">
@@ -886,18 +855,10 @@
 											</td>
 										</tr>
 										<tr>
-											<th scope="row">
-												전화번호
-											</th>
-											<td class="n-input">
-												<input type="text">
-											</td>
-										</tr>
-										<tr>
 											<th scope="row" rowspan="2">
 												주소
 											</th>
-											<td class="n-input addressView bb0" colspan="5">
+											<td class="n-input addressView bb0" colspan="3">
 												<button class="n-button blue">우편번호</button>
 												<div class="address_detail">
 													<p>
@@ -910,9 +871,9 @@
 											</td>
 										</tr>
 										<tr>
-											<td class="n-input" colspan="5">
-												<input type="text" id="search" class="search" placeholder="상세주소 를 입력하세요.">
-												<label for="search" class="search"></label>
+											<td class="n-input" colspan="3">
+												<input type="text" id="search2" class="search" placeholder="상세주소 를 입력하세요.">
+												<label for="search2" class="search"></label>
 											</td>
 										</tr>
 										</tbody>
@@ -1065,7 +1026,7 @@
 											<table class="n-table row">
 											<caption>가맹점 정보 : 가맹점명, 상태</caption>
 											<colgroup>
-											<col style="width: %">
+											<col style="width: 10%">
 											<col style="width: 15%">
 											<col style="width: 16%">
 											<col style="width: 27%">
@@ -1215,7 +1176,7 @@
 						</ul>
 					</div>
 					</li>
-					<li class="depth2-li" class="on">
+					<li class="depth2-li on">
 					<span class="icon box-open"></span>
 					<a href="#">출고</a>
 					<button class="menu-arrow"></button>
